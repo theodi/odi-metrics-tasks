@@ -1,23 +1,21 @@
-# Open Organisation Services
+# ODI Metrics Tasks
 
-[![Build Status](http://jenkins.theodi.org/job/open-orgn-services-master/badge/icon)](http://jenkins.theodi.org/job/open-orgn-services-master/)
-[![Dependency Status](https://gemnasium.com/theodi/open-orgn-services.png)](https://gemnasium.com/theodi/open-orgn-services)
-[![Code Climate](https://codeclimate.com/github/theodi/open-orgn-services.png)](https://codeclimate.com/github/theodi/open-orgn-services)
+[![Build Status](http://jenkins.theodi.org/job/odi-metrics-tasks-master/badge/icon)](http://jenkins.theodi.org/job/odi-metrics-tasks-master/)
+[![Dependency Status](https://gemnasium.com/theodi/odi-metrics-tasks.png)](https://gemnasium.com/theodi/odi-metrics-tasks)
+[![Code Climate](https://codeclimate.com/github/theodi/odi-metrics-tasks.png)](https://codeclimate.com/github/theodi/odi-metrics-tasks)
 
-This repository is for code for services that support the ODI's operation as an open organisation. Our aim is to publish open data as a mechanism to help us function more effectively, and to act as a demonstrator of both the technical and policy challenges.
-
-[Feature documentation](https://relishapp.com/theodi/open-orgn-services/docs) can be found on Relish.
+[Feature documentation](https://relishapp.com/theodi/odi-metrics-tasks/docs) can be found on Relish.
 
 Setup
 -----
 
 Add to gemfile:
 
-    gem 'open-orgn-services', :git => 'https://github.com/theodi/open-orgn-services.git'
+    gem 'odi-metrics-tasks', :git => 'https://github.com/theodi/odi-metrics-tasks.git'
 
 And require if necessary:
 
-    require 'open-orgn-services'
+    require 'odi-metrics-tasks'
 
 Configuration is loaded from environment variables. See the environment section below for the list of which variables must be set. The main one to make sure you add is `RESQUE_REDIS_SERVER`, which should be the hostname and port of the redis server where jobs should be queued.
 

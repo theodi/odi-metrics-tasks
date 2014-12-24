@@ -14,7 +14,7 @@ ENV['RACK_ENV'] = "test"
 
 $:.unshift File.dirname(__FILE__)+'../lib'
 require 'ignore_env'
-require 'open-orgn-services'
+require 'odi-metrics-tasks'
 
 VCR.configure do |c|
   # Automatically filter all secure details that are stored in the environment

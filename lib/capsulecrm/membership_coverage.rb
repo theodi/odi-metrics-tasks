@@ -1,7 +1,6 @@
 class MembershipCoverage
   @queue = :metrics
   
-  extend Observable
   extend CapsuleHelper
   extend MetricsHelper
   extend ProductHelper

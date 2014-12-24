@@ -23,7 +23,7 @@ end
 
 Spork.each_run do
   require 'ignore_env'
-  require 'open-orgn-services'
+  require 'odi-metrics-tasks'
 
   VCR.configure do |c|
     # Automatically filter all secure details that are stored in the environment

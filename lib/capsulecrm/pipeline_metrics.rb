@@ -1,7 +1,6 @@
 class PipelineMetrics
   @queue = :metrics
   
-  extend Observable
   extend CapsuleHelper
   extend MetricsHelper
   

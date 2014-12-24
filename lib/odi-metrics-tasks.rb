@@ -17,7 +17,6 @@ end
 
 # Require everything else in lib
 Dir.glob(File.expand_path("**/*.rb", File.dirname(__FILE__))).each do |inc|
-  puts inc
   require inc
 end
 

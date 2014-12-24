@@ -3,7 +3,15 @@ class MembershipCoverage
   
   extend CapsuleHelper
   extend MetricsHelper
-  extend ProductHelper
+  
+  def self.products
+    [
+      :supporter,
+      :member,
+      :sponsor,
+      :partner
+    ]
+  end
   
   def self.perform
 

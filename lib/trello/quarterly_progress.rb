@@ -1,4 +1,5 @@
 require 'trello'
+require 'trello/trello_boards'
 
 class QuarterlyProgress
   @queue = :metrics

@@ -1,3 +1,6 @@
+require 'trello/trello_boards'
+require 'trello/trello_board'
+
 class TrelloTasks
   @queue = :metrics
 

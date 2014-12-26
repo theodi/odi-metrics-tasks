@@ -8,7 +8,6 @@ describe Github::PullRequestMonitor, :vcr do
   end
 
   it "should store right value in metrics API" do
-    metrics_api_should_receive("github-total-pull-requests", @time, 3048)
     metrics_api_should_receive("github-open-pull-requests", @time, 34)
     # when this happens:
     Github::PullRequestMonitor.perform

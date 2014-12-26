@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rake'               , '~> 10.0', '>= 10.0.3'
   s.add_dependency 'resque'             , '~> 1.23', '>= 1.23.0'
-  s.add_dependency 'github_api'         , '~> 0.9' , '>= 0.9.0', '<= 0.10.1'
+  s.add_dependency 'github_api'         , '~> 0.12', '>= 0.12.2'
   s.add_dependency 'activemodel'        , '~> 3.2' , '>= 3.2.12'
   s.add_dependency 'ruby-trello'        , '~> 0.5' , '>= 0.5.1'
   s.add_dependency 'capsulecrm'

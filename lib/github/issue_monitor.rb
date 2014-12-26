@@ -8,10 +8,7 @@ class Github::IssueMonitor
     # Connect
     github = Github.connection
     # Count up stats across all repositories
-    open_issues = 0
-    github.repos.list(user: ENV['GITHUB_ORGANISATION']) do |repo|
-      open_issues += repo.open_issues_count
-    end
+    open_issues = github.search.issues(q: "is:open is:issue user:#{ENV['GITHUB_ORGANISATION']}").total_count
     # Push into metrics
     store_metric "github-open-issue-count", DateTime.now, open_issues
   rescue Faraday::Error::TimeoutError, Faraday::Error::ConnectionFailed

@@ -8,8 +8,8 @@ describe Github::WatchersForksMonitor, :vcr do
   end
 
   it "should store right value in metrics API" do
-    metrics_api_should_receive("github-watchers", @time, 20)
-    metrics_api_should_receive("github-forks", @time, 11)
+    metrics_api_should_receive("github-watchers", @time, 409)
+    metrics_api_should_receive("github-forks", @time, 194)
     # when this happens:
     Github::WatchersForksMonitor.perform
   end

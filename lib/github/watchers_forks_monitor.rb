@@ -10,7 +10,7 @@ class Github::WatchersForksMonitor
     # Count up stats across all repositories
     watchers = 0
     forks = 0
-    github.repos.list(user: ENV['GITHUB_ORGANISATION']) do |repo|
+    github.repos.list(user: ENV['GITHUB_ORGANISATION'], auto_pagination: true) do |repo|
       watchers += repo.watchers_count
       forks += repo.forks_count
     end

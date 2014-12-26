@@ -12,9 +12,9 @@ http_interactions:
       Accept-Charset:
       - utf-8
       User-Agent:
-      - Github Ruby Gem 0.10.1
+      - Github API Ruby Gem 0.12.2
       Authorization:
-      - Token token="<GITHUB_OAUTH_TOKEN>"
+      - token <GITHUB_OAUTH_TOKEN>
       Accept-Enc<METRICS_API_USERNAME>ng:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -28,7 +28,7 @@ http_interactions:
         R2l0SHViLmNvbQ==
       !binary "RGF0ZQ==":
       - !binary |-
-        V2VkLCAyNCBEZWMgMjAxNCAxMzowNzoxNyBHTVQ=
+        RnJpLCAyNiBEZWMgMjAxNCAyMToyNToyNiBHTVQ=
       !binary "Q29udGVudC1UeXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
@@ -40,16 +40,16 @@ http_interactions:
         NTAwMA==
       !binary "WC1SYXRlbGltaXQtUmVtYWluaW5n":
       - !binary |-
-        NDcxNA==
+        NDY0Mw==
       !binary "WC1SYXRlbGltaXQtUmVzZXQ=":
       - !binary |-
-        MTQxOTQyNzk2Mg==
+        MTQxOTYyOTU3MA==
       !binary "Q2FjaGUtQ29udHJvbA==":
       - !binary |-
         cHJpdmF0ZSwgbWF4LWFnZT02MCwgcy1tYXhhZ2U9NjA=
       !binary "RXRhZw==":
       - !binary |-
-        IjU0ODhkY2JiZTY5NjU1MmY5YjkxMWQ2Y2FmOTljNWM3Ig==
+        IjcyMzZmMTIyZWQzNTVkOTQ3YThkOTA0MzcyNGRlYjA3Ig==
       !binary "WC1PYXV0aC1TY29wZXM=":
       - !binary |-
         cmVwbw==
@@ -90,7 +90,7 @@ http_interactions:
         Kg==
       !binary "WC1HaXRodWItUmVxdWVzdC1JZA==":
       - !binary |-
-        RDkyQjM5OTE6NjM0RDo3MUQxNEI5OjU0OUFCQTg1
+        RDkyQjM5OTE6MkZENDpBQUQ3NDg3OjU0OUREMjQ2
       !binary "U3RyaWN0LVRyYW5zcG9ydC1TZWN1cml0eQ==":
       - !binary |-
         bWF4LWFnZT0zMTUzNjAwMDsgaW5jbHVkZVN1YmRvbWFpbnM7IHByZWxvYWQ=
@@ -99,29 +99,29 @@ http_interactions:
         bm9zbmlmZg==
       !binary "WC1TZXJ2ZWQtQnk=":
       - !binary |-
-        MDY1YjQzY2Q5Njc0MDkxZmVjNDhhMjIxYjQyMGZiYjM=
+        OGRkMTg1ZTQyMzk3NGE3ZTEzYWJiYmU2ZTA2MDAzMWU=
       !binary "VHJhbnNmZXItRW5jPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPm5n":
       - !binary |-
         Y2h1bmtlZA==
       !binary "TGFzdC1NPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPmZpZWQ=":
       - !binary |-
-        V2VkLCAyNCBEZWMgMjAxNCAxMjoxMToxOSBHTVQ=
+        RnJpLCAyNiBEZWMgMjAxNCAxNzoxNjo0OSBHTVQ=
       !binary "Q29udGVudC1FbmM8TUVUUklDU19BUElfVVNFUk5BTUU+bmc=":
       - !binary |-
         Z3ppcA==
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA5VSTa/aMBD8K8hnIImBIixV7aGXSpXehVMvkZPsS7Z1bMte
-        8/SK+O/dkPDx6KXc7PXs7M6Mj8K4Fq1QgjpwDYq5wEYoud7J7TafixQMv3VE
-        Pqos0x6XLVKXqmXt+syFNmbXvgDexfJ/G7IznMfBASw90TfiubGHvoLwROfU
-        cMzGw4k5fKoM1uXTVB/77hn1QZMOjzaci3HyLkUItbPEus82pmyy+8vh84qX
-        aiDWAT2hG3LhgtU98GnfwezFg519Y7bZdxsJKREwgFm8tu9C2WTMXFSc6ZQa
-        hzYGtOSwMoYaV+uJ+YezDY/gCHqNQ8w3Q8ZwVLHdXT1qMVIUiv/EqzPGvbH1
-        dze0PJHfOurNg/i7D3P9K3UATdCUmniszAu5KPJFvtnnOyU3qtj95FWSbz5g
-        1guGyfW+kKooJgy9+8GZl9Bqi39GYXNBjrQpfUC2HcpJCy/n3izP/Ld+qdwk
-        Nhh/lynqltmLT5t1LleDy8boygVNbtJeoTGsvLwY+Assfr35PfhpNId4vET4
-        GmDIK3pdM/Mq38qc93rc6HT6Cy1f4R2XAwAA
+        H4sIAAAAAAAAA5VSu47bMBD8FYO1bT38UEwgSIo0AQJc4yqNsJJ40iYUSZBL
+        Hy6G/z0rS36c08QduZyd3ZnhUWjbohFSUKdsg2IusBEyX+/yokjnInrNbx2R
+        CzJJwOGyRepitaxtn1jfhuTa55WzofzfhuQM53HqoAw90TfiubFXfaX8E51T
+        wzEZDyfmcLHSWJdPU33su2eEAxD4RxvOxTB5F4PytTXEus82xmSy+8vh84qX
+        alSoPTpCO+TCBQO94tO+U7MXp8zsG7PNvptASJEUA5jFgXkX0kSt56LiTKfU
+        OLQxoCWHlTBU2xom5h/WNDyCI+gBh5hvhozhyKzYXT1qMVAQkv/Eq9XavrH1
+        dzc0PJHfOur1g/i7D3P9K7VXQKopgXhsnmb5IksX6Waf7mS+kdnuJ68SXfMB
+        s14wLN/us0JmW7k+Y+jdDc68+BYM/hmFcdUS6NJ5ZNtVOWnh5eyb4Zn/1i+V
+        m8QGw+8yBmiZPdtuVp822eCy1lBZD2Qn7RVqzcrLi4G/lMGvN78HPzVwiMdL
+        hK9eDXkFBzUzr9IiT3mvx41Op7/JeL7HlwMAAA==
     http_version: 
-  recorded_at: Wed, 24 Dec 2014 13:07:16 GMT
+  recorded_at: Fri, 26 Dec 2014 21:25:25 GMT
 recorded_with: VCR 2.9.3

@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'google_drive'       , '~> 0.3' , '>= 0.3.6'
   s.add_dependency 'curb'               , '~> 0.8' , '>= 0.8.6'
   
+  s.add_development_dependency 'coveralls'
   s.add_development_dependency 'cucumber'         , '~> 1.2'
   s.add_development_dependency 'dotenv'           , '~> 0.5'
   s.add_development_dependency 'guard-cucumber'   , '~> 1.3'
@@ -31,7 +32,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rb-fsevent'       , '~> 0.9'
   s.add_development_dependency 'relish'           , '~> 0.6'
   s.add_development_dependency 'rspec'            , '~> 2.12'
-  s.add_development_dependency 'simplecov-rcov'   , '~> 0.2'
   s.add_development_dependency 'timecop'          , '~> 0.5'
   s.add_development_dependency 'vcr'              , '~> 2.9' 
   s.add_development_dependency 'webmock'          , '1.9.3'

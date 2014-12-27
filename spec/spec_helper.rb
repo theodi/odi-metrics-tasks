@@ -1,14 +1,12 @@
+require 'coveralls'
+Coveralls.wear_merged!
+
 require 'vcr'
 require 'dotenv'
 require 'timecop'
 require 'pry'
 
 Dotenv.load
-
-require 'simplecov'
-require 'simplecov-rcov'
-SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
-SimpleCov.start
 
 ENV['RACK_ENV'] = "test"
 

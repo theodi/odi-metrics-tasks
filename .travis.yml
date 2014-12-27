@@ -25,14 +25,22 @@ env:
   - METRICS_API_USERNAME: odi
   - METRICS_API_PASSWORD: somethingsecret
   - METRICS_API_BASE_URL: https://metrics.theodi.org/
-  - HUBOT_USER_LIST: 'http://hubot.theodi.org/hubot/irc'
-  - AIRBRAKE_API_KEY: somethingmadeup    
-  - GITHUB_ORGANISATION: 'theodi'
-  - GITHUB_OAUTH_TOKEN: 'oauth_token'
+  - HUBOT_USER_LIST: http://hubot.theodi.org/hubot/irc
+  - AIRBRAKE_API_KEY: somethingmadeup
+  - GITHUB_ORGANISATION: theodi
+  - GITHUB_OAUTH_TOKEN: oauth_token
   - GAPPS_USER_EMAIL: nobody@example.com
   - GAPPS_PASSWORD: not_a_real_password
-  - CAPSULECRM_ACCOUNT_NAME: 'whoever'
-  - CAPSULECRM_API_TOKEN: 'password'
-  - PRECISEMEDIA_FEED_URL: 'http://example.com/feed'
-  - TRELLO_DEV_KEY: 'trello_dev_key'
-  - TRELLO_MEMBER_KEY: 'trello_member_key'
+  - CAPSULECRM_ACCOUNT_NAME: whoever
+  - CAPSULECRM_API_TOKEN: password
+  - PRECISEMEDIA_FEED_URL: http://example.com/feed
+  - TRELLO_DEV_KEY: trello_dev_key
+  - TRELLO_MEMBER_KEY: trello_member_key
+deploy:
+  provider: rubygems
+  api_key:
+    secure: RcZJA+EL+q9Wrytm1wuF+axx86XDM0Smclkanceueyv0IC9VGS/nCdQBz999ywS6KGZQTVkb0tK2olaAnSI1iIo3LBf+/XIGkt0Kw3fc03PFo3nHl1XQmk/2t/m/HE0SETeNla0HP3zJvzzjeLraug2AX8zi4qhEvVrXzipAHec=
+  gem: odi-metrics-tasks
+  on:
+    tags: true
+    repo: theodi/odi-metrics-tasks

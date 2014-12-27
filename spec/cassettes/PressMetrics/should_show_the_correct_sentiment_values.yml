@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://socialfeed.precise.co.uk/<METRICS_API_USERNAME>.aspx?UserID=FFRSEREE66
+    uri: <PRECISEMEDIA_FEED_URL>
     body:
       encoding: US-ASCII
       string: ''

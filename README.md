@@ -8,8 +8,6 @@
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://theodi.mit-license.org)
 [![Badges](http://img.shields.io/:badges-7/7-ff6799.svg)](https://github.com/badges/badgerbadgerbadger)
 
-[Feature documentation](https://relishapp.com/theodi/odi-metrics-tasks/docs) can be found on Relish.
-
 Setup
 -----
 

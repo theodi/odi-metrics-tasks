@@ -17,7 +17,7 @@ And require if necessary:
 
     require 'odi-metrics-tasks'
 
-Configuration is loaded from environment variables. See the environment section below for the list of which variables must be set. The main one to make sure you add is `RESQUE_REDIS_SERVER`, which should be the hostname and port of the redis server where jobs should be queued.
+Configuration is loaded from environment variables. See the environment section below for the list of which variables must be set.
 
 License
 -------

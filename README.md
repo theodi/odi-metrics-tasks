@@ -15,7 +15,7 @@ Setup
 
 Add to gemfile:
 
-    gem 'odi-metrics-tasks', :git => 'https://github.com/theodi/odi-metrics-tasks.git'
+    gem 'odi-metrics-tasks'
 
 And require if necessary:
 

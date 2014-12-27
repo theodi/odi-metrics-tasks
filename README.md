@@ -1,8 +1,12 @@
 # ODI Metrics Tasks
 
-[![Build Status](http://jenkins.theodi.org/job/odi-metrics-tasks-master/badge/icon)](http://jenkins.theodi.org/job/odi-metrics-tasks-master/)
-[![Dependency Status](https://gemnasium.com/theodi/odi-metrics-tasks.png)](https://gemnasium.com/theodi/odi-metrics-tasks)
-[![Code Climate](https://codeclimate.com/github/theodi/odi-metrics-tasks.png)](https://codeclimate.com/github/theodi/odi-metrics-tasks)
+[![Build Status](http://img.shields.io/travis/theodi/odi-metrics-tasks.svg)](https://travis-ci.org/theodi/odi-metrics-tasks)
+[![Dependency Status](http://img.shields.io/gemnasium/theodi/odi-metrics-tasks.svg)](https://gemnasium.com/theodi/odi-metrics-tasks)
+[![Coverage Status](http://img.shields.io/coveralls/theodi/odi-metrics-tasks.svg)](https://coveralls.io/r/theodi/odi-metrics-tasks)
+[![Code Climate](http://img.shields.io/codeclimate/github/theodi/odi-metrics-tasks.svg)](https://codeclimate.com/github/theodi/odi-metrics-tasks)
+[![Gem Version](http://img.shields.io/gem/v/odi-metrics-tasks.svg)](https://rubygems.org/gems/odi-metrics-tasks)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://theodi.mit-license.org)
+[![Badges](http://img.shields.io/:badges-7/7-ff6799.svg)](https://github.com/badges/badgerbadgerbadger)
 
 [Feature documentation](https://relishapp.com/theodi/odi-metrics-tasks/docs) can be found on Relish.
 

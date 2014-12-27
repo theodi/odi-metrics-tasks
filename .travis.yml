@@ -37,4 +37,5 @@ deploy:
   gem: odi-metrics-tasks
   on:
     tags: true
+    branch: master
     repo: theodi/odi-metrics-tasks

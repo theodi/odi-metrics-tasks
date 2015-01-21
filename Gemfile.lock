@@ -126,14 +126,14 @@ GEM
       fog-core (>= 1.21.0)
       fog-json
       fog-xml (>= 0.0.1)
-    fog-sakuracloud (0.1.1)
+    fog-sakuracloud (1.0.0)
       fog-core
       fog-json
     fog-serverlove (0.1.1)
       fog-core
       fog-json
-    fog-softlayer (0.3.28)
-      fog-core (>= 1.27.3)
+    fog-softlayer (0.3.30)
+      fog-core
       fog-json
     fog-storm_on_demand (0.1.0)
       fog-core

@@ -1,9 +1,10 @@
 GIT
   remote: git://github.com/theodi/google-drive-ruby.git
-  revision: 2ac538abec2dfc3ae45079946fbb2bd4f68970ba
-  branch: support-ranges
+  revision: 8e0deae892b6aace66736654977efc3f2e7cd408
+  branch: 1.0.1
   specs:
-    google_drive (0.3.6)
+    google_drive (1.0.0)
+      google-api-client (>= 0.7.0)
       nokogiri (>= 1.4.4, != 1.5.2, != 1.5.1)
       oauth (>= 0.3.6)
       oauth2 (>= 0.5.0)
@@ -26,7 +27,7 @@ PATH
       curb (~> 0.8, >= 0.8.6)
       fog (~> 1.12, >= 1.12.1)
       github_api (~> 0.12, >= 0.12.2)
-      google_drive (~> 0.3, >= 0.3.6)
+      google-api-client (>= 0.7.0)
       httparty
       rake (~> 10.0, >= 10.0.3)
       resque (~> 1.23, >= 1.23.0)
@@ -35,19 +36,23 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    CFPropertyList (2.3.0)
+    CFPropertyList (2.3.1)
     activemodel (3.2.21)
       activesupport (= 3.2.21)
       builder (~> 3.0.0)
     activesupport (3.2.21)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
-    addressable (2.3.7)
+    addressable (2.3.8)
+    autoparse (0.3.3)
+      addressable (>= 2.3.1)
+      extlib (>= 0.9.15)
+      multi_json (>= 1.0.0)
     builder (3.0.4)
-    childprocess (0.5.5)
+    childprocess (0.5.6)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
-    coveralls (0.7.11)
+    coveralls (0.8.0)
       multi_json (~> 1.10)
       rest-client (>= 1.6.8, < 2)
       simplecov (~> 0.9.1)
@@ -61,7 +66,7 @@ GEM
       gherkin (~> 2.12)
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.2)
-    curb (0.8.6)
+    curb (0.8.8)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
@@ -69,19 +74,22 @@ GEM
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
-    excon (0.44.3)
+    excon (0.45.1)
+    extlib (0.9.16)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.6)
+    ffi (1.9.8)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
-    fog (1.28.0)
+    fog (1.29.0)
       fog-atmos
       fog-aws (~> 0.0)
       fog-brightbox (~> 0.4)
-      fog-core (~> 1.27, >= 1.27.3)
+      fog-core (~> 1.27, >= 1.27.4)
       fog-ecloud
       fog-json
+      fog-local
+      fog-powerdns (>= 0.1.1)
       fog-profitbricks
       fog-radosgw (>= 0.0.2)
       fog-riakcs
@@ -98,7 +106,7 @@ GEM
     fog-atmos (0.1.0)
       fog-core
       fog-xml
-    fog-aws (0.1.1)
+    fog-aws (0.1.2)
       fog-core (~> 1.27)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
@@ -107,23 +115,30 @@ GEM
       fog-core (~> 1.22)
       fog-json
       inflecto (~> 0.0.2)
-    fog-core (1.29.0)
+    fog-core (1.30.0)
       builder
-      excon (~> 0.38)
+      excon (~> 0.45)
       formatador (~> 0.2)
       mime-types
       net-scp (~> 1.1)
       net-ssh (>= 2.1.3)
-    fog-ecloud (0.0.2)
+    fog-ecloud (0.1.1)
       fog-core
       fog-xml
-    fog-json (1.0.0)
+    fog-json (1.0.1)
+      fog-core (~> 1.0)
       multi_json (~> 1.0)
-    fog-profitbricks (0.0.1)
+    fog-local (0.2.1)
+      fog-core (~> 1.27)
+    fog-powerdns (0.1.1)
+      fog-core (~> 1.27)
+      fog-json (~> 1.0)
+      fog-xml (~> 0.1)
+    fog-profitbricks (0.0.2)
       fog-core
       fog-xml
       nokogiri
-    fog-radosgw (0.0.3)
+    fog-radosgw (0.0.4)
       fog-core (>= 1.21.0)
       fog-json
       fog-xml (>= 0.0.1)
@@ -131,28 +146,28 @@ GEM
       fog-core
       fog-json
       fog-xml
-    fog-sakuracloud (1.0.0)
+    fog-sakuracloud (1.0.1)
       fog-core
       fog-json
-    fog-serverlove (0.1.1)
+    fog-serverlove (0.1.2)
       fog-core
       fog-json
-    fog-softlayer (0.4.1)
+    fog-softlayer (0.4.5)
       fog-core
       fog-json
-    fog-storm_on_demand (0.1.0)
+    fog-storm_on_demand (0.1.1)
       fog-core
       fog-json
-    fog-terremark (0.0.4)
+    fog-terremark (0.1.0)
       fog-core
       fog-xml
-    fog-vmfusion (0.0.1)
+    fog-vmfusion (0.1.0)
       fission
       fog-core
-    fog-voxel (0.0.2)
+    fog-voxel (0.1.0)
       fog-core
       fog-xml
-    fog-xml (0.1.1)
+    fog-xml (0.1.2)
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
     formatador (0.2.5)
@@ -166,20 +181,40 @@ GEM
       multi_json (>= 1.7.5, < 2.0)
       nokogiri (~> 1.6.3)
       oauth2
+    google-api-client (0.8.6)
+      activesupport (>= 3.2)
+      addressable (~> 2.3)
+      autoparse (~> 0.3)
+      extlib (~> 0.9)
+      faraday (~> 0.9)
+      googleauth (~> 0.3)
+      launchy (~> 2.4)
+      multi_json (~> 1.10)
+      retriable (~> 1.4)
+      signet (~> 0.6)
+    googleauth (0.4.0)
+      faraday (~> 0.9)
+      jwt (~> 1.4)
+      logging (~> 1.8)
+      memoist (~> 0.11)
+      multi_json (= 1.11)
+      signet (~> 0.6)
     guard (1.8.3)
       formatador (>= 0.2.4)
       listen (~> 1.3)
       lumberjack (>= 1.0.2)
       pry (>= 0.9.10)
       thor (>= 0.14.6)
-    guard-cucumber (1.4.1)
-      cucumber (>= 1.2.0)
-      guard (>= 1.1.0)
+    guard-compat (1.2.1)
+    guard-cucumber (1.5.4)
+      cucumber (>= 1.3.0)
+      guard-compat (~> 1.0)
+      nenv (~> 0.1)
     guard-spork (1.5.2)
       childprocess (>= 0.2.3)
       guard (~> 1.1)
       spork (>= 0.8.4)
-    hashie (3.4.0)
+    hashie (3.4.1)
     httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -187,20 +222,28 @@ GEM
     inflecto (0.0.2)
     ipaddress (0.8.0)
     json (1.8.2)
-    jwt (1.3.0)
+    jwt (1.4.1)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     listen (1.3.1)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
+    little-plugger (1.1.3)
+    logging (1.8.2)
+      little-plugger (>= 1.1.3)
+      multi_json (>= 1.8.4)
     lumberjack (1.0.9)
+    memoist (0.12.0)
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.2)
     mono_logger (1.1.0)
-    multi_json (1.10.1)
+    multi_json (1.11.0)
     multi_test (0.1.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    nenv (0.2.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
@@ -229,7 +272,7 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     redis (3.2.1)
-    redis-namespace (1.5.1)
+    redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
     resque (1.25.2)
       mono_logger (~> 1.0)
@@ -240,6 +283,7 @@ GEM
     rest-client (1.6.8)
       mime-types (~> 1.16)
       rdoc (>= 2.4.2)
+    retriable (1.4.1)
     rspec (2.99.0)
       rspec-core (~> 2.99.0)
       rspec-expectations (~> 2.99.0)
@@ -255,22 +299,28 @@ GEM
       oauth (~> 0.4.5)
       rest-client (~> 1.6.7)
     safe_yaml (1.0.4)
+    signet (0.6.0)
+      addressable (~> 2.3)
+      extlib (~> 0.9)
+      faraday (~> 0.9)
+      jwt (~> 1.0)
+      multi_json (~> 1.10)
     simplecov (0.9.2)
       docile (~> 1.1.0)
       multi_json (~> 1.0)
       simplecov-html (~> 0.9.0)
     simplecov-html (0.9.0)
-    sinatra (1.4.5)
+    sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
-      tilt (~> 1.3, >= 1.3.4)
+      tilt (>= 1.3, < 3)
     slop (3.6.0)
     spork (0.9.2)
     term-ansicolor (1.3.0)
       tins (~> 1.0)
     thor (0.19.1)
-    thread_safe (0.3.4)
-    tilt (1.4.1)
+    thread_safe (0.3.5)
+    tilt (2.0.1)
     timecop (0.7.3)
     tins (1.3.5)
     vcr (2.9.3)

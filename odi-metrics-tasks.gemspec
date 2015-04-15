@@ -1,6 +1,6 @@
 lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
- 
+
 Gem::Specification.new do |s|
   s.name        = "odi-metrics-tasks"
   s.version     = "0.1.0"
@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["tech@theodi.org"]
   s.homepage    = "http://github.com/theodi/odi-metrics-tasks"
   s.summary     = "Resque tasks for ODI metrics collection"
- 
+
   s.required_rubygems_version = ">= 1.8.24"
 
   s.add_dependency 'rake'               , '~> 10.0', '>= 10.0.3'
@@ -20,9 +20,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'capsulecrm'
   s.add_dependency 'fog'                , '~> 1.12', '>= 1.12.1'
   s.add_dependency 'httparty'
-  s.add_dependency 'google_drive'       , '~> 0.3' , '>= 0.3.6'
+  s.add_dependency 'google-api-client'  , '>= 0.7.0'
   s.add_dependency 'curb'               , '~> 0.8' , '>= 0.8.6'
-  
+
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'cucumber'         , '~> 1.2'
   s.add_development_dependency 'dotenv'           , '~> 0.5'
@@ -32,11 +32,9 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rb-fsevent'       , '~> 0.9'
   s.add_development_dependency 'rspec'            , '~> 2.12'
   s.add_development_dependency 'timecop'          , '~> 0.5'
-  s.add_development_dependency 'vcr'              , '~> 2.9' 
+  s.add_development_dependency 'vcr'              , '~> 2.9'
   s.add_development_dependency 'webmock'          , '1.9.3'
 
   s.files        = Dir.glob("{lib}/**/*") + %w(LICENSE.md README.md)
   s.require_path = 'lib'
 end
-
-

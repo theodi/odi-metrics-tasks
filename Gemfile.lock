@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/theodi/google-drive-ruby.git
-  revision: 8e0deae892b6aace66736654977efc3f2e7cd408
+  revision: fb89a30d145d6ba6d08c2ef45f058c273a0f3de6
   branch: 1.0.1
   specs:
     google_drive (1.0.0)

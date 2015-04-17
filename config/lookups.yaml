@@ -81,12 +81,12 @@ cell_lookups:
       document: dashboard
     Active Reach:
       cell_ref: E3
-      sheet: For board slides
+      sheet: Dashboard
       document: reach
       multiplier: 1
     Passive Reach:
       cell_ref: E8
-      sheet: For board slides
+      sheet: Dashboard
       document: reach
       multiplier: 1
     Value unlocked:
@@ -333,6 +333,6 @@ cell_lookups:
 
     People trained:
       cell_ref: E4
-      sheet: For board slides
+      sheet: Dashboard
       document: reach
       multiplier: 1

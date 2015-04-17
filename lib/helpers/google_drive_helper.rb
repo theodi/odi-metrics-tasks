@@ -1,4 +1,5 @@
 require 'google_drive'
+require 'google_drive/auth'
 require 'yaml'
 
 module GoogleDriveHelper
@@ -39,7 +40,7 @@ module GoogleDriveHelper
   end
 
   def google_drive
-    GoogleDrive.login(ENV['GAPPS_USER_EMAIL'], ENV['GAPPS_PASSWORD'])
+    @@google_drive ||= GoogleDriveAuth.new.session
   end
 
   def metrics_spreadsheet(doc_name)
@@ -52,7 +53,7 @@ module GoogleDriveHelper
     metrics_spreadsheet(doc_name).worksheet_by_title worksheet_name.to_s
   end
 
-  def cell_location year, identifier  
+  def cell_location year, identifier
     year = Date.today.year if year.nil?
     @@lookups['cell_lookups'][year][identifier] rescue nil
   end
@@ -63,7 +64,7 @@ module GoogleDriveHelper
     multiplier = location['multiplier'] || @@lookups['default_multiplier']
     block.call(metrics_worksheet(location["document"], location["sheet"])[location[ref]]) * multiplier
   end
-  
+
   def metrics_sum(metrics, block)
     total = 0
     metrics.each do |metric|

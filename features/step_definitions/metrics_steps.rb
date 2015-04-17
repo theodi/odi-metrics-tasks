@@ -7,4 +7,3 @@ Then(/^the following data should be stored in the "(.*?)" metric$/) do |metric, 
       once
   HTTParty.should_receive(:post).any_number_of_times
 end
-

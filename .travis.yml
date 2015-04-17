@@ -30,6 +30,11 @@ env:
   - PRECISEMEDIA_FEED_URL: http://example.com/feed
   - TRELLO_DEV_KEY: trello_dev_key
   - TRELLO_MEMBER_KEY: trello_member_key
+  - GAPPS_CLIENT_ID: whevs
+  - GAPPS_CLIENT_SECRET: fooobar
+  - GAPPS_ACCESS_TOKEN: i-dont-care
+  - GAPPS_REFRESH_TOKEN: there-must-be-a-better-way-of-doing-this
+  - GAPPS_SERVICE_ACCOUNT_EMAIL: foo@bar.com
 deploy:
   provider: rubygems
   api_key:

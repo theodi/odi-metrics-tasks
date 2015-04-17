@@ -6,4 +6,4 @@ gemspec
 
 # These should be grabbed from git, not rubygems, as we have our own fixes
 gem 'capsulecrm', github: 'xmacinka/capsulecrm'
-gem 'google_drive', github: 'theodi/google-drive-ruby', branch: 'support-ranges'
+gem 'google_drive', github: 'theodi/google-drive-ruby', branch: '1.0.1'

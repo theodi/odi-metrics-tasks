@@ -24,30 +24,30 @@ describe NetworkMetrics do
 
   it "should show the correct cumulative reach", :vcr do
     NetworkMetrics.reach.should == {
-      :total   => 639817,
+      :total   => 542050,
       :breakdown => {
-        :active  => 20538,
-        :passive => 619279,
+        :active  => 13790,
+        :passive => 528260,
       }
     }
   end
 
   it "should show the correct reach for 2013", :vcr do
     NetworkMetrics.reach(2013).should == {
-      :total   => 303396,
+      :total   => 302,
       :breakdown => {
-        :active  => 10526,
-        :passive => 292870,
+        :active  => 10,
+        :passive => 292,
       }
     }
   end
 
   it "should show the correct reach for 2014", :vcr do
     NetworkMetrics.reach(2014).should == {
-      :total   => 336421,
+      :total   => 541748,
       :breakdown => {
-        :active  => 10012,
-        :passive => 326409,
+        :active  => 13780,
+        :passive => 527968,
       }
     }
   end
@@ -65,7 +65,7 @@ describe NetworkMetrics do
     # total is new, added as a single number from the "People trained" metric
     # if set.
     NetworkMetrics.people_trained(2014, 2).should == {
-        total: 497,
+        total: 702,
         commercial:     {
             actual:        34,
             annual_target: 190,
@@ -80,7 +80,7 @@ describe NetworkMetrics do
   end
 
   it "should show the cumulative number of people trained", :vcr do
-    NetworkMetrics.people_trained(nil, nil).should == 731
+    NetworkMetrics.people_trained(nil, nil).should == 936
   end
 
   it "should show correct network size", :vcr do

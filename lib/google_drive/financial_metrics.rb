@@ -32,7 +32,7 @@ class FinancialMetrics
     if year.nil?
       years.inject(0) { |total, year| total += value(year) }
     else
-      metrics_cell('Value unlocked', year, Proc.new {|x| x.to_i })
+      metrics_cell('Value unlocked', year, Proc.new {|x| integize(x) })
     end
   end
 
@@ -45,7 +45,7 @@ class FinancialMetrics
   end
 
   def self.bookings(year)
-    block = Proc.new { |x| x.to_f }
+    block = Proc.new { |x| integize(x) }
     if year.nil?
       metrics_sum([
         ['Total bookings', 2014],
@@ -58,7 +58,7 @@ class FinancialMetrics
 
   def self.income(year, month)
     if year.nil? && month.nil?
-      block = Proc.new { |x| x.to_i }
+      block = Proc.new { |x| integize(x) }
       metrics_sum([
         ['Income', 2014],
         ['Income', 2013]

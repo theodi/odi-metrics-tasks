@@ -48,9 +48,9 @@ describe FinancialMetrics do
 
   it "should show income", :vcr do
     FinancialMetrics.income(2014, 2).should == {
-      actual:        301840.783333333,
-      annual_target: 2935183.33333333,
-      ytd_target:    173153.3333333333,
+      actual:        302000.0,
+      annual_target: 2935000.0,
+      ytd_target:    173000.0,
     }
   end
 

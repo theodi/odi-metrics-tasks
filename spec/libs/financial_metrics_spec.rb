@@ -41,7 +41,7 @@ describe FinancialMetrics do
   it "should show total grant funding", :vcr do
     FinancialMetrics.grant_funding(2014, 2).should == {
       actual:        330000.0,
-      annual_target: 3000.0,
+      annual_target: 3355000.0,
       ytd_target:    374000.0,
     }
   end
@@ -49,7 +49,7 @@ describe FinancialMetrics do
   it "should show income", :vcr do
     FinancialMetrics.income(2014, 2).should == {
       actual:        302000.0,
-      annual_target: 2000.0,
+      annual_target: 2935000.0,
       ytd_target:    173000.0,
     }
   end
@@ -71,7 +71,7 @@ describe FinancialMetrics do
       research: {
         commercial:     {
           actual:        26000.0,
-          annual_target: 1000.0,
+          annual_target: 1500000.0,
           ytd_target:    0.0,
         },
         non_commercial: {
@@ -94,12 +94,12 @@ describe FinancialMetrics do
       },
       projects: {
         commercial:     {
-          actual:        1000.0,
+          actual:        1175000.0,
           annual_target: 450000.0,
           ytd_target:    0.0,
         },
         non_commercial: {
-          actual:        1000.0,
+          actual:        1039000.0,
           annual_target: 500000.0,
           ytd_target:    50000.0,
         }
@@ -137,7 +137,7 @@ describe FinancialMetrics do
     FinancialMetrics.ebitda(2014, 6).should == {
       actual:        -944000.0,
       latest:        -253000.0,
-      annual_target: -3000.0,
+      annual_target: -3684000.0,
       ytd_target:    -2496000.0,
     }
   end
@@ -145,8 +145,8 @@ describe FinancialMetrics do
   it "should load total cost information", :vcr do
 
     FinancialMetrics.total_costs(2014, 2).should == {
-      :actual => 37000.0,
-      :annual_target => 5000.0,
+      :actual => 1245000.0,
+      :annual_target => 6620000.0,
       :ytd_target => 1380000.0,
       :breakdown => {
         :variable => {
@@ -174,7 +174,7 @@ describe FinancialMetrics do
         :fixed => {
           :staff => {
             :actual => 662000.0,
-            :annual_target => 2000.0,
+            :annual_target => 2113000.0,
             :ytd_target => 277000.0
           },
           :associates => {

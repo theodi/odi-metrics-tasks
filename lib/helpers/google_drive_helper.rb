@@ -16,9 +16,9 @@ module GoogleDriveHelper
     ytd_method = location['ytd_method'] || @@lookups['default_ytd_method']
     ytd_aggregator = case ytd_method
     when "sum"
-      Proc.new {|x| x.inject(0.0){|sum,val| sum + val.to_f}}
+      Proc.new { |x| x.inject(0.0){|sum,val| sum + floatize(val) }}
     when "latest"
-      Proc.new {|x| x.last.to_f}
+      Proc.new { |x| floatize(x.last) }
     end
     multiplier = location['multiplier'] || @@lookups['default_multiplier']
     data = {}

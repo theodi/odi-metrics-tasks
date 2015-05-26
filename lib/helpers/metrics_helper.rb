@@ -18,12 +18,19 @@ module MetricsHelper
 
   end
 
-  def integize(cell)
+  def strip_number(cell)
     if cell.class == String
-      cell.gsub(/[^\d\.\-]/, '').to_i
+      cell.gsub(/[^\d\.\-]/, '')
     else
-      cell.to_i
+      cell
     end
   end
 
+  def integize(cell)
+    strip_number(cell).to_i
+  end
+
+  def floatize(cell)
+    strip_number(cell).to_f
+  end
 end

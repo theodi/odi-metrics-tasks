@@ -36,23 +36,23 @@ class NetworkMetrics
       end
     else
       {
-        total:   metrics_cell("Active Reach", year, Proc.new {|x| x.to_i}) + 
-                 metrics_cell("Passive Reach", year, Proc.new {|x| x.to_i}),
+        total:   metrics_cell("Active Reach", year, Proc.new { |x| integize(x) }) +
+                 metrics_cell("Passive Reach", year, Proc.new { |x| integize(x) }),
         breakdown: {
-          active:  metrics_cell("Active Reach", year, Proc.new {|x| x.to_i}),
-          passive: metrics_cell("Passive Reach", year, Proc.new {|x| x.to_i}),
+          active:  metrics_cell("Active Reach", year, Proc.new { |x| integize(x) }),
+          passive: metrics_cell("Passive Reach", year, Proc.new { |x| integize(x) }),
         }
       }
     end
   end
 
   def self.pr_pieces(year)
-    block = Proc.new { |x| x.to_i }
+    block = Proc.new { |x| integize(x) }
     metrics_cell('PR Pieces', year, block)
   end
 
   def self.events_hosted(year)
-    block = Proc.new { |x| x.to_i }
+    block = Proc.new { |x| integize(x) }
     metrics_cell('Events hosted', year, block)
   end
 
@@ -62,7 +62,7 @@ class NetworkMetrics
         memo += trained[:total]
       end
     else
-      block = Proc.new { |x| x.to_i }
+      block = Proc.new { |x| integize(x) }
       h     = {
           commercial:     'Commercial people trained',
           non_commercial: 'Non-commercial people trained'
@@ -78,7 +78,7 @@ class NetworkMetrics
   end
 
   def self.network_size(year, month)
-    block = Proc.new { |x| x.to_i }
+    block = Proc.new { |x| integize(x) }
     if year.nil? && month.nil?
       years.inject(0) do |memo, year|
         memo += metrics_cell('Network size', year, block)

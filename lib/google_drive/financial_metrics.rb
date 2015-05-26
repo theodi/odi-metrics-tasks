@@ -82,7 +82,7 @@ class FinancialMetrics
         :projects,
         :network
     ].map do |item|
-      [item, extract_metric(
+      [item, extract_metrics(
           {
               commercial: "Commercial #{item.to_s} bookings",
               non_commercial: "Non-commercial #{item.to_s} bookings"
@@ -114,14 +114,14 @@ class FinancialMetrics
   def self.total_costs(year, month)
     block = Proc.new { |x| x.to_f }
     breakdown = {
-      variable: extract_metric(
+      variable: extract_metrics(
                     {
                         research: 'Research costs',
                         training: 'Training costs',
                         projects: 'Projects costs',
                         network:  'Network costs'
                     }, year, month, block),
-      fixed:    extract_metric(
+      fixed:    extract_metrics(
                     {
                         staff:                  'Staff costs',
                         associates:             'Associate costs',

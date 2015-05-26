@@ -70,18 +70,17 @@ class NetworkMetrics
   def self.people_trained(year, month)
     if year.nil? && month.nil?
       years.map{|year| people_trained(year, 12)}.inject(0) do |memo, trained|
-        memo += trained[:total]
+        memo += trained[:total].is_a?(Hash) ? trained[:total][:actual] : trained[:total]
       end
     else
       block = Proc.new { |x| integize(x) }
       h     = {
-          commercial:     'Commercial people trained',
-          non_commercial: 'Non-commercial people trained'
+        commercial:     'Commercial people trained',
+        non_commercial: 'Non-commercial people trained',
+        total:          'People trained',
       }
       data = extract_metrics h, year, month, block
-      if cell_location(year, "People trained")
-        data[:total] = metrics_cell('People trained', year, block)
-      else
+      if not data.has_key?(:total)
         data[:total] = data[:commercial][:actual] + data[:non_commercial][:actual]
       end
       data

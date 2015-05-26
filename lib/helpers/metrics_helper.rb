@@ -20,7 +20,7 @@ module MetricsHelper
 
   def integize(cell)
     if cell.class == String
-      cell.gsub(/[^\d|\.]/, '').to_i
+      cell.gsub(/[^\d\.\-]/, '').to_i
     else
       cell.to_i
     end

@@ -41,21 +41,21 @@ describe FinancialMetrics do
   it "should show total grant funding", :vcr do
     FinancialMetrics.grant_funding(2014, 2).should == {
       actual:        330000.0,
-      annual_target: 3354617.6046176003,
-      ytd_target:    373917.748917748,
+      annual_target: 3000.0,
+      ytd_target:    374000.0,
     }
   end
 
   it "should show income", :vcr do
     FinancialMetrics.income(2014, 2).should == {
-      actual:        301840.783333333,
-      annual_target: 2935183.33333333,
-      ytd_target:    173153.3333333333,
+      actual:        302000.0,
+      annual_target: 2000.0,
+      ytd_target:    173000.0,
     }
   end
 
   it "should show cumulative income", :vcr do
-    FinancialMetrics.income(nil, nil).should == 304123
+    FinancialMetrics.income(nil, nil).should == 305123
   end
 
   it "should show cash reserves", :vcr do
@@ -71,7 +71,7 @@ describe FinancialMetrics do
       research: {
         commercial:     {
           actual:        26000.0,
-          annual_target: 1500000.0,
+          annual_target: 1000.0,
           ytd_target:    0.0,
         },
         non_commercial: {
@@ -82,38 +82,38 @@ describe FinancialMetrics do
       },
       training: {
         commercial:     {
-          actual:        13182.95,
-          annual_target: 128120.0,
-          ytd_target:    17360.0,
+          actual:        13000.0,
+          annual_target: 128000.0,
+          ytd_target:    17000.0,
         },
         non_commercial: {
-          actual:        133387.0,
-          annual_target: 180780.0,
-          ytd_target:    14580.0,
+          actual:        133000.0,
+          annual_target: 181000.0,
+          ytd_target:    14000.0,
         }
       },
       projects: {
         commercial:     {
-          actual:        1175000.0,
+          actual:        1000.0,
           annual_target: 450000.0,
           ytd_target:    0.0,
         },
         non_commercial: {
-          actual:        1039000.0,
+          actual:        1000.0,
           annual_target: 500000.0,
           ytd_target:    50000.0,
         }
       },
       network:  {
         commercial:     {
-          actual:        245250.0,
-          annual_target: 874480.0,
-          ytd_target:    141440.0,
+          actual:        245000.0,
+          annual_target: 874000.0,
+          ytd_target:    142000.0,
         },
         non_commercial: {
           actual:        39000.0,
-          annual_target: 45200.0,
-          ytd_target:    25200.0,
+          annual_target: 45000.0,
+          ytd_target:    25000.0,
         }
       }
     }
@@ -135,69 +135,77 @@ describe FinancialMetrics do
 
   it "should load EBITDA information", :vcr do
     FinancialMetrics.ebitda(2014, 6).should == {
-      actual:        -943159.2166666667,
-      latest:        -253020.0,
-      annual_target: -3684411.3333333298,
-      ytd_target:    -2496414.3333333326,
+      actual:        -944000.0,
+      latest:        -253000.0,
+      annual_target: -3000.0,
+      ytd_target:    -2496000.0,
     }
   end
 
   it "should load total cost information", :vcr do
 
     FinancialMetrics.total_costs(2014, 2).should == {
-      :actual => 1245000.0,
-      :annual_target => 6619594.66666667,
-      :ytd_target => 1380368.6666666674,
+      :actual => 37000.0,
+      :annual_target => 5000.0,
+      :ytd_target => 1380000.0,
       :breakdown => {
         :variable => {
           :research => {
             :actual => 6000.0,
-            :annual_target => 447916.66666666704,
+            :annual_target => 448000.0,
             :ytd_target => 0.0
           },
           :training => {
             :actual => 8000.0,
-            :annual_target => 123560.0,
-            :ytd_target=>12776.0
+            :annual_target => 124000.0,
+            :ytd_target=>13000.0
           },
           :projects => {
             :actual => 10000.0,
-            :annual_target => 397925.0,
-            :ytd_target => 21633.3333333334
+            :annual_target => 398000.0,
+            :ytd_target => 22000.0
           },
           :network => {
             :actual => 12000.0,
-            :annual_target => 100695.0,
-            :ytd_target => 10187.999999999998
+            :annual_target => 101000.0,
+            :ytd_target => 10000.0
           }
         },
         :fixed => {
           :staff => {
-            :actual=>662000.0,
-            :annual_target=>2113000.0,
-            :ytd_target=>277000.0
+            :actual => 662000.0,
+            :annual_target => 2000.0,
+            :ytd_target => 277000.0
           },
           :associates => {
-            :actual=>198000.0,
-            :annual_target=>858000.0,
-            :ytd_target=>112000.0
+            :actual => 198000.0,
+            :annual_target => 858000.0,
+            :ytd_target => 112000.0
           },
-          :office_and_operational=>
-      {:actual=>129000.0,
-       :annual_target=>494000.0,
-       :ytd_target=>82333.3333333334},
-     :delivery=>
-      {:actual=>62000.0,
-       :annual_target=>778270.0,
-       :ytd_target=>81876.6666666666},
-     :communications=>
-      {:actual=>85000.0, :annual_target=>315000.0, :ytd_target=>52500.0},
-     :professional_fees=>
-      {:actual=>59000.0,
-       :annual_target=>200000.0,
-       :ytd_target=>33333.3333333334},
-     :software=>
-      {:actual=>14000.0, :annual_target=>110700.0, :ytd_target=>16200.0}}}}
+          :office_and_operational => {
+            :actual => 129000.0,
+            :annual_target => 494000.0,
+            :ytd_target => 82000.0
+          },
+          :delivery => {
+            :actual => 62000.0,
+            :annual_target => 778000.0,
+            :ytd_target => 82000.0
+          },
+          :communications => {
+            :actual => 85000.0, :annual_target => 315000.0, :ytd_target => 52000.0
+          },
+          :professional_fees => {
+            :actual => 59000.0,
+            :annual_target => 200000.0,
+            :ytd_target => 34000.0
+          },
+          :software => {
+            :actual => 14000.0, :annual_target => 111000.0, :ytd_target => 16000.0
+          }
+        }
+      }
+    }
   end
 
   after :each do

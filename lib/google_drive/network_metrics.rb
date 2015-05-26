@@ -67,7 +67,7 @@ class NetworkMetrics
           commercial:     'Commercial people trained',
           non_commercial: 'Non-commercial people trained'
       }
-      data = extract_metric h, year, month, block
+      data = extract_metrics h, year, month, block
       if cell_location(year, "People trained")
         data[:total] = metrics_cell('People trained', year, block)
       else
@@ -92,7 +92,7 @@ class NetworkMetrics
           nodes:      'Nodes',
           affiliates: 'Affiliates',
       }
-      extract_metric h, year, month, block
+      extract_metrics h, year, month, block
     end
   end
 

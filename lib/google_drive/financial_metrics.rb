@@ -47,10 +47,9 @@ class FinancialMetrics
   def self.bookings(year)
     block = Proc.new { |x| integize(x) }
     if year.nil?
-      metrics_sum([
-        ['Total bookings', 2014],
-        ['Total bookings', 2013]
-      ], block)
+      years.inject(0) do |memo, year|
+        memo += metrics_cell 'Total bookings', year, block, 'actual'
+      end
     else
       metrics_cell('Total bookings', year, block)
     end
@@ -58,11 +57,9 @@ class FinancialMetrics
 
   def self.income(year, month)
     if year.nil? && month.nil?
-      block = Proc.new { |x| integize(x) }
-      metrics_sum([
-        ['Income', 2014],
-        ['Income', 2013]
-      ], block)
+      years.inject(0) do |memo, year|
+        memo += metrics_cell 'Income', year, Proc.new { |x| integize(x) }, 'actual'
+      end
     else
       metric_with_target('Income', year, month, Proc.new {|x| x.to_f})
     end

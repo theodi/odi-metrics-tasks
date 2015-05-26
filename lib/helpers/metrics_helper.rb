@@ -26,4 +26,11 @@ module MetricsHelper
     end
   end
 
+  def floatize(cell)
+    if cell.class == String
+      cell.gsub(/[^\d\.\-]/, '').to_f
+    else
+      cell.to_f
+    end
+  end
 end

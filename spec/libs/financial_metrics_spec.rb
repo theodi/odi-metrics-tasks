@@ -16,13 +16,14 @@ describe FinancialMetrics do
     FinancialMetrics.should_receive(:bookings).with(nil).once
     FinancialMetrics.should_receive(:kpis).with(2014).once
     FinancialMetrics.should_receive(:grant_funding).with(2014, 2).once
+    FinancialMetrics.should_receive(:bookings).with(2014).once
     FinancialMetrics.should_receive(:bookings_by_sector).with(2014, 2).once
     FinancialMetrics.should_receive(:headcount).with(2014, 2).once
     FinancialMetrics.should_receive(:burn_rate).with(2014, 2).once
     FinancialMetrics.should_receive(:ebitda).with(2014, 2).once
     FinancialMetrics.should_receive(:total_costs).with(2014, 2).once
     # How many metrics are stored?
-    FinancialMetrics.should_receive(:store_metric).exactly(13).times
+    FinancialMetrics.should_receive(:store_metric).exactly(14).times
     # Do it
     FinancialMetrics.perform
   end
@@ -64,6 +65,10 @@ describe FinancialMetrics do
 
   it "should show correct cumulative bookings", :vcr do
     FinancialMetrics.bookings(nil).should == 686000
+  end
+
+  it "should show correct bookings", :vcr do
+    FinancialMetrics.bookings(2014).should == 209000
   end
 
   it "should show the correct bookings by sector", :vcr do

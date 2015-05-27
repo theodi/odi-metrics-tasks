@@ -65,14 +65,6 @@ module GoogleDriveHelper
     block.call(metrics_worksheet(location["document"], location["sheet"])[location[ref]]) * multiplier
   end
 
-  def metrics_sum(metrics, block)
-    total = 0
-    metrics.each do |metric|
-      total += metrics_cell metric[0], metric[1], block, "actual"
-    end
-    total
-  end
-
   def years
     2013..Date.today.year
   end

@@ -30,11 +30,11 @@ env:
   - PRECISEMEDIA_FEED_URL: http://example.com/feed
   - TRELLO_DEV_KEY: trello_dev_key
   - TRELLO_MEMBER_KEY: trello_member_key
-  - GAPPS_CLIENT_ID: whevs
-  - GAPPS_CLIENT_SECRET: fooobar
-  - GAPPS_ACCESS_TOKEN: i-dont-care
-  - GAPPS_REFRESH_TOKEN: there-must-be-a-better-way-of-doing-this
   - GAPPS_SERVICE_ACCOUNT_EMAIL: foo@bar.com
+  - secure: C9JVdoqPTdgAxPilbQmF5Rm/4mcmWSB05PffR7KZlAKhwHNTYibc73+H5SX8iEkZZRFpgWe+ujhbrfIPhjpr+/Ymyzw59SDgAHLYf14+YBVHHXZzgoefxZXUw8h3xD/P+KWlVglN9QAyBTIxHcdU+vkFmGYS1SLSdda3pp8ptjw=
+  - secure: Heu0yBamaflPLud1Vvx3LtuDXOFlluuAVZmWk3NzzLReoMQE6d0If2TsP1kZXfzKu98IeyItigqKM2VJcaUA8FbzvKa5l+zQ+GY7zkfK2oOSAK9Hp9Q2XGULNBdeJTQSKgKLGci3rn0ww+PzYCkgsDXzyh5WgixolZQJ5voR8Qw=
+  - secure: O8dChmuo7Fo9ZM+FN6Q2HZNiPJBCEf58Y92Og015Fax8auT3EHVn0ZI2KldikCdexNWK8slOgiP6TpiYIPmxz9n52DMiRZ+HIn5T0cjccAyvxrRn+pgtuhA/UTfHl0C7wCg1atO1V62vyI6+JPEBlRmcJQ1l8FSmWFUcaZFqhzY=
+  - secure: OeI0HpWwRyMbHjqZgEgev3PcOfMDLbp9GPwtpRSYA2tev2Bqp7fHQyudsqtFGpFv1LBCAztYizBb4rRpe6NAOcy8WqrT0KF6sMIoB/tWlxpP4pjqHuFG+/loJryXIhypZ/854j3fffjuV88LyfO/ZfxaAiVKxKp/sdzR5oajZnc=
 deploy:
   provider: rubygems
   api_key:

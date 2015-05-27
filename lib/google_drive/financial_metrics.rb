@@ -38,11 +38,11 @@ class FinancialMetrics
   end
 
   def self.kpis(year)
-    metrics_cell('KPI percentage', year, Proc.new {|x| x.to_f}).round(1)
+    metrics_cell('KPI percentage', year, Proc.new {|x| floatize(x) }).round(1)
   end
 
   def self.cash_reserves(year)
-    metrics_cell('Cash reserves', year, Proc.new {|x| x.to_f})
+    metrics_cell('Cash reserves', year, Proc.new {|x| floatize(x) })
   end
 
   def self.bookings(year)
@@ -62,17 +62,17 @@ class FinancialMetrics
         memo += metrics_cell 'Income', year, Proc.new { |x| integize(x) }, 'actual'
       end
     else
-      metric_with_target('Income', year, month, Proc.new {|x| x.to_f})
+      metric_with_target 'Income', year, month, Proc.new {|x| floatize(x) }
     end
   end
 
   def self.grant_funding(year, month)
-    block = Proc.new { |x| x.to_f }
+    block = Proc.new { |x| floatize(x) }
     metric_with_target 'Grant Funding', year, month, block
   end
 
   def self.bookings_by_sector(year, month)
-    block = Proc.new { |x| x.to_f }
+    block = Proc.new { |x| floatize(x) }
     Hash[
         [
         :research,
@@ -90,7 +90,7 @@ class FinancialMetrics
   end
 
   def self.headcount(year, month)
-    block = Proc.new { |x| x.is_a?(Array) ? x[month-1].to_f : x.to_f }
+    block = Proc.new { |x| x.is_a?(Array) ? floatize(x[month-1]) : floatize(x) }
     metric_with_target 'Headcount', year, month, block
   end
 
@@ -99,18 +99,18 @@ class FinancialMetrics
       data = data.slice(0,month)
       nonzero = data.select{|val| val.to_f > 0}
       divisor = [nonzero.length, 3].min
-      sum = nonzero.last(3).map{|x| x.to_f}.inject(0.0){|sum,val| sum += val} / divisor
+      sum = nonzero.last(3).map{ |x| floatize(x) }.inject(0.0){|sum,val| sum += val} / divisor
     end
     metrics_cell 'Burn', year, block
   end
 
   def self.ebitda(year, month)
-    block = Proc.new { |x| x.is_a?(Array) ? x.inject(0.0) {|s,v| s += v.to_f} : x.to_f }
+    block = Proc.new { |x| x.is_a?(Array) ? x.inject(0.0) { |s,v| s += floatize(v) } : floatize(x) }
     metric_with_target 'EBITDA', year, month, block
   end
 
   def self.total_costs(year, month)
-    block = Proc.new { |x| x.to_f }
+    block = Proc.new { |x| floatize(x) }
     breakdown = {
       variable: extract_metrics(
                     {

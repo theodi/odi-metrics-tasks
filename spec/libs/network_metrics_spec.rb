@@ -65,7 +65,7 @@ describe NetworkMetrics do
     # total is new, added as a single number from the "People trained" metric
     # if set.
     NetworkMetrics.people_trained(2014, 2).should == {
-        total: 702,
+        total: 0,
         commercial:     {
             actual:        34,
             annual_target: 190,
@@ -80,7 +80,7 @@ describe NetworkMetrics do
   end
 
   it "should show the cumulative number of people trained", :vcr do
-    NetworkMetrics.people_trained(nil, nil).should == 936
+    NetworkMetrics.people_trained(nil, nil).should == 234
   end
 
   it "should show correct network size", :vcr do

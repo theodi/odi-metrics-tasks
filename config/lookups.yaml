@@ -338,7 +338,8 @@ cell_lookups:
       sheet: P&L + Cashflow
 
     People trained:
-      cell_ref: E4
-      sheet: Dashboard
-      document: reach
+      actual: W37
+      annual_target: AP37
+      ytd_target: Y37:AJ37
+      sheet: Training
       multiplier: 1

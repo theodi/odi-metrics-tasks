@@ -69,7 +69,7 @@ class NetworkMetrics
       }
       data = extract_metrics h, year, month, block
       if cell_location(year, "People trained")
-        data[:total] = metrics_cell('People trained', year, block)
+        data[:total] = metrics_cell 'People trained', year, block, 'actual'
       else
         data[:total] = data[:commercial][:actual] + data[:non_commercial][:actual]
       end

@@ -139,6 +139,12 @@ describe FinancialMetrics do
         annual_target: 34.0,
         ytd_target:    26.0,
     }
+
+    FinancialMetrics.headcount(2015, 2).should == {
+        actual:        41.0,
+        annual_target: 52.0,
+        ytd_target:    46.0,
+    }
   end
 
   it "should show burn", :vcr do

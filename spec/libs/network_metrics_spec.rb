@@ -24,20 +24,20 @@ describe NetworkMetrics do
 
   it "should show the correct cumulative reach", :vcr do
     NetworkMetrics.reach.should == {
-      :total   => 542050,
+      :total   => 845144,
       :breakdown => {
-        :active  => 13790,
-        :passive => 528260,
+        :active  => 24306,
+        :passive => 820838,
       }
     }
   end
 
   it "should show the correct reach for 2013", :vcr do
     NetworkMetrics.reach(2013).should == {
-      :total   => 302,
+      :total   => 303396,
       :breakdown => {
-        :active  => 10,
-        :passive => 292,
+        :active  => 10526,
+        :passive => 292870,
       }
     }
   end

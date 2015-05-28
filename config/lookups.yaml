@@ -342,3 +342,29 @@ cell_lookups:
       sheet: Dashboard
       document: reach
       multiplier: 1
+
+  2015:
+    Network size:
+      actual: G4
+      annual_target: H4
+      document: 2015_dashboard
+      sheet: Public dashboards
+      multiplier: 1
+
+    Members:
+      cell_ref: C20
+      document: 2015_dashboard
+      sheet: aggregated
+      multiplier: 1
+
+    Nodes:
+      cell_ref: C21
+      document: 2015_dashboard
+      sheet: aggregated
+      multiplier: 1
+
+    Startups:
+      cell_ref: C22
+      document: 2015_dashboard
+      sheet: aggregated
+      multiplier: 1

@@ -83,7 +83,7 @@ describe NetworkMetrics do
     NetworkMetrics.people_trained(nil, nil).should == 936
   end
 
-  it "should show correct network size", :vcr do
+  it "should show correct network size for 2014", :vcr do
     NetworkMetrics.network_size(2014, 2).should == {
         partners:   {
             actual:        3,
@@ -112,7 +112,21 @@ describe NetworkMetrics do
         },
         affiliates: {
             actual:        0,
-        }
+        },
+        total: 23,
+    }
+  end
+
+  it "should show correct network size for 2015", :vcr do
+    NetworkMetrics.network_size(2015, 2).should == {
+      members:  239,
+      nodes:    25,
+      startups: 23,
+      total: {
+        actual:        287,
+        annual_target: 1200,
+        ytd_target:    200,
+      }
     }
   end
 

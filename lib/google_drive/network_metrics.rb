@@ -81,7 +81,7 @@ class NetworkMetrics
     block = Proc.new { |x| integize(x) }
     if year.nil? && month.nil?
       years.inject(0) do |memo, year|
-        memo += metrics_cell('Network size', year, block)
+        memo += metrics_total 'Network size', year, block
       end
     else
       h     = {
@@ -91,6 +91,8 @@ class NetworkMetrics
           startups:   'Startups',
           nodes:      'Nodes',
           affiliates: 'Affiliates',
+          members:    'Members',
+          total:      'Network size',
       }
       extract_metrics h, year, month, block
     end

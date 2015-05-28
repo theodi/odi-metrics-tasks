@@ -342,3 +342,10 @@ cell_lookups:
       sheet: Dashboard
       document: reach
       multiplier: 1
+
+  2015:
+    Value unlocked:
+      cell_ref: C7
+      document: 2015_dashboard
+      sheet: aggregated
+      multiplier: 1

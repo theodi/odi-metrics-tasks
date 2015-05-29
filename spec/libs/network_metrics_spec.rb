@@ -3,20 +3,20 @@ require 'spec_helper'
 describe NetworkMetrics do
 
   before :each do
-    Timecop.freeze(Date.new(2014, 2, 4))
+    Timecop.freeze(Date.new(2015, 2, 4))
   end
 
   it "should store right values in metrics API" do
     # Which methods are called?
-    NetworkMetrics.should_receive(:reach).with(2014, 2).once
+    NetworkMetrics.should_receive(:reach).with(2015, 2).once
     NetworkMetrics.should_receive(:reach).with(nil, nil).once
-    NetworkMetrics.should_receive(:pr_pieces).with(2014).once
-    NetworkMetrics.should_receive(:flagship_stories).with(2014, 2).once
-    NetworkMetrics.should_receive(:events_hosted).with(2014).once
-    NetworkMetrics.should_receive(:people_trained).with(2014, 2).once
+    NetworkMetrics.should_receive(:pr_pieces).with(2015).once
+    NetworkMetrics.should_receive(:flagship_stories).with(2015, 2).once
+    NetworkMetrics.should_receive(:events_hosted).with(2015).once
+    NetworkMetrics.should_receive(:people_trained).with(2015, 2).once
     NetworkMetrics.should_receive(:people_trained).with(nil, nil).once
-    NetworkMetrics.should_receive(:trainers_trained).with(2014, 2).once
-    NetworkMetrics.should_receive(:network_size).with(2014, 2).once
+    NetworkMetrics.should_receive(:trainers_trained).with(2015, 2).once
+    NetworkMetrics.should_receive(:network_size).with(2015, 2).once
     NetworkMetrics.should_receive(:network_size).with(nil, nil).once
     # How many metrics are stored?
     NetworkMetrics.should_receive(:store_metric).exactly(10).times
@@ -26,9 +26,9 @@ describe NetworkMetrics do
 
   it "should show the correct cumulative reach", :vcr do
     NetworkMetrics.reach.should == {
-      :total   => 845144,
+      :total   => 848832,
       :breakdown => {
-        :active  => 24306,
+        :active  => 27994,
         :passive => 820838,
       }
     }
@@ -134,7 +134,7 @@ describe NetworkMetrics do
   end
 
   it "should show the cumulative number of people trained", :vcr do
-    NetworkMetrics.people_trained(nil, nil).should == 936
+    NetworkMetrics.people_trained(nil, nil).should == 1566
   end
 
   it "should show number of trainers trained for 2015", :vcr do
@@ -187,7 +187,7 @@ describe NetworkMetrics do
   end
 
   it "should show the cumulative network size", :vcr do
-    NetworkMetrics.network_size(nil, nil).should == 103
+    NetworkMetrics.network_size(nil, nil).should == 210
   end
 
   after :each do

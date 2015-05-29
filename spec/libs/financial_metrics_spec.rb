@@ -80,7 +80,7 @@ describe FinancialMetrics do
     }
   end
 
-  it "should show the correct bookings by sector", :vcr do
+  it "should show the correct bookings by sector for 2014", :vcr do
     FinancialMetrics.bookings_by_sector(2014, 2).should == {
       research: {
         commercial:     {
@@ -129,6 +129,26 @@ describe FinancialMetrics do
           annual_target: 45000.0,
           ytd_target:    25000.0,
         }
+      }
+    }
+  end
+
+  it "should show the correct bookings by sector for 2015", :vcr do
+    FinancialMetrics.bookings_by_sector(2015, 2).should == {
+      network: {
+        actual: 152000.0,
+        annual_target: 1252000.0,
+        ytd_target: 159000.0
+      },
+      innovation: {
+        actual: 189000.0,
+        annual_target: 1419000.0,
+        ytd_target: 299000.0
+      },
+      core: {
+        actual: 0.0,
+        annual_target: 191000.0,
+        ytd_target: 0.0
       }
     }
   end

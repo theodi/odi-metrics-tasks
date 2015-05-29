@@ -73,8 +73,8 @@ class FinancialMetrics
   end
 
   def self.bookings_by_sector(year, month)
-    block = Proc.new { |x| floatize(x) }
-    Hash[
+    block = Proc.new { |x| x.is_a?(Array) ? x.slice(0,month).inject(0.0) { |s,v| s += floatize(v) } : floatize(x) }
+    data = Hash[
         [
         :research,
         :training,
@@ -86,8 +86,17 @@ class FinancialMetrics
               commercial: "Commercial #{item.to_s} bookings",
               non_commercial: "Non-commercial #{item.to_s} bookings"
           }, year, month, block)]
-        end
+      end.select do |k, item|
+        item != {}
+      end
     ]
+
+    h = {
+      network: 'Network bookings',
+      innovation: 'Innovation bookings',
+      core: 'Core bookings',
+    }
+    data.merge(extract_metrics h, year, month, block)
   end
 
   def self.headcount(year, month)

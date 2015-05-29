@@ -58,7 +58,8 @@ class FinancialMetrics
   end
 
   def self.income(year, month)
-    block = Proc.new { |x| floatize(x) }
+    slice_by = month ? month : 12
+    block = Proc.new { |x| x.is_a?(Array) ? x.slice(0, slice_by).inject(0.0) { |s,v| s += floatize(v) } : floatize(x) }
     if year.nil? && month.nil?
       years.inject(0) do |memo, year|
         memo += metrics_cell 'Income', year, block, 'actual'

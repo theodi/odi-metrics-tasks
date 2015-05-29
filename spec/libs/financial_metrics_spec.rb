@@ -54,6 +54,12 @@ describe FinancialMetrics do
       annual_target: 2935000.0,
       ytd_target:    173000.0,
     }
+
+    FinancialMetrics.income(2015, 2).should == {
+      actual:        340000.0,
+      annual_target: 2862000.0,
+      ytd_target:    458000.0,
+    }
   end
 
   it "should show cumulative income", :vcr do

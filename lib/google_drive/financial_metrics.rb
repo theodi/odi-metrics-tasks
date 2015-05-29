@@ -58,12 +58,13 @@ class FinancialMetrics
   end
 
   def self.income(year, month)
+    block = Proc.new { |x| floatize(x) }
     if year.nil? && month.nil?
       years.inject(0) do |memo, year|
-        memo += metrics_cell 'Income', year, Proc.new { |x| integize(x) }, 'actual'
+        memo += metrics_cell 'Income', year, block, 'actual'
       end
     else
-      metric_with_target 'Income', year, month, Proc.new {|x| floatize(x) }
+      metric_with_target 'Income', year, month, block
     end
   end
 

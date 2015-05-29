@@ -57,7 +57,7 @@ describe FinancialMetrics do
   end
 
   it "should show cumulative income", :vcr do
-    FinancialMetrics.income(nil, nil).should == 305123
+    FinancialMetrics.income(nil, nil).should == 305123.0
   end
 
   it "should show cash reserves", :vcr do

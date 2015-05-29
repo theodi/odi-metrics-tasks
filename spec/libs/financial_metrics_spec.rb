@@ -68,6 +68,7 @@ describe FinancialMetrics do
 
   it "should show cash reserves", :vcr do
     FinancialMetrics.cash_reserves(2014).should == 1086562.0
+    FinancialMetrics.cash_reserves(2015).should == 1304880.05
   end
 
   it "should show correct cumulative bookings", :vcr do

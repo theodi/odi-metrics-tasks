@@ -186,6 +186,13 @@ describe FinancialMetrics do
       annual_target: -3684000.0,
       ytd_target:    -2496000.0,
     }
+
+    FinancialMetrics.ebitda(2015, 6).should == {
+      actual:        -1228000.0,
+      latest:        -294000.0,
+      annual_target: -3488000.0,
+      ytd_target:    -1713000.0,
+    }
   end
 
   it "should load total cost information", :vcr do

@@ -70,7 +70,7 @@ class FinancialMetrics
   end
 
   def self.grant_funding(year, month)
-    block = Proc.new { |x| floatize(x) }
+    block = Proc.new { |x| x.is_a?(Array) ? x.slice(0, month).inject(0.0) { |s,v| s += floatize(v) } : floatize(x) }
     metric_with_target 'Grant Funding', year, month, block
   end
 

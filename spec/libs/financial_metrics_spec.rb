@@ -46,6 +46,12 @@ describe FinancialMetrics do
       annual_target: 3355000.0,
       ytd_target:    374000.0,
     }
+
+    FinancialMetrics.grant_funding(2015, 2).should == {
+      actual:        379000.0,
+      annual_target: 3545000.0,
+      ytd_target:    558000.0,
+    }
   end
 
   it "should show income", :vcr do

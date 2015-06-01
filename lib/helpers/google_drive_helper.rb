@@ -64,7 +64,19 @@ module GoogleDriveHelper
     location             = cell_location(year, identifier)
     location['document'] ||= @@lookups['document_keys'][environment]['default']
     multiplier = location['multiplier'] || @@lookups['default_multiplier']
-    block.call(metrics_worksheet(location["document"], location["sheet"])[location[ref]]) * multiplier
+
+    attempt = 1
+    begin
+      block.call(metrics_worksheet(location["document"], location["sheet"])[location[ref]]) * multiplier
+    rescue GoogleDrive::ResponseCodeError
+      attempt += 1
+      if attempt < 5
+        # clear_cache!
+        retry
+      else
+        raise
+      end
+    end
   end
 
   def years

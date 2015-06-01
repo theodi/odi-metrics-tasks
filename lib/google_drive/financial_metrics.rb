@@ -130,35 +130,47 @@ class FinancialMetrics
   end
 
   def self.total_costs(year, month)
-    block = Proc.new { |x| floatize(x) }
-    breakdown = {
-      variable: extract_metrics(
-                    {
-                        research: 'Research costs',
-                        training: 'Training costs',
-                        projects: 'Projects costs',
-                        network:  'Network costs'
-                    }, year, month, block),
-      fixed:    extract_metrics(
-                    {
-                        staff:                  'Staff costs',
-                        associates:             'Associate costs',
-                        office_and_operational: 'Office and operational costs',
-                        delivery:               'Delivery costs',
-                        communications:         'Communications costs',
-                        professional_fees:      'Professional fees costs',
-                        software:               'Software costs'
-                    }, year, month, block)
-    }
-    variable = metric_with_target("Variable costs", year, month, block)
-    fixed    = metric_with_target("Fixed costs", year, month, block)
-    # Smoosh it all together
-    {
-        actual:        variable[:actual] + fixed[:actual],
-        annual_target: variable[:annual_target] + fixed[:annual_target],
-        ytd_target:    variable[:ytd_target] + fixed[:ytd_target],
-        breakdown: breakdown
-    }
+    if year < 2015
+      block = Proc.new { |x| floatize(x) }
+      breakdown = {
+        variable: extract_metrics(
+                      {
+                          research: 'Research costs',
+                          training: 'Training costs',
+                          projects: 'Projects costs',
+                          network:  'Network costs'
+                      }, year, month, block),
+        fixed:    extract_metrics(
+                      {
+                          staff:                  'Staff costs',
+                          associates:             'Associate costs',
+                          office_and_operational: 'Office and operational costs',
+                          delivery:               'Delivery costs',
+                          communications:         'Communications costs',
+                          professional_fees:      'Professional fees costs',
+                          software:               'Software costs'
+                      }, year, month, block)
+      }
+      variable = metric_with_target("Variable costs", year, month, block)
+      fixed    = metric_with_target("Fixed costs", year, month, block)
+      # Smoosh it all together
+      {
+          actual:        variable[:actual] + fixed[:actual],
+          annual_target: variable[:annual_target] + fixed[:annual_target],
+          ytd_target:    variable[:ytd_target] + fixed[:ytd_target],
+          breakdown: breakdown
+      }
+    else
+      block = Proc.new { |x| x.is_a?(Array) ? x.slice(0,month).inject(0.0) { |s,v| s += floatize(v) } : floatize(x) }
+      h = {
+        network:    'Network costs',
+        innovation: 'Innovation costs',
+        core:       'Core costs',
+        staff:      'Staff costs',
+        other:      'Other costs',
+      }
+      extract_metrics h, year, month, block
+    end
   end
 
 end

@@ -3,25 +3,25 @@ require 'spec_helper'
 describe FinancialMetrics do
 
   before :each do
-    Timecop.freeze(Date.new(2014, 2, 4))
+    Timecop.freeze(Date.new(2015, 2, 4))
   end
 
   it "should store right values in metrics API" do
     # Which methods are called?
-    FinancialMetrics.should_receive(:cash_reserves).with(2014).once
-    FinancialMetrics.should_receive(:value).with(2014).once
+    FinancialMetrics.should_receive(:cash_reserves).with(2015).once
+    FinancialMetrics.should_receive(:value).with(2015).once
     FinancialMetrics.should_receive(:value).with(nil).once
-    FinancialMetrics.should_receive(:income).with(2014, 2).once
+    FinancialMetrics.should_receive(:income).with(2015, 2).once
     FinancialMetrics.should_receive(:income).with(nil, nil).once
     FinancialMetrics.should_receive(:bookings).with(nil, nil).once
-    FinancialMetrics.should_receive(:kpis).with(2014).once
-    FinancialMetrics.should_receive(:grant_funding).with(2014, 2).once
-    FinancialMetrics.should_receive(:bookings).with(2014, 2).once
-    FinancialMetrics.should_receive(:bookings_by_sector).with(2014, 2).once
-    FinancialMetrics.should_receive(:headcount).with(2014, 2).once
-    FinancialMetrics.should_receive(:burn_rate).with(2014, 2).once
-    FinancialMetrics.should_receive(:ebitda).with(2014, 2).once
-    FinancialMetrics.should_receive(:total_costs).with(2014, 2).once
+    FinancialMetrics.should_receive(:kpis).with(2015).once
+    FinancialMetrics.should_receive(:grant_funding).with(2015, 2).once
+    FinancialMetrics.should_receive(:bookings).with(2015, 2).once
+    FinancialMetrics.should_receive(:bookings_by_sector).with(2015, 2).once
+    FinancialMetrics.should_receive(:headcount).with(2015, 2).once
+    FinancialMetrics.should_receive(:burn_rate).with(2015, 2).once
+    FinancialMetrics.should_receive(:ebitda).with(2015, 2).once
+    FinancialMetrics.should_receive(:total_costs).with(2015, 2).once
     # How many metrics are stored?
     FinancialMetrics.should_receive(:store_metric).exactly(14).times
     # Do it
@@ -32,7 +32,7 @@ describe FinancialMetrics do
     FinancialMetrics.value(2013).should == 15210243
     FinancialMetrics.value(2014).should == 544441
     FinancialMetrics.value(2015).should == 499511
-    FinancialMetrics.value.should == 15754684
+    FinancialMetrics.value.should == 16254195
   end
 
   it "should show the correct kpi percentage", :vcr do
@@ -63,7 +63,7 @@ describe FinancialMetrics do
   end
 
   it "should show cumulative income", :vcr do
-    FinancialMetrics.income(nil, nil).should == 305123.0
+    FinancialMetrics.income(nil, nil).should == 2498123
   end
 
   it "should show cash reserves", :vcr do
@@ -72,7 +72,7 @@ describe FinancialMetrics do
   end
 
   it "should show correct cumulative bookings", :vcr do
-    FinancialMetrics.bookings(nil, nil).should == 686000
+    FinancialMetrics.bookings(nil, nil).should == 1134000
   end
 
   it "should show correct bookings for 2014", :vcr do

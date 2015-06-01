@@ -50,7 +50,9 @@ module GoogleDriveHelper
   end
 
   def metrics_worksheet doc_name, worksheet_name
-    metrics_spreadsheet(doc_name).worksheet_by_title worksheet_name.to_s
+    @@metrics_worksheets ||= {}
+    key = @@lookups['document_keys'][environment][doc_name]
+    @@metrics_worksheets["#{key} #{worksheet_name}"] ||= metrics_spreadsheet(doc_name).worksheet_by_title worksheet_name.to_s
   end
 
   def cell_location year, identifier
@@ -71,5 +73,6 @@ module GoogleDriveHelper
 
   def clear_cache!
     @@metrics_spreadsheets = {}
+    @@metrics_worksheets = {}
   end
 end

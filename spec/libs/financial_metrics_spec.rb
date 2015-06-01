@@ -184,6 +184,10 @@ describe FinancialMetrics do
     FinancialMetrics.burn_rate(2014, 2).should == 207000.0
     FinancialMetrics.burn_rate(2014, 5).should == 265000.0
     FinancialMetrics.burn_rate(2014, 6).should == 265000.0
+
+    FinancialMetrics.burn_rate(2015, 2).should == 162500.0
+    FinancialMetrics.burn_rate(2015, 5).should == 168333.33333333334
+    FinancialMetrics.burn_rate(2015, 6).should == 182333.33333333334
   end
 
   it "should load EBITDA information", :vcr do

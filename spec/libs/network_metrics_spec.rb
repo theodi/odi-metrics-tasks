@@ -3,18 +3,20 @@ require 'spec_helper'
 describe NetworkMetrics do
 
   before :each do
-    Timecop.freeze(Date.new(2014, 2, 4))
+    Timecop.freeze(Date.new(2015, 2, 4))
   end
 
   it "should store right values in metrics API" do
     # Which methods are called?
-    NetworkMetrics.should_receive(:reach).with(2014).once
-    NetworkMetrics.should_receive(:reach).with(nil).once
-    NetworkMetrics.should_receive(:pr_pieces).with(2014).once
-    NetworkMetrics.should_receive(:events_hosted).with(2014).once
-    NetworkMetrics.should_receive(:people_trained).with(2014, 2).once
+    NetworkMetrics.should_receive(:reach).with(2015, 2).once
+    NetworkMetrics.should_receive(:reach).with(nil, nil).once
+    # NetworkMetrics.should_receive(:pr_pieces).with(2015).once
+    NetworkMetrics.should_receive(:flagship_stories).with(2015, 2).once
+    # NetworkMetrics.should_receive(:events_hosted).with(2015).once
+    NetworkMetrics.should_receive(:people_trained).with(2015, 2).once
     NetworkMetrics.should_receive(:people_trained).with(nil, nil).once
-    NetworkMetrics.should_receive(:network_size).with(2014, 2).once
+    NetworkMetrics.should_receive(:trainers_trained).with(2015, 2).once
+    NetworkMetrics.should_receive(:network_size).with(2015, 2).once
     NetworkMetrics.should_receive(:network_size).with(nil, nil).once
     # How many metrics are stored?
     NetworkMetrics.should_receive(:store_metric).exactly(8).times
@@ -24,16 +26,16 @@ describe NetworkMetrics do
 
   it "should show the correct cumulative reach", :vcr do
     NetworkMetrics.reach.should == {
-      :total   => 845144,
+      :total   => 848832,
       :breakdown => {
-        :active  => 24306,
+        :active  => 27994,
         :passive => 820838,
       }
     }
   end
 
   it "should show the correct reach for 2013", :vcr do
-    NetworkMetrics.reach(2013).should == {
+    NetworkMetrics.reach(2013, 2).should == {
       :total   => 303396,
       :breakdown => {
         :active  => 10526,
@@ -43,7 +45,7 @@ describe NetworkMetrics do
   end
 
   it "should show the correct reach for 2014", :vcr do
-    NetworkMetrics.reach(2014).should == {
+    NetworkMetrics.reach(2014, 2).should == {
       :total   => 541748,
       :breakdown => {
         :active  => 13780,
@@ -52,15 +54,57 @@ describe NetworkMetrics do
     }
   end
 
+  it "should show the correct reach for 2015", :vcr do
+    NetworkMetrics.reach(2015, 2).should == {
+      :total   => {
+        actual:        3688,
+        annual_target: 1020000,
+        ytd_target:    0,
+      },
+      :breakdown => {
+        :active  => {
+          actual:        3688,
+          annual_target: 20000,
+          ytd_target:    0,
+        },
+        :passive => {
+          actual:        0,
+          annual_target: 1000000,
+          ytd_target:    0,
+        },
+      }
+    }
+  end
+
   it "should show the correct number of PR pieces", :vcr do
     NetworkMetrics.pr_pieces(2014).should == 99
+  end
+
+  it "should show the correct number of flagship stories for 2015", :vcr do
+    NetworkMetrics.flagship_stories(2015, 2).should == {
+        actual:        0,
+        annual_target: 0,
+        ytd_target:    0,
+    }
   end
 
   it "should show the correct number of events hosted", :vcr do
     NetworkMetrics.events_hosted(2014).should == 2
   end
 
-  it "should show number of people trained", :vcr do
+  it "should show number of people trained for 2013", :vcr do
+    NetworkMetrics.people_trained(2013, 2).should == {
+        total: 234,
+        commercial:     {
+            actual:        234,
+        },
+        non_commercial: {
+            actual:        0,
+        }
+    }
+  end
+
+  it "should show number of people trained for 2014", :vcr do
     # I know these numbers don't add up - they come from different places
     # total is new, added as a single number from the "People trained" metric
     # if set.
@@ -79,8 +123,26 @@ describe NetworkMetrics do
     }
   end
 
+  it "should show number of people trained for 2015", :vcr do
+    NetworkMetrics.people_trained(2015, 2).should == {
+        total: {
+            actual:        630,
+            annual_target: 1000,
+            ytd_target:    100,
+        }
+    }
+  end
+
   it "should show the cumulative number of people trained", :vcr do
-    NetworkMetrics.people_trained(nil, nil).should == 936
+    NetworkMetrics.people_trained(nil, nil).should == 1566
+  end
+
+  it "should show number of trainers trained for 2015", :vcr do
+    NetworkMetrics.trainers_trained(2015, 2).should == {
+        actual:        3,
+        annual_target: 59,
+        ytd_target:    6,
+    }
   end
 
   it "should show correct network size", :vcr do
@@ -112,12 +174,20 @@ describe NetworkMetrics do
         },
         affiliates: {
             actual:        0,
-        }
+        },
+        total: 23,
+    }
+
+    NetworkMetrics.network_size(2015, 2).should == {
+      members:  97,
+      nodes:    5,
+      startups: 5,
+      total: 107
     }
   end
 
   it "should show the cumulative network size", :vcr do
-    NetworkMetrics.network_size(nil, nil).should == 103
+    NetworkMetrics.network_size(nil, nil).should == 210
   end
 
   after :each do

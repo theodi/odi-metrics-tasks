@@ -9,12 +9,14 @@ class NetworkMetrics
     current_year  = DateTime.now.year
     current_month = DateTime.now.month
     {
-      "current-year-reach"                   => reach(current_year),
-      "cumulative-reach"                     => reach(nil),
-      "current-year-pr-pieces"               => pr_pieces(current_year),
-      "current-year-events-hosted"           => events_hosted(current_year),
+      "current-year-reach"                   => reach(current_year, current_month),
+      "cumulative-reach"                     => reach(nil, nil),
+      # "current-year-pr-pieces"               => pr_pieces(current_year),
+      "current-year-flagship-stories"        => flagship_stories(current_year, current_month),
+      # "current-year-events-hosted"           => events_hosted(current_year),
       "current-year-people-trained"          => people_trained(current_year, current_month),
       "cumulative-people-trained"            => people_trained(nil, nil),
+      "current-year-trainers-trained"        => trainers_trained(current_year, current_month),
       "current-year-network-size"            => network_size(current_year, current_month),
       "cumulative-network-size"              => network_size(nil, nil)
     }.each_pair do |metric, value|
@@ -23,24 +25,35 @@ class NetworkMetrics
     clear_cache!
   end
 
-  def self.reach(year = nil)
-    if year.nil?
-      years.map{|year| reach(year)}.inject do |memo, reach|
+  def self.reach(year = nil, month = nil)
+    total_block = Proc.new { |x| x.class == Hash ? x[:actual] : x }
+    if year.nil? && month.nil?
+      years.map{|year| reach(year, 12)}.inject do |memo, reach|
         memo = {
-          total: memo[:total] + reach[:total],
+          total: total_block.call(memo[:total]) + total_block.call(reach[:total]),
           breakdown: {
-            active:  memo[:breakdown][:active] + reach[:breakdown][:active],
-            passive: memo[:breakdown][:passive] + reach[:breakdown][:passive],
+            active:  total_block.call(memo[:breakdown][:active]) + total_block.call(reach[:breakdown][:active]),
+            passive: total_block.call(memo[:breakdown][:passive]) + total_block.call(reach[:breakdown][:passive]),
           }
         }
       end
     else
+      integize_block = Proc.new { |x| integize(x) }
+      active  = extract_metric "Active Reach", year, month, integize_block
+      passive = extract_metric "Passive Reach", year, month, integize_block
+      if active.class == Hash && passive.class == Hash
+        total = active.inject({}) do |data, (k, v)|
+          data[k] = v + passive[k]
+          data
+        end
+      else
+        total = total_block.call(active) + total_block.call(passive)
+      end
       {
-        total:   metrics_cell("Active Reach", year, Proc.new { |x| integize(x) }) +
-                 metrics_cell("Passive Reach", year, Proc.new { |x| integize(x) }),
+        total: total,
         breakdown: {
-          active:  metrics_cell("Active Reach", year, Proc.new { |x| integize(x) }),
-          passive: metrics_cell("Passive Reach", year, Proc.new { |x| integize(x) }),
+          active:  active,
+          passive: passive,
         }
       }
     end
@@ -51,6 +64,10 @@ class NetworkMetrics
     metrics_cell('PR Pieces', year, block)
   end
 
+  def self.flagship_stories(year, month)
+    extract_metric 'Flagship stories', year, month, Proc.new { |x| integize(x) }
+  end
+
   def self.events_hosted(year)
     block = Proc.new { |x| integize(x) }
     metrics_cell('Events hosted', year, block)
@@ -59,29 +76,32 @@ class NetworkMetrics
   def self.people_trained(year, month)
     if year.nil? && month.nil?
       years.map{|year| people_trained(year, 12)}.inject(0) do |memo, trained|
-        memo += trained[:total]
+        memo += trained[:total].is_a?(Hash) ? trained[:total][:actual] : trained[:total]
       end
     else
       block = Proc.new { |x| integize(x) }
       h     = {
-          commercial:     'Commercial people trained',
-          non_commercial: 'Non-commercial people trained'
+        commercial:     'Commercial people trained',
+        non_commercial: 'Non-commercial people trained',
+        total:          'People trained',
       }
       data = extract_metrics h, year, month, block
-      if cell_location(year, "People trained")
-        data[:total] = metrics_cell('People trained', year, block)
-      else
+      if not data.has_key?(:total)
         data[:total] = data[:commercial][:actual] + data[:non_commercial][:actual]
       end
       data
     end
   end
 
+  def self.trainers_trained(year, month)
+    extract_metric 'Trainers trained', year, month, Proc.new { |x| integize(x) }
+  end
+
   def self.network_size(year, month)
     block = Proc.new { |x| integize(x) }
     if year.nil? && month.nil?
       years.inject(0) do |memo, year|
-        memo += metrics_cell('Network size', year, block)
+        memo += metrics_total 'Network size', year, block
       end
     else
       h     = {
@@ -91,6 +111,8 @@ class NetworkMetrics
           startups:   'Startups',
           nodes:      'Nodes',
           affiliates: 'Affiliates',
+          members:    'Members',
+          total:      'Network size',
       }
       extract_metrics h, year, month, block
     end

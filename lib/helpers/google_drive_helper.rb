@@ -6,8 +6,22 @@ module GoogleDriveHelper
   @@lookups = YAML.load(File.open(File.join(File.dirname(__FILE__), '..', '..', 'config/lookups.yaml')))
 
   def extract_metrics h, year, month, block
-    Hash[h.map { |key, value| [key, metric_with_target(value, year, month, block)] }
+    Hash[
+      h.select do |key, value|
+        cell_location(year, value)
+      end.map do |key, value|
+        [key, extract_metric(value, year, month, block)]
+      end
     ]
+  end
+
+  def extract_metric name, year, month, block
+    location = cell_location year, name
+    if location.has_key? "cell_ref"
+      metrics_cell name, year, block
+    else
+      metric_with_target name, year, month, block
+    end
   end
 
   def metric_with_target name, year, month, block
@@ -56,6 +70,12 @@ module GoogleDriveHelper
   def cell_location year, identifier
     year = Date.today.year if year.nil?
     @@lookups['cell_lookups'][year][identifier] rescue nil
+  end
+
+  def metrics_total name, year, block
+    location = cell_location(year, name)
+    ref = location.has_key?("actual") ? "actual" : "cell_ref"
+    metrics_cell name, year, block, ref
   end
 
   def metrics_cell identifier, year, block, ref = "cell_ref"

@@ -14,6 +14,12 @@ module TrelloBoards
             :q3 => '35vZLoPO',
             :q4 => 'bkxnoXEm',
         },
+        2015 => {
+            :q1 => '72lviKLV',
+            :q2 => 'pSkUuB9x',
+            :q3 => 'dzx6W33u',
+            :q4 => 'PhPlKLAN',
+        },
     }
   end
 

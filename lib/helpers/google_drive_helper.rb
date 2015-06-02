@@ -65,10 +65,6 @@ module GoogleDriveHelper
     block.call(metrics_worksheet(location["document"], location["sheet"])[location[ref]]) * multiplier
   end
 
-  def years
-    2013..Date.today.year
-  end
-
   def clear_cache!
     @@metrics_spreadsheets = {}
   end

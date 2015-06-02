@@ -33,4 +33,8 @@ module MetricsHelper
   def floatize(cell)
     strip_number(cell).to_f
   end
+
+  def years
+    2013..Date.today.year
+  end
 end

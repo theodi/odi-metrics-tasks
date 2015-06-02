@@ -8,10 +8,7 @@ class QuarterlyProgress
   extend TrelloBoards
 
   def self.perform
-    h = {
-        '2014' => progress(2014),
-        '2013' => progress(2013)
-    }
+    h = Hash[years.map{|year| [year, progress(year)]}]
     store_metric("quarterly-progress", DateTime.now, h)
   end
 

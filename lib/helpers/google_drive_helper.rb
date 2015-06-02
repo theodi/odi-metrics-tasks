@@ -64,7 +64,9 @@ module GoogleDriveHelper
   end
 
   def metrics_worksheet doc_name, worksheet_name
-    metrics_spreadsheet(doc_name).worksheet_by_title worksheet_name.to_s
+    @@metrics_worksheets ||= {}
+    key = @@lookups['document_keys'][environment][doc_name]
+    @@metrics_worksheets["#{key} #{worksheet_name}"] ||= metrics_spreadsheet(doc_name).worksheet_by_title worksheet_name.to_s
   end
 
   def cell_location year, identifier
@@ -82,10 +84,23 @@ module GoogleDriveHelper
     location             = cell_location(year, identifier)
     location['document'] ||= @@lookups['document_keys'][environment]['default']
     multiplier = location['multiplier'] || @@lookups['default_multiplier']
-    block.call(metrics_worksheet(location["document"], location["sheet"])[location[ref]]) * multiplier
+
+    attempt = 1
+    begin
+      block.call(metrics_worksheet(location["document"], location["sheet"])[location[ref]]) * multiplier
+    rescue GoogleDrive::ResponseCodeError
+      attempt += 1
+      if attempt < 5
+        # clear_cache!
+        retry
+      else
+        raise
+      end
+    end
   end
 
   def clear_cache!
     @@metrics_spreadsheets = {}
+    @@metrics_worksheets = {}
   end
 end

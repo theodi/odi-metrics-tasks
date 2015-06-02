@@ -3,13 +3,13 @@ require 'spec_helper'
 describe QuarterlyProgress do
   it "should show correct progress for each quarter in 2013", :vcr do
     progress = QuarterlyProgress.progress(2013)
-    
+
     progress[:q1].should == 97
     progress[:q2].should == 90.2
     progress[:q3].should == 93.1
     progress[:q4].should == 90.8
   end
-    
+
   it "should show correct progress for each quarter in 2014", :vcr do
     progress = QuarterlyProgress.progress(2014)
 
@@ -19,21 +19,36 @@ describe QuarterlyProgress do
     progress[:q4].should == 10.6
   end
 
+  it "should show correct progress for each quarter in 2015", :vcr do
+    progress = QuarterlyProgress.progress(2015)
+
+    progress[:q1].should == 68.9
+    progress[:q2].should == 15.3
+    progress[:q3].should == 0
+    progress[:q4].should == 0
+  end
+
   it "should store right values in metrics API", :vcr do
     Timecop.freeze
     time = DateTime.now
     h    = {
-        '2014' => {
-            :q1 => 91.6,
-            :q2 => 87.5,
-            :q3 => 63.6,
-            :q4 => 10.6
-        },
         '2013' => {
             :q1 => 97.0,
             :q2 => 90.2,
-            :q3 => 93.1,
+            :q3 => 93.4,
             :q4 => 90.8
+        },
+        '2014' => {
+            :q1 => 91.8,
+            :q2 => 91.5,
+            :q3 => 84.1,
+            :q4 => 92.5
+        },
+        '2015' => {
+            :q1 => 68.9,
+            :q2 => 15.3,
+            :q3 => 0,
+            :q4 => 0
         }
     }
     metrics_api_should_receive("quarterly-progress", time, h.to_json)

@@ -10,16 +10,16 @@ describe NetworkMetrics do
     # Which methods are called?
     NetworkMetrics.should_receive(:reach).with(2015, 2).once
     NetworkMetrics.should_receive(:reach).with(nil, nil).once
-    NetworkMetrics.should_receive(:pr_pieces).with(2015).once
+    # NetworkMetrics.should_receive(:pr_pieces).with(2015).once
     NetworkMetrics.should_receive(:flagship_stories).with(2015, 2).once
-    NetworkMetrics.should_receive(:events_hosted).with(2015).once
+    # NetworkMetrics.should_receive(:events_hosted).with(2015).once
     NetworkMetrics.should_receive(:people_trained).with(2015, 2).once
     NetworkMetrics.should_receive(:people_trained).with(nil, nil).once
     NetworkMetrics.should_receive(:trainers_trained).with(2015, 2).once
     NetworkMetrics.should_receive(:network_size).with(2015, 2).once
     NetworkMetrics.should_receive(:network_size).with(nil, nil).once
     # How many metrics are stored?
-    NetworkMetrics.should_receive(:store_metric).exactly(10).times
+    NetworkMetrics.should_receive(:store_metric).exactly(8).times
     # Do it
     NetworkMetrics.perform
   end

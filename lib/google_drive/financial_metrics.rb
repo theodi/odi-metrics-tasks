@@ -15,7 +15,7 @@ class FinancialMetrics
       "current-year-income"                  => income(current_year, current_month),
       "cumulative-income"                    => income(nil, nil),
       "cumulative-bookings"                  => bookings(nil, nil),
-      "current-year-kpi-performance"         => kpis(current_year),
+      # "current-year-kpi-performance"         => kpis(current_year),
       "current-year-grant-funding"           => grant_funding(current_year, current_month),
       "current-year-bookings"                => bookings(current_year, current_month),
       "current-year-bookings-by-sector"      => bookings_by_sector(current_year, current_month),

@@ -1,10 +1,10 @@
 class DiversityMetrics
-  
+
   @queue = :metrics
 
   extend MetricsHelper
   extend GoogleDriveHelper
-    
+
   def self.perform
     {
       "diversity-gender" => gender
@@ -14,11 +14,11 @@ class DiversityMetrics
   end
 
   def self.gender
-    gender_sheet = metrics_worksheet("diversity", "Gender")    
+    gender_sheet = metrics_worksheet("diversity", "Gender")
     genders = {}
     (2..99).each do |row|
       gender = gender_sheet["C#{row}"]
-      genders[gender.downcase] = row if gender.present?
+      genders[gender.downcase] = row if gender.present? && gender != 'Total'
     end
     data = {
       "total" => {},

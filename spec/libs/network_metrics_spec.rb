@@ -174,15 +174,19 @@ describe NetworkMetrics do
         },
         affiliates: {
             actual:        0,
-        },
-        total: 23,
+        }
     }
 
     NetworkMetrics.network_size(2015, 2).should == {
-      members:  97,
-      nodes:    5,
-      startups: 5,
-      total: 107
+      members:  {
+        actual: 147,
+      },
+      nodes:    {
+        actual: 5,
+      },
+      startups: {
+        actual: 5
+      }
     }
   end
 

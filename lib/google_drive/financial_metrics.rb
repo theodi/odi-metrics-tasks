@@ -169,7 +169,15 @@ class FinancialMetrics
         staff:      'Staff costs',
         other:      'Other costs',
       }
-      extract_metrics h, year, month, block
+      breakdown = extract_metrics h, year, month, block
+
+      data = [:actual, :annual_target, :ytd_target].inject({}) do |d, v|
+        d[v] = breakdown.inject(0.0) do |sum, (_, t)|
+          sum += t[v]
+        end
+        d
+      end
+      data.merge({ breakdown: breakdown })
     end
   end
 

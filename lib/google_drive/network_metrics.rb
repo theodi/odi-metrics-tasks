@@ -112,7 +112,6 @@ class NetworkMetrics
           nodes:      'Nodes',
           affiliates: 'Affiliates',
           members:    'Members',
-          total:      'Network size',
       }
       extract_metrics h, year, month, block
     end

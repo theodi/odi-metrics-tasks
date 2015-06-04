@@ -358,19 +358,19 @@ cell_lookups:
       multiplier: 1
 
     Members:
-      cell_ref: F20
+      actual: F20
       document: 2015_non_financial
       sheet: aggregated
       multiplier: 1
 
     Nodes:
-      cell_ref: F21
+      actual: F21
       document: 2015_non_financial
       sheet: aggregated
       multiplier: 1
 
     Startups:
-      cell_ref: F22
+      actual: F22
       document: 2015_non_financial
       sheet: aggregated
       multiplier: 1

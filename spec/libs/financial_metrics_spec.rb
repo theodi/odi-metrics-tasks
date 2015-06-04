@@ -272,31 +272,36 @@ describe FinancialMetrics do
     }
 
     FinancialMetrics.total_costs(2015, 2).should == {
-      :network => {
-        :actual => 81000.0,
-        :annual_target => 1195000.0,
-        :ytd_target => 139000.0,
-      },
-      :innovation => {
-        :actual => 173000.0,
-        :annual_target => 1891000.0,
-        :ytd_target => 297000.0,
-      },
-      :core => {
-        :actual => 80000.0,
-        :annual_target => 936000.0,
-        :ytd_target => 125000.0,
-      },
-      :staff => {
-        :actual => 201000.0,
-        :annual_target => 1230000.0,
-        :ytd_target => 194000.0,
-      },
-      :other => {
-        :actual => 124000.0,
-        :annual_target => 1000000.0,
-        :ytd_target => 144000.0,
-      },
+      :actual => 659000.0,
+      :annual_target => 6252000.0,
+      :ytd_target => 899000.0,
+      :breakdown => {
+        :network => {
+          :actual => 81000.0,
+          :annual_target => 1195000.0,
+          :ytd_target => 139000.0,
+        },
+        :innovation => {
+          :actual => 173000.0,
+          :annual_target => 1891000.0,
+          :ytd_target => 297000.0,
+        },
+        :core => {
+          :actual => 80000.0,
+          :annual_target => 936000.0,
+          :ytd_target => 125000.0,
+        },
+        :staff => {
+          :actual => 201000.0,
+          :annual_target => 1230000.0,
+          :ytd_target => 194000.0,
+        },
+        :other => {
+          :actual => 124000.0,
+          :annual_target => 1000000.0,
+          :ytd_target => 144000.0,
+        }
+      }
     }
   end
 

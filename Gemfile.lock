@@ -66,6 +66,8 @@ GEM
       gherkin (~> 2.12)
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.2)
+    cucumber-core (1.1.3)
+      gherkin (~> 2.12.0)
     curb (0.8.8)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
@@ -81,11 +83,11 @@ GEM
     ffi (1.9.8)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
-    fog (1.30.0)
+    fog (1.31.0)
       fog-atmos
       fog-aws (~> 0.0)
       fog-brightbox (~> 0.4)
-      fog-core (~> 1.27, >= 1.27.4)
+      fog-core (~> 1.30)
       fog-ecloud
       fog-google (>= 0.0.2)
       fog-json
@@ -123,7 +125,7 @@ GEM
       mime-types
       net-scp (~> 1.1)
       net-ssh (>= 2.1.3)
-    fog-ecloud (0.1.1)
+    fog-ecloud (0.1.2)
       fog-core
       fog-xml
     fog-google (0.0.5)
@@ -139,7 +141,7 @@ GEM
       fog-core (~> 1.27)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
-    fog-profitbricks (0.0.2)
+    fog-profitbricks (0.0.3)
       fog-core
       fog-xml
       nokogiri
@@ -304,11 +306,11 @@ GEM
       oauth (~> 0.4.5)
       rest-client (~> 1.6.7)
     safe_yaml (1.0.4)
-    signet (0.6.0)
+    signet (0.6.1)
       addressable (~> 2.3)
       extlib (~> 0.9)
       faraday (~> 0.9)
-      jwt (~> 1.0)
+      jwt (~> 1.5)
       multi_json (~> 1.10)
     simplecov (0.10.0)
       docile (~> 1.1.0)

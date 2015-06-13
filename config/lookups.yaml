@@ -384,17 +384,17 @@ cell_lookups:
       sheet: P&L - programme
 
     Active Reach:
-      actual: O3
-      annual_target: AB3
-      ytd_target: P3:AA3
+      actual: O2
+      annual_target: AB2
+      ytd_target: P2:AA2
       document: 2015_non_financial
       sheet: Culture
       multiplier: 1
 
     Passive Reach:
-      actual: O51
-      annual_target: AB51
-      ytd_target: P51:AA51
+      actual: O6
+      annual_target: AB6
+      ytd_target: P6:AA6
       document: 2015_non_financial
       sheet: Culture
       multiplier: 1

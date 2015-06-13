@@ -392,9 +392,9 @@ cell_lookups:
       multiplier: 1
 
     Passive Reach:
-      actual: O6
-      annual_target: AB6
-      ytd_target: P6:AA6
+      actual: O5
+      annual_target: AB5
+      ytd_target: P5:AA5
       document: 2015_non_financial
       sheet: Culture
       multiplier: 1

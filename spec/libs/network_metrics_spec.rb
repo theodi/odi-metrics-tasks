@@ -191,7 +191,7 @@ describe NetworkMetrics do
   end
 
   it "should show the cumulative network size", :vcr do
-    NetworkMetrics.network_size(nil, nil).should == 210
+    NetworkMetrics.network_size(nil, nil).should == 287
   end
 
   after :each do

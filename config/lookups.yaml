@@ -28,6 +28,12 @@ document_keys:
     default: budget
 
 cell_lookups:
+  lifetime:
+    Network size:
+      cell_ref: G4
+      document: 2015_non_financial
+      sheet: Public dashboards
+      multiplier: 1
   2013:
     Reach:
       cell_ref: B1

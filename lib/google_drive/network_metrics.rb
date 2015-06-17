@@ -100,9 +100,7 @@ class NetworkMetrics
   def self.network_size(year, month)
     block = Proc.new { |x| integize(x) }
     if year.nil? && month.nil?
-      years.inject(0) do |memo, year|
-        memo += metrics_total 'Network size', year, block
-      end
+      metrics_cell('Network size', "lifetime", block)
     else
       h     = {
           partners:   'Partners',

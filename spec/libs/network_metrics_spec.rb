@@ -28,8 +28,8 @@ describe NetworkMetrics do
     NetworkMetrics.reach.should == {
       :total   => 848832,
       :breakdown => {
-        :active  => 27994,
-        :passive => 820838,
+        :active  => 24306,
+        :passive => 824526,
       }
     }
   end
@@ -58,18 +58,18 @@ describe NetworkMetrics do
     NetworkMetrics.reach(2015, 2).should == {
       :total   => {
         actual:        3688,
-        annual_target: 1020000,
+        annual_target: 22015,
         ytd_target:    0,
       },
       :breakdown => {
         :active  => {
-          actual:        3688,
-          annual_target: 20000,
+          actual:        0,
+          annual_target: 2015,
           ytd_target:    0,
         },
         :passive => {
-          actual:        0,
-          annual_target: 1000000,
+          actual:        3688,
+          annual_target: 20000,
           ytd_target:    0,
         },
       }
@@ -191,7 +191,7 @@ describe NetworkMetrics do
   end
 
   it "should show the cumulative network size", :vcr do
-    NetworkMetrics.network_size(nil, nil).should == 210
+    NetworkMetrics.network_size(nil, nil).should == 287
   end
 
   after :each do

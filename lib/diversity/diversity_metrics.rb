@@ -16,9 +16,13 @@ class DiversityMetrics
   def self.gender
     gender_sheet = metrics_worksheet("diversity", "Gender")
     genders = {}
-    (2..99).each do |row|
+    (3..99).each do |row|
       gender = gender_sheet["C#{row}"]
-      genders[gender.downcase] = row if gender.present? && gender != 'Total'
+      if gender.present? && gender != 'Total'
+        genders[gender.downcase] = row
+      else
+        break
+      end
     end
     data = {
       "total" => {},
@@ -28,7 +32,7 @@ class DiversityMetrics
       data["total"][gender] = gender_sheet["D#{row}"].to_i
     end
     ("E".."Z").each do |col|
-      title = gender_sheet["#{col}1"].downcase
+      title = gender_sheet["#{col}2"].downcase.gsub(' ','_')
       if title != ""
         data["teams"][title] = {}
         genders.each_pair do |gender, row|

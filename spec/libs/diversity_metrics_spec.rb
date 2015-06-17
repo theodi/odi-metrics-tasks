@@ -14,33 +14,29 @@ describe DiversityMetrics do
   it "should show current diversity values", :vcr do
     DiversityMetrics.gender.should == {
       "total" => {
-        "male" => 27,
-        "female" => 36
+        "male" => 24,
+        "female" => 37
       },
       "teams" => {
         "board" => {
           "male" => 6,
           "female" => 2,
         },
-        "smt" => {
+        "spt" => {
           "male" => 2,
           "female" => 2,
         },
-        "commercial" => {
-          "male" => 8,
-          "female" => 11,
+        "global_network" => {
+          "male" => 6,
+          "female" => 8,
         },
-        "international" => {
-          "male" => 3,
-          "female" => 6,
+        "core" => {
+          "male" => 5,
+          "female" => 20,
         },
-        "operations" => {
-          "male" => 1,
-          "female" => 11,
-        },
-        "technical" => {
-          "male" => 7,
-          "female" => 4,
+        "innovation_unit" => {
+          "male" => 11,
+          "female" => 9,
         },
         "leadership" => {
           "male" => 5,

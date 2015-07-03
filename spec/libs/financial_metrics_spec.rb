@@ -174,9 +174,9 @@ describe FinancialMetrics do
     }
 
     FinancialMetrics.headcount(2015, 2).should == {
-        actual:        41.0,
-        annual_target: 52.0,
-        ytd_target:    46.0,
+        actual:        56.0,
+        annual_target: 80.0,
+        ytd_target:    80.0,
     }
   end
 

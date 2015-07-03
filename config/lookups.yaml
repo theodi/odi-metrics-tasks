@@ -465,11 +465,11 @@ cell_lookups:
       sheet: P&L
 
     Headcount:
-      actual: E4:P4
-      annual_target: AE4
-      ytd_target: S4:AD4
-      document: 2015_financial
-      sheet: Environment
+      actual: E12
+      annual_target: D12
+      ytd_target: D12
+      document: diversity
+      sheet: Gender
       multiplier: 1
       ytd_method: latest
 

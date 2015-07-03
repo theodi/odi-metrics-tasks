@@ -32,7 +32,7 @@ module GoogleDriveHelper
     when "sum"
       Proc.new { |x| x.inject(0.0){|sum,val| sum + floatize(val) }}
     when "latest"
-      Proc.new { |x| floatize(x.last) }
+      Proc.new { |x| floatize([x].flatten.last) }
     end
     multiplier = location['multiplier'] || @@lookups['default_multiplier']
     data = {}

@@ -69,16 +69,16 @@ describe FinancialMetrics do
   end
 
   it "should show cumulative income", :vcr do
-    FinancialMetrics.income(nil, nil).should == 2498123
+    FinancialMetrics.income(nil, nil).should == 2672123
   end
 
   it "should show cash reserves", :vcr do
     FinancialMetrics.cash_reserves(2014).should == 1086562.0
-    FinancialMetrics.cash_reserves(2015).should == 1304880.05
+    FinancialMetrics.cash_reserves(2015).should == 1272809.69
   end
 
   it "should show correct cumulative bookings", :vcr do
-    FinancialMetrics.bookings(nil, nil).should == 1134000
+    FinancialMetrics.bookings(nil, nil).should == 1925000
   end
 
   it "should show correct bookings for 2014", :vcr do
@@ -199,8 +199,8 @@ describe FinancialMetrics do
     }
 
     FinancialMetrics.ebitda(2015, 6).should == {
-      actual:        -1228000.0,
-      latest:        -294000.0,
+      actual:        -1220000.0,
+      latest:        -250000.0,
       annual_target: -3488000.0,
       ytd_target:    -1713000.0,
     }

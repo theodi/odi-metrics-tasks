@@ -141,7 +141,7 @@ GEM
       fog-core (~> 1.27)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
-    fog-profitbricks (0.0.3)
+    fog-profitbricks (0.0.5)
       fog-core
       fog-xml
       nokogiri
@@ -325,7 +325,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.1)
-    timecop (0.7.4)
+    timecop (0.8.0)
     tins (1.5.4)
     vcr (2.9.3)
     vegas (0.1.11)

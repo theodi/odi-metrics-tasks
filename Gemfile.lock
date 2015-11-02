@@ -66,8 +66,6 @@ GEM
       gherkin (~> 2.12)
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.2)
-    cucumber-core (1.2.0)
-      gherkin (~> 2.12.0)
     curb (0.8.8)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)

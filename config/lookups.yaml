@@ -413,6 +413,12 @@ cell_lookups:
       sheet: Learning
       multiplier: 1
 
+    People trained by nodes:
+      actual: F16
+      document: 2015_non_financial
+      sheet: aggregated
+      multiplier: 1
+
     Trainers trained:
       actual: O5
       annual_target: AB5

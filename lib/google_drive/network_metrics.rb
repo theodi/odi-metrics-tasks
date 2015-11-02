@@ -83,11 +83,17 @@ class NetworkMetrics
       h     = {
         commercial:     'Commercial people trained',
         non_commercial: 'Non-commercial people trained',
+        nodes:          'People trained by nodes',
         total:          'People trained',
       }
+
       data = extract_metrics h, year, month, block
       if not data.has_key?(:total)
         data[:total] = data[:commercial][:actual] + data[:non_commercial][:actual]
+      end
+      if data.has_key?(:nodes)
+        data[:total][:actual] = data[:total][:actual] + data[:nodes][:actual]
+        data.delete(:nodes) # Delete the nodes value
       end
       data
     end

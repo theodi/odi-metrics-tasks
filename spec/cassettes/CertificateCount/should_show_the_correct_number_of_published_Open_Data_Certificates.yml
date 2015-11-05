@@ -2,11 +2,64 @@
 http_interactions:
 - request:
     method: get
-    uri: https://certificates.theodi.org/datasets/info.json
+    uri: https://certificates.the<METRICS_API_USERNAME>.org/datasets/info.json
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Accept-Enc<METRICS_API_USERNAME>ng:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Thu, 05 Nov 2015 11:25:27 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - keep-alive
+      Location:
+      - https://certificates.the<METRICS_API_USERNAME>.org/en/datasets/info.json
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - e81bc762ed6b4d2160e21fa999400691
+      X-Runtime:
+      - '0.004724'
+      X-Rack-Cache:
+      - miss
+      Vary:
+      - Origin
+      Transfer-Enc<METRICS_API_USERNAME>ng:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: <html><body>You are being <a href="https://certificates.the<METRICS_API_USERNAME>.org/en/datasets/info.json">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Thu, 05 Nov 2015 11:25:18 GMT
+- request:
+    method: get
+    uri: https://certificates.the<METRICS_API_USERNAME>.org/en/datasets/info.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Accept-Enc<METRICS_API_USERNAME>ng:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
@@ -15,28 +68,28 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Tue, 28 Oct 2014 15:18:26 GMT
+      - Thu, 05 Nov 2015 11:25:24 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
       Connection:
       - keep-alive
       X-Ua-Compatible:
       - IE=Edge,chrome=1
-      Etag:
-      - '"2ff1beb0f621ced5dbecd95f2652f11d"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4e6ffe756138247dfd785fc88590ee03
+      - 3d40dbd509b59056b0fd9ec0f38c23d9
       X-Runtime:
-      - '0.017496'
+      - '1.092650'
       X-Rack-Cache:
       - miss
+      Vary:
+      - Origin
+      Transfer-Enc<METRICS_API_USERNAME>ng:
+      - chunked
     body:
-      encoding: UTF-8
-      string: '{"published_certificate_count":2618}'
+      encoding: ASCII-8BIT
+      string: '{"published_certificate_count":151401}'
     http_version: 
-  recorded_at: Tue, 28 Oct 2014 15:18:05 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Thu, 05 Nov 2015 11:25:19 GMT
+recorded_with: VCR 2.9.3

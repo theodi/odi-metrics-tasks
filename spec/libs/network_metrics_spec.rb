@@ -179,7 +179,7 @@ describe NetworkMetrics do
 
     NetworkMetrics.network_size(2015, 2).should == {
       members:  {
-        actual: 147,
+        actual: 226,
       },
       nodes:    {
         actual: 5,

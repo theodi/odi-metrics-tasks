@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20A
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20A
     body:
       encoding: US-ASCII
       string: ''
@@ -15,28 +15,50 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:03 GMT
+      - Thu, 05 Nov 2015 14:59:42 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3739'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '74'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="0"/>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="0"/>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/organisation
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/organisation
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<organisation>\n  <about
-        nil=\"true\"/>\n  <name>company A</name>\n  <contacts/>\n</organisation>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <organisation>
+          <about nil="true"/>
+          <name>company A</name>
+          <contacts/>
+        </organisation>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -45,23 +67,37 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:04 GMT
+      - Thu, 05 Nov 2015 14:59:43 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3738'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823119
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968168
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20A
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20A
     body:
       encoding: US-ASCII
       string: ''
@@ -74,29 +110,51 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:04 GMT
+      - Thu, 05 Nov 2015 14:59:43 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3737'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '361'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="1"><organisation><id>52823119</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1386856454/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2013-12-13T15:32:18Z</createdOn><updatedOn>2013-12-13T15:32:18Z</updatedOn><name>company
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="1"><organisation><id>91968168</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1446725669/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2015-11-05T14:59:43Z</createdOn><updatedOn>2015-11-05T14:59:43Z</updatedOn><name>company
         A</name></organisation></parties>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823119/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968168/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Closed</milestone>\n  <probability type=\"integer\">100</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Closed</milestone>
+          <probability type="integer">100</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -105,31 +163,42 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:05 GMT
+      - Thu, 05 Nov 2015 14:59:44 GMT
       Server:
       - Apache
       Content-Length:
       - '128'
-      Vary:
-      - Accept-Encoding
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Connection:
       - close
       Content-Type:
-      - text/xml
+      - application/xml
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><response><message>unknown
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><response><message>unknown
         milestone for opportunity</message></response>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823119/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968168/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Invoiced</milestone>\n  <probability type=\"integer\">100</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Invoiced</milestone>
+          <probability type="integer">100</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -138,29 +207,49 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:05 GMT
+      - Thu, 05 Nov 2015 14:59:44 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3735'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848918
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733172
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848918
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733172
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <value
-        type=\"integer\">60000</value>\n  <duration type=\"integer\">1</duration>\n
-        \ <durationBasis>YEAR</durationBasis>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <value type="integer">60000</value>
+          <duration type="integer">1</duration>
+          <durationBasis>YEAR</durationBasis>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -169,28 +258,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:06 GMT
+      - Thu, 05 Nov 2015 14:59:45 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3734'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '514'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848918</id><name>Membership</name><partyId>52823119</partyId><currency>GBP</currency><value>60000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><actualCloseDate>2013-12-13T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:19Z</createdOn><updatedOn>2013-12-13T15:32:20.090Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733172</id><name>Membership</name><partyId>91968168</partyId><currency>GBP</currency><value>60000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><actualCloseDate>2015-11-05T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:45Z</createdOn><updatedOn>2015-11-05T14:59:45.217Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848918
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733172
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <expectedCloseDate
-        type=\"date\">2013-03-23</expectedCloseDate>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <expectedCloseDate type="date">2013-03-23</expectedCloseDate>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -199,23 +307,37 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:06 GMT
+      - Thu, 05 Nov 2015 14:59:45 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3733'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '573'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848918</id><name>Membership</name><partyId>52823119</partyId><currency>GBP</currency><value>60000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><expectedCloseDate>2013-03-23T00:00:00Z</expectedCloseDate><actualCloseDate>2013-12-13T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:19Z</createdOn><updatedOn>2013-12-13T15:32:20.471Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733172</id><name>Membership</name><partyId>91968168</partyId><currency>GBP</currency><value>60000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><expectedCloseDate>2013-03-23T00:00:00Z</expectedCloseDate><actualCloseDate>2015-11-05T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:45Z</createdOn><updatedOn>2015-11-05T14:59:45.665Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20B
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20B
     body:
       encoding: US-ASCII
       string: ''
@@ -228,28 +350,50 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:07 GMT
+      - Thu, 05 Nov 2015 14:59:46 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3732'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '74'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="0"/>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="0"/>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/organisation
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/organisation
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<organisation>\n  <about
-        nil=\"true\"/>\n  <name>company B</name>\n  <contacts/>\n</organisation>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <organisation>
+          <about nil="true"/>
+          <name>company B</name>
+          <contacts/>
+        </organisation>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -258,23 +402,37 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:07 GMT
+      - Thu, 05 Nov 2015 14:59:46 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3731'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823122
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968172
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20B
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20B
     body:
       encoding: US-ASCII
       string: ''
@@ -287,29 +445,51 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:08 GMT
+      - Thu, 05 Nov 2015 14:59:46 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3730'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '361'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="1"><organisation><id>52823122</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1386856454/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2013-12-13T15:32:21Z</createdOn><updatedOn>2013-12-13T15:32:21Z</updatedOn><name>company
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="1"><organisation><id>91968172</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1446725669/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2015-11-05T14:59:47Z</createdOn><updatedOn>2015-11-05T14:59:47Z</updatedOn><name>company
         B</name></organisation></parties>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823122/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968172/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Closed</milestone>\n  <probability type=\"integer\">100</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Closed</milestone>
+          <probability type="integer">100</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -318,31 +498,42 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:08 GMT
+      - Thu, 05 Nov 2015 14:59:47 GMT
       Server:
       - Apache
       Content-Length:
       - '128'
-      Vary:
-      - Accept-Encoding
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Connection:
       - close
       Content-Type:
-      - text/xml
+      - application/xml
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><response><message>unknown
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><response><message>unknown
         milestone for opportunity</message></response>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823122/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968172/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Invoiced</milestone>\n  <probability type=\"integer\">100</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Invoiced</milestone>
+          <probability type="integer">100</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -351,29 +542,49 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:09 GMT
+      - Thu, 05 Nov 2015 14:59:47 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3728'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848919
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733173
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848919
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733173
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <value
-        type=\"integer\">40000</value>\n  <duration type=\"integer\">2</duration>\n
-        \ <durationBasis>YEAR</durationBasis>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <value type="integer">40000</value>
+          <duration type="integer">2</duration>
+          <durationBasis>YEAR</durationBasis>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -382,28 +593,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:09 GMT
+      - Thu, 05 Nov 2015 14:59:48 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3727'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '514'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848919</id><name>Membership</name><partyId>52823122</partyId><currency>GBP</currency><value>40000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><actualCloseDate>2013-12-13T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:22Z</createdOn><updatedOn>2013-12-13T15:32:23.420Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733173</id><name>Membership</name><partyId>91968172</partyId><currency>GBP</currency><value>40000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><actualCloseDate>2015-11-05T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:48Z</createdOn><updatedOn>2015-11-05T14:59:48.358Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848919
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733173
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <expectedCloseDate
-        type=\"date\">2012-11-03</expectedCloseDate>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <expectedCloseDate type="date">2012-11-03</expectedCloseDate>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -412,23 +642,37 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:10 GMT
+      - Thu, 05 Nov 2015 14:59:48 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3726'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '573'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848919</id><name>Membership</name><partyId>52823122</partyId><currency>GBP</currency><value>40000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2012-11-03T00:00:00Z</expectedCloseDate><actualCloseDate>2013-12-13T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:22Z</createdOn><updatedOn>2013-12-13T15:32:23.985Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733173</id><name>Membership</name><partyId>91968172</partyId><currency>GBP</currency><value>40000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2012-11-03T00:00:00Z</expectedCloseDate><actualCloseDate>2015-11-05T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:48Z</createdOn><updatedOn>2015-11-05T14:59:48.819Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20C
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20C
     body:
       encoding: US-ASCII
       string: ''
@@ -441,28 +685,50 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:10 GMT
+      - Thu, 05 Nov 2015 14:59:49 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3725'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '74'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="0"/>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="0"/>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/organisation
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/organisation
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<organisation>\n  <about
-        nil=\"true\"/>\n  <name>company C</name>\n  <contacts/>\n</organisation>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <organisation>
+          <about nil="true"/>
+          <name>company C</name>
+          <contacts/>
+        </organisation>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -471,23 +737,37 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:11 GMT
+      - Thu, 05 Nov 2015 14:59:49 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3724'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823125
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968174
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20C
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20C
     body:
       encoding: US-ASCII
       string: ''
@@ -500,29 +780,51 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:11 GMT
+      - Thu, 05 Nov 2015 14:59:50 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3723'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '361'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="1"><organisation><id>52823125</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1386856454/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2013-12-13T15:32:25Z</createdOn><updatedOn>2013-12-13T15:32:25Z</updatedOn><name>company
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="1"><organisation><id>91968174</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1446725669/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2015-11-05T14:59:50Z</createdOn><updatedOn>2015-11-05T14:59:50Z</updatedOn><name>company
         C</name></organisation></parties>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823125/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968174/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Closed</milestone>\n  <probability type=\"integer\">100</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Closed</milestone>
+          <probability type="integer">100</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -531,31 +833,42 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:12 GMT
+      - Thu, 05 Nov 2015 14:59:50 GMT
       Server:
       - Apache
       Content-Length:
       - '128'
-      Vary:
-      - Accept-Encoding
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Connection:
       - close
       Content-Type:
-      - text/xml
+      - application/xml
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><response><message>unknown
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><response><message>unknown
         milestone for opportunity</message></response>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823125/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968174/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Proposal</milestone>\n  <probability type=\"integer\">50</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Proposal</milestone>
+          <probability type="integer">50</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -564,29 +877,49 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:12 GMT
+      - Thu, 05 Nov 2015 14:59:50 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3721'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848920
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733174
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848920
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733174
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <value
-        type=\"integer\">50000</value>\n  <duration type=\"integer\">3</duration>\n
-        \ <durationBasis>YEAR</durationBasis>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <value type="integer">50000</value>
+          <duration type="integer">3</duration>
+          <durationBasis>YEAR</durationBasis>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -595,28 +928,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:13 GMT
+      - Thu, 05 Nov 2015 14:59:51 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3720'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '458'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848920</id><name>Membership</name><partyId>52823125</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><milestoneId>211636</milestoneId><milestone>Proposal</milestone><probability>50</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:26Z</createdOn><updatedOn>2013-12-13T15:32:26.905Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733174</id><name>Membership</name><partyId>91968174</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><milestoneId>211636</milestoneId><milestone>Proposal</milestone><probability>50</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:51Z</createdOn><updatedOn>2015-11-05T14:59:51.490Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848920
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733174
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <expectedCloseDate
-        type=\"date\">2013-10-19</expectedCloseDate>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <expectedCloseDate type="date">2013-10-19</expectedCloseDate>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -625,23 +977,37 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:13 GMT
+      - Thu, 05 Nov 2015 14:59:51 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3719'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '517'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848920</id><name>Membership</name><partyId>52823125</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2013-10-19T00:00:00Z</expectedCloseDate><milestoneId>211636</milestoneId><milestone>Proposal</milestone><probability>50</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:26Z</createdOn><updatedOn>2013-12-13T15:32:27.452Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733174</id><name>Membership</name><partyId>91968174</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2013-10-19T00:00:00Z</expectedCloseDate><milestoneId>211636</milestoneId><milestone>Proposal</milestone><probability>50</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:51Z</createdOn><updatedOn>2015-11-05T14:59:51.971Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20D
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20D
     body:
       encoding: US-ASCII
       string: ''
@@ -654,28 +1020,50 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:14 GMT
+      - Thu, 05 Nov 2015 14:59:52 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3718'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '74'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="0"/>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="0"/>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/organisation
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/organisation
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<organisation>\n  <about
-        nil=\"true\"/>\n  <name>company D</name>\n  <contacts/>\n</organisation>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <organisation>
+          <about nil="true"/>
+          <name>company D</name>
+          <contacts/>
+        </organisation>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -684,23 +1072,37 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:14 GMT
+      - Thu, 05 Nov 2015 14:59:52 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3717'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823126
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968177
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20D
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20D
     body:
       encoding: US-ASCII
       string: ''
@@ -713,29 +1115,51 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:15 GMT
+      - Thu, 05 Nov 2015 14:59:53 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3716'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '361'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="1"><organisation><id>52823126</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1386856454/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2013-12-13T15:32:28Z</createdOn><updatedOn>2013-12-13T15:32:28Z</updatedOn><name>company
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="1"><organisation><id>91968177</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1446725669/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2015-11-05T14:59:53Z</createdOn><updatedOn>2015-11-05T14:59:53Z</updatedOn><name>company
         D</name></organisation></parties>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823126/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968177/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Closed</milestone>\n  <probability type=\"integer\">100</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Closed</milestone>
+          <probability type="integer">100</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -744,31 +1168,42 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:15 GMT
+      - Thu, 05 Nov 2015 14:59:54 GMT
       Server:
       - Apache
       Content-Length:
       - '128'
-      Vary:
-      - Accept-Encoding
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Connection:
       - close
       Content-Type:
-      - text/xml
+      - application/xml
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><response><message>unknown
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><response><message>unknown
         milestone for opportunity</message></response>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823126/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968177/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Contract</milestone>\n  <probability type=\"integer\">70</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Contract</milestone>
+          <probability type="integer">70</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -777,29 +1212,49 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:16 GMT
+      - Thu, 05 Nov 2015 14:59:55 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3714'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848921
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733175
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848921
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733175
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <value
-        type=\"integer\">30000</value>\n  <duration type=\"integer\">3</duration>\n
-        \ <durationBasis>YEAR</durationBasis>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <value type="integer">30000</value>
+          <duration type="integer">3</duration>
+          <durationBasis>YEAR</durationBasis>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -808,28 +1263,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:16 GMT
+      - Thu, 05 Nov 2015 14:59:55 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3713'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '458'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848921</id><name>Membership</name><partyId>52823126</partyId><currency>GBP</currency><value>30000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><milestoneId>211637</milestoneId><milestone>Contract</milestone><probability>70</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:30Z</createdOn><updatedOn>2013-12-13T15:32:30.532Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733175</id><name>Membership</name><partyId>91968177</partyId><currency>GBP</currency><value>30000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><milestoneId>211637</milestoneId><milestone>Contract</milestone><probability>70</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:55Z</createdOn><updatedOn>2015-11-05T14:59:55.897Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848921
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733175
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <expectedCloseDate
-        type=\"date\">2013-08-10</expectedCloseDate>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <expectedCloseDate type="date">2013-08-10</expectedCloseDate>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -838,23 +1312,37 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:17 GMT
+      - Thu, 05 Nov 2015 14:59:56 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3712'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '517'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848921</id><name>Membership</name><partyId>52823126</partyId><currency>GBP</currency><value>30000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2013-08-10T00:00:00Z</expectedCloseDate><milestoneId>211637</milestoneId><milestone>Contract</milestone><probability>70</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:30Z</createdOn><updatedOn>2013-12-13T15:32:31.102Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733175</id><name>Membership</name><partyId>91968177</partyId><currency>GBP</currency><value>30000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2013-08-10T00:00:00Z</expectedCloseDate><milestoneId>211637</milestoneId><milestone>Contract</milestone><probability>70</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:55Z</createdOn><updatedOn>2015-11-05T14:59:56.904Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20E
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20E
     body:
       encoding: US-ASCII
       string: ''
@@ -867,28 +1355,50 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:17 GMT
+      - Thu, 05 Nov 2015 14:59:57 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3711'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '74'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="0"/>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="0"/>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/organisation
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/organisation
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<organisation>\n  <about
-        nil=\"true\"/>\n  <name>company E</name>\n  <contacts/>\n</organisation>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <organisation>
+          <about nil="true"/>
+          <name>company E</name>
+          <contacts/>
+        </organisation>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -897,23 +1407,37 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:18 GMT
+      - Thu, 05 Nov 2015 14:59:57 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3710'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823131
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968180
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20E
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20E
     body:
       encoding: US-ASCII
       string: ''
@@ -926,29 +1450,51 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:18 GMT
+      - Thu, 05 Nov 2015 14:59:58 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3709'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '361'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="1"><organisation><id>52823131</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1386856454/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2013-12-13T15:32:32Z</createdOn><updatedOn>2013-12-13T15:32:32Z</updatedOn><name>company
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="1"><organisation><id>91968180</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1446725669/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2015-11-05T14:59:58Z</createdOn><updatedOn>2015-11-05T14:59:58Z</updatedOn><name>company
         E</name></organisation></parties>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823131/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968180/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Closed</milestone>\n  <probability type=\"integer\">100</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Closed</milestone>
+          <probability type="integer">100</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -957,31 +1503,42 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:19 GMT
+      - Thu, 05 Nov 2015 14:59:58 GMT
       Server:
       - Apache
       Content-Length:
       - '128'
-      Vary:
-      - Accept-Encoding
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Connection:
       - close
       Content-Type:
-      - text/xml
+      - application/xml
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><response><message>unknown
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><response><message>unknown
         milestone for opportunity</message></response>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823131/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968180/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Lost</milestone>\n  <probability type=\"integer\">0</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Lost</milestone>
+          <probability type="integer">0</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -990,29 +1547,49 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:19 GMT
+      - Thu, 05 Nov 2015 14:59:59 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3707'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848922
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733176
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848922
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733176
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <value
-        type=\"integer\">50000</value>\n  <duration type=\"integer\">2</duration>\n
-        \ <durationBasis>YEAR</durationBasis>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <value type="integer">50000</value>
+          <duration type="integer">2</duration>
+          <durationBasis>YEAR</durationBasis>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1021,28 +1598,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:20 GMT
+      - Thu, 05 Nov 2015 14:59:59 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3706'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '508'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848922</id><name>Membership</name><partyId>52823131</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><actualCloseDate>2013-12-13T00:00:00Z</actualCloseDate><milestoneId>211640</milestoneId><milestone>Lost</milestone><probability>0</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:33Z</createdOn><updatedOn>2013-12-13T15:32:34.051Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733176</id><name>Membership</name><partyId>91968180</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><actualCloseDate>2015-11-05T00:00:00Z</actualCloseDate><milestoneId>211640</milestoneId><milestone>Lost</milestone><probability>0</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:59Z</createdOn><updatedOn>2015-11-05T14:59:59.567Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848922
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733176
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <expectedCloseDate
-        type=\"date\">2013-06-22</expectedCloseDate>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <expectedCloseDate type="date">2013-06-22</expectedCloseDate>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1051,23 +1647,37 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:20 GMT
+      - Thu, 05 Nov 2015 15:00:00 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3705'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '567'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848922</id><name>Membership</name><partyId>52823131</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2013-06-22T00:00:00Z</expectedCloseDate><actualCloseDate>2013-12-13T00:00:00Z</actualCloseDate><milestoneId>211640</milestoneId><milestone>Lost</milestone><probability>0</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:33Z</createdOn><updatedOn>2013-12-13T15:32:34.536Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733176</id><name>Membership</name><partyId>91968180</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2013-06-22T00:00:00Z</expectedCloseDate><actualCloseDate>2015-11-05T00:00:00Z</actualCloseDate><milestoneId>211640</milestoneId><milestone>Lost</milestone><probability>0</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:59Z</createdOn><updatedOn>2015-11-05T15:00:00.090Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20F
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20F
     body:
       encoding: US-ASCII
       string: ''
@@ -1080,28 +1690,50 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:21 GMT
+      - Thu, 05 Nov 2015 15:00:00 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3704'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '74'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="0"/>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="0"/>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/organisation
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/organisation
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<organisation>\n  <about
-        nil=\"true\"/>\n  <name>company F</name>\n  <contacts/>\n</organisation>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <organisation>
+          <about nil="true"/>
+          <name>company F</name>
+          <contacts/>
+        </organisation>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1110,23 +1742,37 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:21 GMT
+      - Thu, 05 Nov 2015 15:00:00 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3703'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823133
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968183
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20F
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20F
     body:
       encoding: US-ASCII
       string: ''
@@ -1139,29 +1785,51 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:22 GMT
+      - Thu, 05 Nov 2015 15:00:01 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3702'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '361'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="1"><organisation><id>52823133</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1386856454/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2013-12-13T15:32:35Z</createdOn><updatedOn>2013-12-13T15:32:35Z</updatedOn><name>company
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="1"><organisation><id>91968183</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1446725669/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2015-11-05T15:00:01Z</createdOn><updatedOn>2015-11-05T15:00:01Z</updatedOn><name>company
         F</name></organisation></parties>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823133/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968183/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Closed</milestone>\n  <probability type=\"integer\">100</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Closed</milestone>
+          <probability type="integer">100</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1170,31 +1838,42 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:22 GMT
+      - Thu, 05 Nov 2015 15:00:01 GMT
       Server:
       - Apache
       Content-Length:
       - '128'
-      Vary:
-      - Accept-Encoding
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Connection:
       - close
       Content-Type:
-      - text/xml
+      - application/xml
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><response><message>unknown
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><response><message>unknown
         milestone for opportunity</message></response>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823133/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968183/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Prospect</milestone>\n  <probability type=\"integer\">10</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Prospect</milestone>
+          <probability type="integer">10</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1203,29 +1882,49 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:23 GMT
+      - Thu, 05 Nov 2015 15:00:02 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3700'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848923
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733177
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848923
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733177
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <value
-        type=\"integer\">10000</value>\n  <duration type=\"integer\">1</duration>\n
-        \ <durationBasis>YEAR</durationBasis>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <value type="integer">10000</value>
+          <duration type="integer">1</duration>
+          <durationBasis>YEAR</durationBasis>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1234,28 +1933,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:23 GMT
+      - Thu, 05 Nov 2015 15:00:02 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3699'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '458'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848923</id><name>Membership</name><partyId>52823133</partyId><currency>GBP</currency><value>10000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><milestoneId>154048</milestoneId><milestone>Prospect</milestone><probability>10</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:37Z</createdOn><updatedOn>2013-12-13T15:32:37.643Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733177</id><name>Membership</name><partyId>91968183</partyId><currency>GBP</currency><value>10000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><milestoneId>154048</milestoneId><milestone>Prospect</milestone><probability>10</probability><owner>techteam</owner><createdOn>2015-11-05T15:00:02Z</createdOn><updatedOn>2015-11-05T15:00:02.881Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848923
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733177
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <expectedCloseDate
-        type=\"date\">2014-07-26</expectedCloseDate>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <expectedCloseDate type="date">2014-07-26</expectedCloseDate>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1264,23 +1982,37 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:24 GMT
+      - Thu, 05 Nov 2015 15:00:03 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3698'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '517'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848923</id><name>Membership</name><partyId>52823133</partyId><currency>GBP</currency><value>10000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><expectedCloseDate>2014-07-26T00:00:00Z</expectedCloseDate><milestoneId>154048</milestoneId><milestone>Prospect</milestone><probability>10</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:37Z</createdOn><updatedOn>2013-12-13T15:32:38.309Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733177</id><name>Membership</name><partyId>91968183</partyId><currency>GBP</currency><value>10000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><expectedCloseDate>2014-07-26T00:00:00Z</expectedCloseDate><milestoneId>154048</milestoneId><milestone>Prospect</milestone><probability>10</probability><owner>techteam</owner><createdOn>2015-11-05T15:00:02Z</createdOn><updatedOn>2015-11-05T15:00:03.324Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20G
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20G
     body:
       encoding: US-ASCII
       string: ''
@@ -1293,28 +2025,50 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:25 GMT
+      - Thu, 05 Nov 2015 15:00:03 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3697'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '74'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="0"/>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="0"/>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/organisation
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/organisation
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<organisation>\n  <about
-        nil=\"true\"/>\n  <name>company G</name>\n  <contacts/>\n</organisation>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <organisation>
+          <about nil="true"/>
+          <name>company G</name>
+          <contacts/>
+        </organisation>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1323,23 +2077,37 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:25 GMT
+      - Thu, 05 Nov 2015 15:00:04 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3696'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823134
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968187
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20G
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20G
     body:
       encoding: US-ASCII
       string: ''
@@ -1352,29 +2120,51 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:25 GMT
+      - Thu, 05 Nov 2015 15:00:04 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3695'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '361'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="1"><organisation><id>52823134</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1386856454/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2013-12-13T15:32:39Z</createdOn><updatedOn>2013-12-13T15:32:39Z</updatedOn><name>company
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="1"><organisation><id>91968187</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1446725669/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2015-11-05T15:00:04Z</createdOn><updatedOn>2015-11-05T15:00:04Z</updatedOn><name>company
         G</name></organisation></parties>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823134/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968187/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Closed</milestone>\n  <probability type=\"integer\">100</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Closed</milestone>
+          <probability type="integer">100</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1383,31 +2173,42 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:26 GMT
+      - Thu, 05 Nov 2015 15:00:05 GMT
       Server:
       - Apache
       Content-Length:
       - '128'
-      Vary:
-      - Accept-Encoding
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Connection:
       - close
       Content-Type:
-      - text/xml
+      - application/xml
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><response><message>unknown
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><response><message>unknown
         milestone for opportunity</message></response>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823134/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968187/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Qualified</milestone>\n  <probability type=\"integer\">30</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Qualified</milestone>
+          <probability type="integer">30</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1416,29 +2217,49 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:27 GMT
+      - Thu, 05 Nov 2015 15:00:05 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3693'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848924
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733178
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848924
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733178
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <value
-        type=\"integer\">20000</value>\n  <duration type=\"integer\">2</duration>\n
-        \ <durationBasis>YEAR</durationBasis>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <value type="integer">20000</value>
+          <duration type="integer">2</duration>
+          <durationBasis>YEAR</durationBasis>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1447,28 +2268,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:27 GMT
+      - Thu, 05 Nov 2015 15:00:06 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3692'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '459'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848924</id><name>Membership</name><partyId>52823134</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><milestoneId>211635</milestoneId><milestone>Qualified</milestone><probability>30</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:40Z</createdOn><updatedOn>2013-12-13T15:32:41.442Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733178</id><name>Membership</name><partyId>91968187</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><milestoneId>211635</milestoneId><milestone>Qualified</milestone><probability>30</probability><owner>techteam</owner><createdOn>2015-11-05T15:00:06Z</createdOn><updatedOn>2015-11-05T15:00:06.252Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848924
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733178
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <expectedCloseDate
-        type=\"date\">2014-03-08</expectedCloseDate>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <expectedCloseDate type="date">2014-03-08</expectedCloseDate>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1477,23 +2317,37 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:28 GMT
+      - Thu, 05 Nov 2015 15:00:07 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3691'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '518'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848924</id><name>Membership</name><partyId>52823134</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2014-03-08T00:00:00Z</expectedCloseDate><milestoneId>211635</milestoneId><milestone>Qualified</milestone><probability>30</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:40Z</createdOn><updatedOn>2013-12-13T15:32:41.817Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733178</id><name>Membership</name><partyId>91968187</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2014-03-08T00:00:00Z</expectedCloseDate><milestoneId>211635</milestoneId><milestone>Qualified</milestone><probability>30</probability><owner>techteam</owner><createdOn>2015-11-05T15:00:06Z</createdOn><updatedOn>2015-11-05T15:00:07.093Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20H
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20H
     body:
       encoding: US-ASCII
       string: ''
@@ -1506,28 +2360,50 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:28 GMT
+      - Thu, 05 Nov 2015 15:00:07 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3690'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '74'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="0"/>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="0"/>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/organisation
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/organisation
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<organisation>\n  <about
-        nil=\"true\"/>\n  <name>company H</name>\n  <contacts/>\n</organisation>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <organisation>
+          <about nil="true"/>
+          <name>company H</name>
+          <contacts/>
+        </organisation>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1536,23 +2412,37 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:29 GMT
+      - Thu, 05 Nov 2015 15:00:08 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3689'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823135
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968193
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party?q=company%20H
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party?q=company%20H
     body:
       encoding: US-ASCII
       string: ''
@@ -1565,29 +2455,51 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:29 GMT
+      - Thu, 05 Nov 2015 15:00:09 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3688'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '361'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><parties size="1"><organisation><id>52823135</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1386856454/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2013-12-13T15:32:42Z</createdOn><updatedOn>2013-12-13T15:32:42Z</updatedOn><name>company
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><parties
+        size="1"><organisation><id>91968193</id><contacts/><pictureURL>https://d365sd3k9yw37.cloudfront.net/a/1446725669/theme/default/images/org_avatar_70.png</pictureURL><createdOn>2015-11-05T15:00:09Z</createdOn><updatedOn>2015-11-05T15:00:09Z</updatedOn><name>company
         H</name></organisation></parties>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823135/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968193/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Closed</milestone>\n  <probability type=\"integer\">100</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Closed</milestone>
+          <probability type="integer">100</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1596,31 +2508,42 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:30 GMT
+      - Thu, 05 Nov 2015 15:00:09 GMT
       Server:
       - Apache
       Content-Length:
       - '128'
-      Vary:
-      - Accept-Encoding
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Connection:
       - close
       Content-Type:
-      - text/xml
+      - application/xml
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><response><message>unknown
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><response><message>unknown
         milestone for opportunity</message></response>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: post
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823135/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968193/opportunity
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <name>Membership</name>\n
-        \ <milestone>Forecast</milestone>\n  <probability type=\"integer\">90</probability>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <name>Membership</name>
+          <milestone>Forecast</milestone>
+          <probability type="integer">90</probability>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1629,29 +2552,49 @@ http_interactions:
       message: Created
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:30 GMT
+      - Thu, 05 Nov 2015 15:00:10 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3686'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Location:
-      - https://<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848925
+      - https://uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733180
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848925
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733180
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <value
-        type=\"integer\">20000</value>\n  <duration type=\"integer\">3</duration>\n
-        \ <durationBasis>YEAR</durationBasis>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <value type="integer">20000</value>
+          <duration type="integer">3</duration>
+          <durationBasis>YEAR</durationBasis>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1660,28 +2603,47 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:31 GMT
+      - Thu, 05 Nov 2015 15:00:10 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3685'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '458'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848925</id><name>Membership</name><partyId>52823135</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><milestoneId>211638</milestoneId><milestone>Forecast</milestone><probability>90</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:44Z</createdOn><updatedOn>2013-12-13T15:32:44.927Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733180</id><name>Membership</name><partyId>91968193</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><milestoneId>211638</milestoneId><milestone>Forecast</milestone><probability>90</probability><owner>techteam</owner><createdOn>2015-11-05T15:00:10Z</createdOn><updatedOn>2015-11-05T15:00:10.563Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: put
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity/1848925
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity/3733180
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<opportunity>\n  <expectedCloseDate
-        type=\"date\">2017-04-01</expectedCloseDate>\n</opportunity>\n"
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8"?>
+        <opportunity>
+          <expectedCloseDate type="date">2017-04-01</expectedCloseDate>
+        </opportunity>
     headers:
+      User-Agent:
+      - CapsuleCRM ruby gem
       Content-Type:
       - text/xml
   response:
@@ -1690,23 +2652,37 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:31 GMT
+      - Thu, 05 Nov 2015 15:00:10 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3684'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '517'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunity><id>1848925</id><name>Membership</name><partyId>52823135</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2017-04-01T00:00:00Z</expectedCloseDate><milestoneId>211638</milestoneId><milestone>Forecast</milestone><probability>90</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:44Z</createdOn><updatedOn>2013-12-13T15:32:45.572Z</updatedOn></opportunity>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunity><id>3733180</id><name>Membership</name><partyId>91968193</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2017-04-01T00:00:00Z</expectedCloseDate><milestoneId>211638</milestoneId><milestone>Forecast</milestone><probability>90</probability><owner>techteam</owner><createdOn>2015-11-05T15:00:10Z</createdOn><updatedOn>2015-11-05T15:00:11.036Z</updatedOn></opportunity>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: get
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/opportunity
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/opportunity
     body:
       encoding: US-ASCII
       string: ''
@@ -1719,24 +2695,38 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:32 GMT
+      - Thu, 05 Nov 2015 15:00:11 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3683'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '3922'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
       Content-Type:
-      - ! '*/*'
+      - "*/*;charset=UTF-8"
     body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><opportunities
-        size="8"><opportunity><id>1848918</id><name>Membership</name><partyId>52823119</partyId><currency>GBP</currency><value>60000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><expectedCloseDate>2013-03-23T00:00:00Z</expectedCloseDate><actualCloseDate>2013-12-13T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:19Z</createdOn><updatedOn>2013-12-13T15:32:20Z</updatedOn></opportunity><opportunity><id>1848919</id><name>Membership</name><partyId>52823122</partyId><currency>GBP</currency><value>40000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2012-11-03T00:00:00Z</expectedCloseDate><actualCloseDate>2013-12-13T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:22Z</createdOn><updatedOn>2013-12-13T15:32:23Z</updatedOn></opportunity><opportunity><id>1848925</id><name>Membership</name><partyId>52823135</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2017-04-01T00:00:00Z</expectedCloseDate><milestoneId>211638</milestoneId><milestone>Forecast</milestone><probability>90</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:44Z</createdOn><updatedOn>2013-12-13T15:32:45Z</updatedOn></opportunity><opportunity><id>1848921</id><name>Membership</name><partyId>52823126</partyId><currency>GBP</currency><value>30000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2013-08-10T00:00:00Z</expectedCloseDate><milestoneId>211637</milestoneId><milestone>Contract</milestone><probability>70</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:30Z</createdOn><updatedOn>2013-12-13T15:32:31Z</updatedOn></opportunity><opportunity><id>1848920</id><name>Membership</name><partyId>52823125</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2013-10-19T00:00:00Z</expectedCloseDate><milestoneId>211636</milestoneId><milestone>Proposal</milestone><probability>50</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:26Z</createdOn><updatedOn>2013-12-13T15:32:27Z</updatedOn></opportunity><opportunity><id>1848924</id><name>Membership</name><partyId>52823134</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2014-03-08T00:00:00Z</expectedCloseDate><milestoneId>211635</milestoneId><milestone>Qualified</milestone><probability>30</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:40Z</createdOn><updatedOn>2013-12-13T15:32:41Z</updatedOn></opportunity><opportunity><id>1848923</id><name>Membership</name><partyId>52823133</partyId><currency>GBP</currency><value>10000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><expectedCloseDate>2014-07-26T00:00:00Z</expectedCloseDate><milestoneId>154048</milestoneId><milestone>Prospect</milestone><probability>10</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:37Z</createdOn><updatedOn>2013-12-13T15:32:38Z</updatedOn></opportunity><opportunity><id>1848922</id><name>Membership</name><partyId>52823131</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2013-06-22T00:00:00Z</expectedCloseDate><actualCloseDate>2013-12-13T00:00:00Z</actualCloseDate><milestoneId>211640</milestoneId><milestone>Lost</milestone><probability>0</probability><owner>techteam</owner><createdOn>2013-12-13T15:32:33Z</createdOn><updatedOn>2013-12-13T15:32:34Z</updatedOn></opportunity></opportunities>
+      encoding: UTF-8
+      string: <?xml version="1.0" enc<METRICS_API_USERNAME>ng="UTF-8" standalone="yes"?><opportunities
+        size="8"><opportunity><id>3733172</id><name>Membership</name><partyId>91968168</partyId><currency>GBP</currency><value>60000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><expectedCloseDate>2013-03-23T00:00:00Z</expectedCloseDate><actualCloseDate>2015-11-05T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:45Z</createdOn><updatedOn>2015-11-05T14:59:46Z</updatedOn></opportunity><opportunity><id>3733173</id><name>Membership</name><partyId>91968172</partyId><currency>GBP</currency><value>40000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2012-11-03T00:00:00Z</expectedCloseDate><actualCloseDate>2015-11-05T00:00:00Z</actualCloseDate><milestoneId>154049</milestoneId><milestone>Invoiced</milestone><probability>100</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:48Z</createdOn><updatedOn>2015-11-05T14:59:49Z</updatedOn></opportunity><opportunity><id>3733174</id><name>Membership</name><partyId>91968174</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2013-10-19T00:00:00Z</expectedCloseDate><milestoneId>211636</milestoneId><milestone>Proposal</milestone><probability>50</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:51Z</createdOn><updatedOn>2015-11-05T14:59:52Z</updatedOn></opportunity><opportunity><id>3733175</id><name>Membership</name><partyId>91968177</partyId><currency>GBP</currency><value>30000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2013-08-10T00:00:00Z</expectedCloseDate><milestoneId>211637</milestoneId><milestone>Contract</milestone><probability>70</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:55Z</createdOn><updatedOn>2015-11-05T14:59:57Z</updatedOn></opportunity><opportunity><id>3733176</id><name>Membership</name><partyId>91968180</partyId><currency>GBP</currency><value>50000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2013-06-22T00:00:00Z</expectedCloseDate><actualCloseDate>2015-11-05T00:00:00Z</actualCloseDate><milestoneId>211640</milestoneId><milestone>Lost</milestone><probability>0</probability><owner>techteam</owner><createdOn>2015-11-05T14:59:59Z</createdOn><updatedOn>2015-11-05T15:00:00Z</updatedOn></opportunity><opportunity><id>3733177</id><name>Membership</name><partyId>91968183</partyId><currency>GBP</currency><value>10000.00</value><durationBasis>YEAR</durationBasis><duration>1</duration><expectedCloseDate>2014-07-26T00:00:00Z</expectedCloseDate><milestoneId>154048</milestoneId><milestone>Prospect</milestone><probability>10</probability><owner>techteam</owner><createdOn>2015-11-05T15:00:02Z</createdOn><updatedOn>2015-11-05T15:00:03Z</updatedOn></opportunity><opportunity><id>3733178</id><name>Membership</name><partyId>91968187</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>2</duration><expectedCloseDate>2014-03-08T00:00:00Z</expectedCloseDate><milestoneId>211635</milestoneId><milestone>Qualified</milestone><probability>30</probability><owner>techteam</owner><createdOn>2015-11-05T15:00:06Z</createdOn><updatedOn>2015-11-05T15:00:07Z</updatedOn></opportunity><opportunity><id>3733180</id><name>Membership</name><partyId>91968193</partyId><currency>GBP</currency><value>20000.00</value><durationBasis>YEAR</durationBasis><duration>3</duration><expectedCloseDate>2017-04-01T00:00:00Z</expectedCloseDate><milestoneId>211638</milestoneId><milestone>Forecast</milestone><probability>90</probability><owner>techteam</owner><createdOn>2015-11-05T15:00:10Z</createdOn><updatedOn>2015-11-05T15:00:11Z</updatedOn></opportunity></opportunities>
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: delete
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823119
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968168
     body:
       encoding: US-ASCII
       string: ''
@@ -1749,21 +2739,35 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:32 GMT
+      - Thu, 05 Nov 2015 15:00:32 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3682'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: delete
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823122
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968172
     body:
       encoding: US-ASCII
       string: ''
@@ -1776,21 +2780,35 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:33 GMT
+      - Thu, 05 Nov 2015 15:00:32 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3681'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: delete
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823125
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968174
     body:
       encoding: US-ASCII
       string: ''
@@ -1803,21 +2821,35 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:33 GMT
+      - Thu, 05 Nov 2015 15:00:33 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3680'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: delete
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823126
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968177
     body:
       encoding: US-ASCII
       string: ''
@@ -1830,21 +2862,35 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:34 GMT
+      - Thu, 05 Nov 2015 15:00:34 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3679'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: delete
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823131
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968180
     body:
       encoding: US-ASCII
       string: ''
@@ -1857,21 +2903,35 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:34 GMT
+      - Thu, 05 Nov 2015 15:00:35 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3678'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: delete
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823133
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968183
     body:
       encoding: US-ASCII
       string: ''
@@ -1884,21 +2944,35 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:35 GMT
+      - Thu, 05 Nov 2015 15:00:35 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3677'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: delete
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823134
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968187
     body:
       encoding: US-ASCII
       string: ''
@@ -1911,21 +2985,35 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:35 GMT
+      - Thu, 05 Nov 2015 15:00:36 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3676'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
 - request:
     method: delete
-    uri: https://<CAPSULECRM_API_TOKEN>:x@<CAPSULECRM_ACCOUNT_NAME>.capsulecrm.com/api/party/52823135
+    uri: https://<CAPSULECRM_API_TOKEN>:x@uk<METRICS_API_USERNAME>tech.capsulecrm.com/api/party/91968193
     body:
       encoding: US-ASCII
       string: ''
@@ -1938,16 +3026,30 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 13 Dec 2013 15:31:36 GMT
+      - Thu, 05 Nov 2015 15:00:36 GMT
       Server:
       - Apache
+      X-Frame-Options:
+      - DENY
       Set-Cookie:
       - JSESSIONID=; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+      X-Ratelimit-Remaining:
+      - '3675'
+      X-Ratelimit-Reset:
+      - '1446737751'
+      X-Ratelimit-Limit:
+      - '4000'
       Content-Length:
       - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     http_version: 
   recorded_at: Sat, 01 Jun 2013 14:00:00 GMT
-recorded_with: VCR 2.8.0
+recorded_with: VCR 2.9.3

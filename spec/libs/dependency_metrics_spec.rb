@@ -9,10 +9,10 @@ describe DependencyMetrics, :vcr do
 
   it "should store right values in metrics API" do
     expected = {
-      current: 470,
-      warning: 704,
-      danger: 16,
-      alerts: 99,
+      current: 670,
+      warning: 1015,
+      danger: 57,
+      alerts: 271,
     }
     # Which methods are called?
     DependencyMetrics.should_receive(:dependencies).once.and_call_original
@@ -21,23 +21,23 @@ describe DependencyMetrics, :vcr do
     # Do it
     DependencyMetrics.perform
   end
-    
+
   it "should get correct value for up-to-date dependencies" do
-    DependencyMetrics.dependencies[:current].should eq 470
+    DependencyMetrics.dependencies[:current].should eq 670
   end
 
   it "should get correct value for out-of-date dependencies" do
-    DependencyMetrics.dependencies[:warning].should eq 704
+    DependencyMetrics.dependencies[:warning].should eq 1015
   end
 
   it "should get correct value for dangerously out-of-date dependencies" do
-    DependencyMetrics.dependencies[:danger].should eq 16
+    DependencyMetrics.dependencies[:danger].should eq 57
   end
 
   it "should get correct value for open alerts" do
-    DependencyMetrics.dependencies[:alerts].should eq 99
+    DependencyMetrics.dependencies[:alerts].should eq 271
   end
-  
+
   after :each do
     Timecop.return
   end

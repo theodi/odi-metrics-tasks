@@ -25,7 +25,7 @@ env:
   - GITHUB_OAUTH_TOKEN: oauth_token
   - GAPPS_USER_EMAIL: nobody@example.com
   - GAPPS_PASSWORD: not_a_real_password
-  - CAPSULECRM_ACCOUNT_NAME: whoever
+  - CAPSULECRM_ACCOUNT_NAME: ukoditech
   - CAPSULECRM_API_TOKEN: password
   - TRELLO_DEV_KEY: trello_dev_key
   - TRELLO_MEMBER_KEY: trello_member_key

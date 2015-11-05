@@ -8,7 +8,7 @@ describe Github::IssueMonitor, :vcr do
   end
 
   it "should store right value in metrics API" do
-    metrics_api_should_receive("github-open-issue-count", @time, 492)
+    metrics_api_should_receive("github-open-issue-count", @time, 651)
     # when this happens:
     Github::IssueMonitor.perform
   end

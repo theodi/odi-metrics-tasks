@@ -6,31 +6,32 @@ describe QuarterlyProgress do
 
     progress[:q1].should == 97
     progress[:q2].should == 90.2
-    progress[:q3].should == 93.1
+    progress[:q3].should == 93.4
     progress[:q4].should == 90.8
   end
 
   it "should show correct progress for each quarter in 2014", :vcr do
     progress = QuarterlyProgress.progress(2014)
 
-    progress[:q1].should == 91.6
-    progress[:q2].should == 87.5
-    progress[:q3].should == 63.6
-    progress[:q4].should == 10.6
+    progress[:q1].should == 91.8
+    progress[:q2].should == 91.5
+    progress[:q3].should == 84.1
+    progress[:q4].should == 92.5
   end
 
   it "should show correct progress for each quarter in 2015", :vcr do
     progress = QuarterlyProgress.progress(2015)
 
-    progress[:q1].should == 68.9
-    progress[:q2].should == 15.3
-    progress[:q3].should == 0
+    progress[:q1].should == 82.6
+    progress[:q2].should == 82.1
+    progress[:q3].should == 72.4
     progress[:q4].should == 0
   end
 
   it "should store right values in metrics API", :vcr do
     Timecop.freeze
     time = DateTime.now
+
     h    = {
         '2013' => {
             :q1 => 97.0,
@@ -45,9 +46,9 @@ describe QuarterlyProgress do
             :q4 => 92.5
         },
         '2015' => {
-            :q1 => 68.9,
-            :q2 => 15.3,
-            :q3 => 0,
+            :q1 => 82.6,
+            :q2 => 82.1,
+            :q3 => 72.4,
             :q4 => 0
         }
     }

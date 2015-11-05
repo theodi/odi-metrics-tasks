@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/orgs/<GITHUB_ORGANISATION>?access_token=<GITHUB_OAUTH_TOKEN>
+    uri: https://api.github.com/orgs/the<METRICS_API_USERNAME>?access_token=<GITHUB_OAUTH_TOKEN>
     body:
       encoding: US-ASCII
       string: ''
@@ -12,7 +12,7 @@ http_interactions:
       Accept-Charset:
       - utf-8
       User-Agent:
-      - Github API Ruby Gem 0.12.2
+      - Github API Ruby Gem 0.12.4
       Authorization:
       - token <GITHUB_OAUTH_TOKEN>
       Accept-Enc<METRICS_API_USERNAME>ng:
@@ -20,108 +20,64 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        R2l0SHViLmNvbQ==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        RnJpLCAyNiBEZWMgMjAxNCAyMToyNToyNiBHTVQ=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "U3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "WC1SYXRlbGltaXQtTGltaXQ=":
-      - !binary |-
-        NTAwMA==
-      !binary "WC1SYXRlbGltaXQtUmVtYWluaW5n":
-      - !binary |-
-        NDY0Mw==
-      !binary "WC1SYXRlbGltaXQtUmVzZXQ=":
-      - !binary |-
-        MTQxOTYyOTU3MA==
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZSwgbWF4LWFnZT02MCwgcy1tYXhhZ2U9NjA=
-      !binary "RXRhZw==":
-      - !binary |-
-        IjcyMzZmMTIyZWQzNTVkOTQ3YThkOTA0MzcyNGRlYjA3Ig==
-      !binary "WC1PYXV0aC1TY29wZXM=":
-      - !binary |-
-        cmVwbw==
-      !binary "WC1BY2NlcHRlZC1PYXV0aC1TY29wZXM=":
-      - !binary |-
-        YWRtaW46b3JnLCByZWFkOm9yZywgcmVwbywgdXNlciwgd3JpdGU6b3Jn
-      !binary "WC1PYXV0aC1DbGllbnQtSWQ=":
-      - !binary |-
-        ZDFhZjkxYmZiZWYxZDQ0ODQ5MTg=
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBBdXRob3JpemF0aW9uLCBDb29raWUsIFgtR2l0SHViLU9UUA==
-      - !binary |-
-        QWNjZXB0LUVuYzxNRVRSSUNTX0FQSV9VU0VSTkFNRT5uZw==
-      !binary "WC1HaXRodWItTWVkaWEtVHlwZQ==":
-      - !binary |-
-        Z2l0aHViLnYzOyBmb3JtYXQ9anNvbg==
-      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
-      - !binary |-
-        MTsgbW9kZT1ibG9jaw==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        ZGVueQ==
-      !binary "Q29udGVudC1TZWN1cml0eS1Qb2xpY3k=":
-      - !binary |-
-        ZGVmYXVsdC1zcmMgJ25vbmUn
-      !binary "QWNjZXNzLUNvbnRyb2wtQWxsb3ctQ3JlZGVudGlhbHM=":
-      - !binary |-
-        dHJ1ZQ==
-      !binary "QWNjZXNzLUNvbnRyb2wtRXhwb3NlLUhlYWRlcnM=":
-      - !binary |-
-        RVRhZywgTGluaywgWC1HaXRIdWItT1RQLCBYLVJhdGVMaW1pdC1MaW1pdCwg
-        WC1SYXRlTGltaXQtUmVtYWluaW5nLCBYLVJhdGVMaW1pdC1SZXNldCwgWC1P
-        QXV0aC1TY29wZXMsIFgtQWNjZXB0ZWQtT0F1dGgtU2NvcGVzLCBYLVBvbGwt
-        SW50ZXJ2YWw=
-      !binary "QWNjZXNzLUNvbnRyb2wtQWxsb3ctT3JpZ2lu":
-      - !binary |-
-        Kg==
-      !binary "WC1HaXRodWItUmVxdWVzdC1JZA==":
-      - !binary |-
-        RDkyQjM5OTE6MkZENDpBQUQ3NDg3OjU0OUREMjQ2
-      !binary "U3RyaWN0LVRyYW5zcG9ydC1TZWN1cml0eQ==":
-      - !binary |-
-        bWF4LWFnZT0zMTUzNjAwMDsgaW5jbHVkZVN1YmRvbWFpbnM7IHByZWxvYWQ=
-      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "WC1TZXJ2ZWQtQnk=":
-      - !binary |-
-        OGRkMTg1ZTQyMzk3NGE3ZTEzYWJiYmU2ZTA2MDAzMWU=
-      !binary "VHJhbnNmZXItRW5jPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPm5n":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "TGFzdC1NPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPmZpZWQ=":
-      - !binary |-
-        RnJpLCAyNiBEZWMgMjAxNCAxNzoxNjo0OSBHTVQ=
-      !binary "Q29udGVudC1FbmM8TUVUUklDU19BUElfVVNFUk5BTUU+bmc=":
-      - !binary |-
-        Z3ppcA==
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 05 Nov 2015 10:53:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4938'
+      X-Ratelimit-Reset:
+      - '1446724399'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Etag:
+      - W/"73f2bdef19e2ab3f7cff20fbcc808fcf"
+      X-Oauth-Scopes:
+      - public_repo
+      X-Accepted-Oauth-Scopes:
+      - admin:org, read:org, repo, user, write:org
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Enc<METRICS_API_USERNAME>ng
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - e724c57ebb9961c772a91e2dd7421c8d
+      X-Github-Request-Id:
+      - 56AE6A05:94A8:33D8544:563B351E
+      Transfer-Enc<METRICS_API_USERNAME>ng:
+      - chunked
+      Last-M<METRICS_API_USERNAME>fied:
+      - Mon, 27 Apr 2015 20:53:44 GMT
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA5VSu47bMBD8FYO1bT38UEwgSIo0AQJc4yqNsJJ40iYUSZBL
-        Hy6G/z0rS36c08QduZyd3ZnhUWjbohFSUKdsg2IusBEyX+/yokjnInrNbx2R
-        CzJJwOGyRepitaxtn1jfhuTa55WzofzfhuQM53HqoAw90TfiubFXfaX8E51T
-        wzEZDyfmcLHSWJdPU33su2eEAxD4RxvOxTB5F4PytTXEus82xmSy+8vh84qX
-        alSoPTpCO+TCBQO94tO+U7MXp8zsG7PNvptASJEUA5jFgXkX0kSt56LiTKfU
-        OLQxoCWHlTBU2xom5h/WNDyCI+gBh5hvhozhyKzYXT1qMVAQkv/Eq9XavrH1
-        dzc0PJHfOur1g/i7D3P9K7VXQKopgXhsnmb5IksX6Waf7mS+kdnuJ68SXfMB
-        s14wLN/us0JmW7k+Y+jdDc68+BYM/hmFcdUS6NJ5ZNtVOWnh5eyb4Zn/1i+V
-        m8QGw+8yBmiZPdtuVp822eCy1lBZD2Qn7RVqzcrLi4G/lMGvN78HPzVwiMdL
-        hK9eDXkFBzUzr9IiT3mvx41Op7/JeL7HlwMAAA==
+      string: '{"login":"the<METRICS_API_USERNAME>","id":2492770,"url":"https://api.github.com/orgs/the<METRICS_API_USERNAME>","repos_url":"https://api.github.com/orgs/the<METRICS_API_USERNAME>/repos","events_url":"https://api.github.com/orgs/the<METRICS_API_USERNAME>/events","members_url":"https://api.github.com/orgs/the<METRICS_API_USERNAME>/members{/member}","public_members_url":"https://api.github.com/orgs/the<METRICS_API_USERNAME>/public_members{/member}","avatar_url":"https://avatars.githubusercontent.com/u/2492770?v=3","description":"","name":"The
+        Open Data Institute","company":null,"blog":"http://the<METRICS_API_USERNAME>.org/","location":"London","email":"","public_repos":222,"public_gists":0,"followers":0,"following":0,"html_url":"https://github.com/the<METRICS_API_USERNAME>","created_at":"2012-10-05T09:25:19Z","updated_at":"2015-04-27T20:53:44Z","type":"Organization"}'
     http_version: 
-  recorded_at: Fri, 26 Dec 2014 21:25:25 GMT
+  recorded_at: Thu, 05 Nov 2015 10:53:19 GMT
 recorded_with: VCR 2.9.3

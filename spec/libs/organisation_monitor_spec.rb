@@ -8,7 +8,7 @@ describe Github::OrganisationMonitor, :vcr do
   end
 
   it "should store right value in metrics API" do
-    metrics_api_should_receive("github-repository-count", @time, 179)
+    metrics_api_should_receive("github-repository-count", @time, 222)
     # when this happens:
     Github::OrganisationMonitor.perform
   end

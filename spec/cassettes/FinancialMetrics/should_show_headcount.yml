@@ -4,202 +4,160 @@ http_interactions:
     method: get
     uri: https://www.googleapis.com/drive/v2/files/0AsEH-bzsP1r8dG9NZlpmc2syOGQzZlN6WmktUDVmN2c
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - ! "google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.4\n
-        (gzip)"
+      - |-
+        google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.5
+         (gzip)
       Content-Type:
       - ''
       Authorization:
-      - Bearer ya29.pQE0PBtAPcg0yBOJf6WxJMBZaBbB5z5pzVPKqsNrnYB12gQc3sEI74lvySlyDNPaQ1DEFuCcY_1eDw
+      - Bearer ya29.IwJJVA0BU23JCVQLaYT6ZBbWR5WxfxOn7kXimKno_y5kjIl-knuqFJ6Wi63Le1-SMfHx
       Cache-Control:
       - no-store
       Accept:
-      - ! '*/*'
+      - "*/*"
       Accept-Enc<METRICS_API_USERNAME>ng:
       - gzip
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "RXhwaXJlcw==":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OTo0NCBHTVQ=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OTo0NCBHTVQ=
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGUsIG5vLXRyYW5z
-        Zm9ybQ==
-      !binary "RXRhZw==":
-      - !binary |-
-        IlRXak9rcmEtOTY1alNGVGg4dl9xU1FGckk3MC9NVFF3TkRNNE5EVTFNRFkx
-        TWci
-      !binary "VmFyeQ==":
-      - !binary |-
-        T3JpZ2lu
-      - !binary |-
-        WC1PcmlnaW4=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA==
-      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        U0FNRU9SSUdJTg==
-      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
-      - !binary |-
-        MTsgbW9kZT1ibG9jaw==
-      !binary "U2VydmVy":
-      - !binary |-
-        R1NF
-      !binary "QWx0ZXJuYXRlLVByb3RvY29s":
-      - !binary |-
-        NDQzOnF1aWMscD0x
-      !binary "Q29udGVudC1FbmM8TUVUUklDU19BUElfVVNFUk5BTUU+bmc=":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPm5n":
-      - !binary |-
-        Y2h1bmtlZA==
+      Expires:
+      - Thu, 05 Nov 2015 11:33:36 GMT
+      Date:
+      - Thu, 05 Nov 2015 11:33:36 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"QEqb14agVr9EIVEHCQ-sEEtYDkU/MTQwNDM4NDU1MDY1Mg"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
+      Content-Enc<METRICS_API_USERNAME>ng:
+      - gzip
+      Transfer-Enc<METRICS_API_USERNAME>ng:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        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
+        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
     http_version: 
   recorded_at: Wed, 04 Feb 2015 00:00:00 GMT
 - request:
     method: get
     uri: https://spreadsheets.google.com/feeds/worksheets/0AsEH-bzsP1r8dG9NZlpmc2syOGQzZlN6WmktUDVmN2c/private/full
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - ! "google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.4\n
-        (gzip)"
+      - |-
+        google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.5
+         (gzip)
       Gdata-Version:
       - '3.0'
       Content-Type:
       - ''
       Authorization:
-      - Bearer ya29.pQE0PBtAPcg0yBOJf6WxJMBZaBbB5z5pzVPKqsNrnYB12gQc3sEI74lvySlyDNPaQ1DEFuCcY_1eDw
+      - Bearer ya29.IwJJVA0BU23JCVQLaYT6ZBbWR5WxfxOn7kXimKno_y5kjIl-knuqFJ6Wi63Le1-SMfHx
       Cache-Control:
       - no-store
       Accept:
-      - ! '*/*'
+      - "*/*"
       Accept-Enc<METRICS_API_USERNAME>ng:
       - gzip
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vYXRvbSt4bWw7IGNoYXJzZXQ9VVRGLTg7IHR5cGU9ZmVl
-        ZA==
-      !binary "WC1Sb2JvdHMtVGFn":
-      - !binary |-
-        bm9pbmRleCwgbm9mb2xsb3csIG5vc25pcHBldA==
-      !binary "RXhwaXJlcw==":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OTo0NSBHTVQ=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OTo0NSBHTVQ=
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGUsIG5vLXRyYW5z
-        Zm9ybQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBYLUdEYXRhLUF1dGhvcml6YXRpb24sIEdEYXRhLVZlcnNpb24=
-      !binary "R2RhdGEtVmVyc2lvbg==":
-      - !binary |-
-        My4w
-      !binary "RXRhZw==":
-      - !binary |-
-        Vy8iRGtJQlFYZy1laXQ3SW1BOVhSWlhFMFUuIg==
-      !binary "UDNw":
-      - !binary |-
-        Q1A9IlRoaXMgaXMgbm90IGEgUDNQIHBvbGljeSEgU2VlIGh0dHA6Ly93d3cu
-        Z29vZ2xlLmNvbS9zdXBwb3J0L2FjY291bnRzL2Jpbi9hbnN3ZXIucHk/aGw9
-        ZW4mYW5zd2VyPTE1MTY1NyBmb3IgbW9yZSBpbmZvLiI=
-      - !binary |-
-        Q1A9IlRoaXMgaXMgbm90IGEgUDNQIHBvbGljeSEgU2VlIGh0dHA6Ly93d3cu
-        Z29vZ2xlLmNvbS9zdXBwb3J0L2FjY291bnRzL2Jpbi9hbnN3ZXIucHk/aGw9
-        ZW4mYW5zd2VyPTE1MTY1NyBmb3IgbW9yZSBpbmZvLiI=
-      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        U0FNRU9SSUdJTg==
-      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
-      - !binary |-
-        MTsgbW9kZT1ibG9jaw==
-      !binary "U2VydmVy":
-      - !binary |-
-        R1NF
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        TklEPTY5PU5DcHBWME9mTUVqUXh2VnhaLTJDVHMtbThrMVFVUnZIOWZGRGhC
-        MDZHM29oOEF3UmJELXl0dDhYZGYyWUtFNWRXUzFEdVh6N1hqQWZpdGNaQlEx
-        R1Y3cDZpanIwRXdNTkxFZ3hlTU1GNmdjeUk5ZWUzQkM2ZGNUZXZVNThJRFdS
-        O0RvbWFpbj0uZ29vZ2xlLmNvbTtQYXRoPS87RXhwaXJlcz1TYXQsIDAyLUph
-        bi0yMDE2IDEzOjQ5OjQ1IEdNVDtIdHRwT25seQ==
-      - !binary |-
-        TklEPTY5PVp3aGtlQXllRVRSMk1MVUdTOHJrZU9iaXAtVXJjd290X085WTlY
-        R3hhWFpfcmZtck5QaXVHR2pjaXh6b1ZrOW4zcGlpbm1xbWZ0VWlaSGVaZE54
-        OV9EdWg1Z1pjYXlFLUhUMGZLXy0zaDlRU2hYc2RMa1BKbDZtYWlTWUtINWpv
-        O0RvbWFpbj0uZ29vZ2xlLmNvbTtQYXRoPS87RXhwaXJlcz1TYXQsIDAyLUph
-        bi0yMDE2IDEzOjQ5OjQ1IEdNVDtIdHRwT25seQ==
-      !binary "QWx0ZXJuYXRlLVByb3RvY29s":
-      - !binary |-
-        NDQzOnF1aWMscD0x
-      !binary "TGFzdC1NPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPmZpZWQ=":
-      - !binary |-
-        VGh1LCAwMyBKdWwgMjAxNCAxMDo0OToxMCBHTVQ=
-      !binary "Q29udGVudC1FbmM8TUVUUklDU19BUElfVVNFUk5BTUU+bmc=":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPm5n":
-      - !binary |-
-        Y2h1bmtlZA==
+      Content-Type:
+      - application/atom+xml; charset=UTF-8; type=feed
+      X-Robots-Tag:
+      - noindex, nofollow, nosnippet
+      Expires:
+      - Thu, 05 Nov 2015 11:33:37 GMT
+      Date:
+      - Thu, 05 Nov 2015 11:33:37 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Vary:
+      - Accept, X-GData-Authorization, GData-Version
+      Gdata-Version:
+      - '3.0'
+      Etag:
+      - W/"DkIBQXg-eit7ImA9XRZXE0U."
+      P3p:
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=73=DbxuEHsmfp3lIAa5RStCXAdY0TY-i90BVHStVhrMhfmx8BZgZAr0_05ydEwC7F_j47QeVTUMEhRJk_zj-_30CfpyFdoME7SSmslzmKlbstXNJM1cP4_Wq19mDhxAMfoR;Domain=.google.com;Path=/;Expires=Fri,
+        06-May-2016 11:33:37 GMT;HttpOnly
+      - NID=73=vJKyKpG12xbyA7MzjwdXc9zo_hi4e4RArpIxEb7UIR2VIBhlag3-0YI7xqyBnvHPUaM2rZiV0GsSW1Rh6toXzFNKqYxo1FB5F-nqGinRXuB8LpN3IGS1MmKMwBABDCZK;Domain=.google.com;Path=/;Expires=Fri,
+        06-May-2016 11:33:37 GMT;HttpOnly
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
+      Last-M<METRICS_API_USERNAME>fied:
+      - Thu, 03 Jul 2014 10:49:10 GMT
+      Content-Enc<METRICS_API_USERNAME>ng:
+      - gzip
+      Transfer-Enc<METRICS_API_USERNAME>ng:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -235,102 +193,74 @@ http_interactions:
     method: get
     uri: https://spreadsheets.google.com/feeds/cells/1BZNSoJU8gtF4-Ajh9Cvox5_XpCZVbWitUjWqDdapPWY/od8/private/full
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - ! "google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.4\n
-        (gzip)"
+      - |-
+        google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.5
+         (gzip)
       Gdata-Version:
       - '3.0'
       Content-Type:
       - ''
       Authorization:
-      - Bearer ya29.pQE0PBtAPcg0yBOJf6WxJMBZaBbB5z5pzVPKqsNrnYB12gQc3sEI74lvySlyDNPaQ1DEFuCcY_1eDw
+      - Bearer ya29.IwJJVA0BU23JCVQLaYT6ZBbWR5WxfxOn7kXimKno_y5kjIl-knuqFJ6Wi63Le1-SMfHx
       Cache-Control:
       - no-store
       Accept:
-      - ! '*/*'
+      - "*/*"
       Accept-Enc<METRICS_API_USERNAME>ng:
       - gzip
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vYXRvbSt4bWw7IGNoYXJzZXQ9VVRGLTg7IHR5cGU9ZmVl
-        ZA==
-      !binary "WC1Sb2JvdHMtVGFn":
-      - !binary |-
-        bm9pbmRleCwgbm9mb2xsb3csIG5vc25pcHBldA==
-      !binary "RXhwaXJlcw==":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OTo0NSBHTVQ=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OTo0NSBHTVQ=
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGUsIG5vLXRyYW5z
-        Zm9ybQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBYLUdEYXRhLUF1dGhvcml6YXRpb24sIEdEYXRhLVZlcnNpb24=
-      !binary "R2RhdGEtVmVyc2lvbg==":
-      - !binary |-
-        My4w
-      !binary "RXRhZw==":
-      - !binary |-
-        Vy8iRGtJQlFYZy1laXQ3SW1BOVhSWlhFMFUuIg==
-      !binary "UDNw":
-      - !binary |-
-        Q1A9IlRoaXMgaXMgbm90IGEgUDNQIHBvbGljeSEgU2VlIGh0dHA6Ly93d3cu
-        Z29vZ2xlLmNvbS9zdXBwb3J0L2FjY291bnRzL2Jpbi9hbnN3ZXIucHk/aGw9
-        ZW4mYW5zd2VyPTE1MTY1NyBmb3IgbW9yZSBpbmZvLiI=
-      - !binary |-
-        Q1A9IlRoaXMgaXMgbm90IGEgUDNQIHBvbGljeSEgU2VlIGh0dHA6Ly93d3cu
-        Z29vZ2xlLmNvbS9zdXBwb3J0L2FjY291bnRzL2Jpbi9hbnN3ZXIucHk/aGw9
-        ZW4mYW5zd2VyPTE1MTY1NyBmb3IgbW9yZSBpbmZvLiI=
-      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        U0FNRU9SSUdJTg==
-      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
-      - !binary |-
-        MTsgbW9kZT1ibG9jaw==
-      !binary "U2VydmVy":
-      - !binary |-
-        R1NF
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        TklEPTY5PUpCcGZLZnNqVzdxVURyT2RMS0ZBTHc2UURFOVVzTU1vdjNsU0dT
-        MWVaQ3NTSVQySGVaSW9lUDJIdkR5NTNaa29zckltUmpXdl92ZWR0aTEyalE1
-        MHF2ZF9nOGtpdmIyZUtHaGwwUjVfRkgxWnR3M2dHZXV1ZUxPMllvN1FmaDJi
-        O0RvbWFpbj0uZ29vZ2xlLmNvbTtQYXRoPS87RXhwaXJlcz1TYXQsIDAyLUph
-        bi0yMDE2IDEzOjQ5OjQ1IEdNVDtIdHRwT25seQ==
-      - !binary |-
-        TklEPTY5PW5oVHNaLVcyUlFSMzVZX1l5VkkzS0huSVBrN3p5TnZ1SWVPd3RG
-        WjJ6THF1UVBQNXM2X25oei0yZlJqVGQ5UnRhdkVld0ZtMDlKdHdWVGtYSmZl
-        eldyNWFjUEljSjUtTGNzWVVqVXJzM0JOY2x6UkZKazA1OEI0YkM2MEpTYmUy
-        O0RvbWFpbj0uZ29vZ2xlLmNvbTtQYXRoPS87RXhwaXJlcz1TYXQsIDAyLUph
-        bi0yMDE2IDEzOjQ5OjQ1IEdNVDtIdHRwT25seQ==
-      !binary "QWx0ZXJuYXRlLVByb3RvY29s":
-      - !binary |-
-        NDQzOnF1aWMscD0x
-      !binary "TGFzdC1NPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPmZpZWQ=":
-      - !binary |-
-        VGh1LCAwMyBKdWwgMjAxNCAxMDo0OToxMCBHTVQ=
-      !binary "Q29udGVudC1FbmM8TUVUUklDU19BUElfVVNFUk5BTUU+bmc=":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPm5n":
-      - !binary |-
-        Y2h1bmtlZA==
+      Content-Type:
+      - application/atom+xml; charset=UTF-8; type=feed
+      X-Robots-Tag:
+      - noindex, nofollow, nosnippet
+      Expires:
+      - Thu, 05 Nov 2015 11:33:38 GMT
+      Date:
+      - Thu, 05 Nov 2015 11:33:38 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Vary:
+      - Accept, X-GData-Authorization, GData-Version
+      Gdata-Version:
+      - '3.0'
+      Etag:
+      - W/"DkIBQXg-eit7ImA9XRZXE0U."
+      P3p:
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=73=cE3ErfMqhCK8Ka26-pGFpgR5dUgt0zPJA8i3X-De1qfc7tvVSsLDXKwX93l2qfXRgLOEvsj2FFhzPYEzGiKe-Qlb3rh3eQmlj92BwWqQIM63uFe-Uz_VcUse4qVmBxaM;Domain=.google.com;Path=/;Expires=Fri,
+        06-May-2016 11:33:38 GMT;HttpOnly
+      - NID=73=gL4K2zUEyW5nw8-NZTcwHos0XSnPDqfdPEqAUS62Z3lRZLCEd4-SPuQHRPmRBpRmM1rCH0ntSkvNOTD0A8Ub2Dxs-xJIG4FGZOaIKfKWM6jf7Phh_9wFxr0RJl0catLm;Domain=.google.com;Path=/;Expires=Fri,
+        06-May-2016 11:33:38 GMT;HttpOnly
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
+      Last-M<METRICS_API_USERNAME>fied:
+      - Thu, 03 Jul 2014 10:49:10 GMT
+      Content-Enc<METRICS_API_USERNAME>ng:
+      - gzip
+      Transfer-Enc<METRICS_API_USERNAME>ng:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -1280,20 +1210,21 @@ http_interactions:
     method: get
     uri: https://www.googleapis.com/drive/v2/files/19BkVrj1x8KwYlZL2f1mNmcs6NtGwDXuTXubgISoCQBA
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - ! "google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.4\n
-        (gzip)"
+      - |-
+        google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.5
+         (gzip)
       Content-Type:
       - ''
       Authorization:
-      - Bearer ya29.pQE0PBtAPcg0yBOJf6WxJMBZaBbB5z5pzVPKqsNrnYB12gQc3sEI74lvySlyDNPaQ1DEFuCcY_1eDw
+      - Bearer ya29.IwJJVA0BU23JCVQLaYT6ZBbWR5WxfxOn7kXimKno_y5kjIl-knuqFJ6Wi63Le1-SMfHx
       Cache-Control:
       - no-store
       Accept:
-      - ! '*/*'
+      - "*/*"
       Accept-Enc<METRICS_API_USERNAME>ng:
       - gzip
   response:
@@ -1302,13 +1233,13 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Fri, 03 Jul 2015 13:49:46 GMT
+      - Thu, 05 Nov 2015 11:33:39 GMT
       Date:
-      - Fri, 03 Jul 2015 13:49:46 GMT
+      - Thu, 05 Nov 2015 11:33:39 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
-      - ! '"TWjOkra-965jSFTh8v_qSQFrI70/MTQzNTkzMTM1NDk5Ng"'
+      - '"pvTNHKA6KkAgXTpZXMwU4P67ELo/MTQ0MDE2NjE4NTQ5MQ"'
       Vary:
       - Origin
       - X-Origin
@@ -1324,6 +1255,8 @@ http_interactions:
       - GSE
       Alternate-Protocol:
       - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
       Content-Enc<METRICS_API_USERNAME>ng:
       - gzip
       Transfer-Enc<METRICS_API_USERNAME>ng:
@@ -1331,337 +1264,281 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAAO1W647iNhT+P08RsdL8WhInECBIaMpAoewuzEzJzoXuCpnE
-        JIbcxna4zGqkfYe+YZ+kthOG22xbKnV+NYq42OfyneNzPp9vZ0phjiO3UFcK
-        LsEL9G6KA1R4z5exXNSty/ktmemr2sflQzD6ZEz1cBA6tDJg3WX7PrXv04nX
-        G8atm8umVEMMekLxS8G+m13NCSxaFXM27Nh+bTF+HN50SK8KtL598zSw5099
-        u68P2nNz4H0pSHWKguknHM2FCZ+xhNY1bblcql4cewGCCaaqE4eaxKotDE3A
-        pdrJKGHAEIkgQ4e+3NihuTPpCGrMR7GL1Zh4Gk0Igi71EWJUc0/yqiEXs4uU
-        Jg0JnbrzLFvhBLlvhsFnYSA9ZgfsxNGha0oD1aMMMuxkeeZQxEeAKdNwCD2e
-        bKE31vXxDpKx2FeTyJOGmZ+Gkwji4KTApgi5VFuwC89tMJKic+w2TonufNEA
-        57TR7CN3EMVN8dyO4KIb+a15d4Svr/vVq+bdY+cX2rlO7Nh7nM3P6VODGgbI
-        UGPGK5+jvWr3lDak/iSGxFVCxAh2qPLH99+VNj85QjFb830GlXfuRkoaCHGI
-        7HUibcAkCbDD0xhH2iJy86CLfJmqO3mTegGcoIByrW9nCm8ABglBovemMKDo
-        vVjzseuiaG+JEe77QIwgKrCyg+UFRku5JLJ6pjwLnw6HwOV4GBKuAfRyEdSK
-        RsXWzbpp1EuGapq1URYXP6Ep3hM2i6BaBCVbL9XLVl0vq5ZVGeXBUHYrHV6u
-        +2hfpcJd2LpeB7W6XlNLlWpuH5I5co+VdKsKikDnrw1AXb4qACBToj7kWbrD
-        zN/zwqOwiqBs6yIEoVC2ci/y5OIoM2wCC5gvdnDkfaaIbE5gnw9TsSPz6GKa
-        BHA9gKH09oF/U2UYcgjZfsJTnxKUm1EKKQl2iz/wK3kZCJO8hxiKmGyD4sPy
-        Y2cVh+P+8Get+fL0tr8vP2vth2ur2w4fFz1Ho5Wylvgxi9VZ4hW4s2cJANNm
-        yhsqYqLykJvHtC2EBJEQU5GFngwQmABUgGVWqqZp1UpAL5WtLBQU8u5tui6v
-        KFGYhZmIVaUi1p+2LVvIiynhRxExIfjbV0lqqyQmTDT/S1UztGKaQxd/xQZ7
-        zJbZuDiVAzK1TkxCyBrCnwxntxsTd/qmIIS/IxCCEuIERaswmEoxWoynU+wg
-        DicNRV3s4AgDNSOLt4S9Cuhqc76iXq9fauf1NtnWVl5B/2gMsOmyZbRa/eBD
-        2i2NjZFOyvP+YDDSu8tsHtiMISHK/v3344G2jYRqG7ckzq6GJcFsQwcsp3pJ
-        EHmmHtOYwcs1Q5Q3X9ZjkmXiZYSIIA7ZJEK7BUmAI6h0EW8kxPW/vshtZDIW
-        +QEbHdHRgcFM5oCSTuEk/PTw69UsSSKr9zontctaq1qqDPxqdO+BY07KSOlv
-        WekVWjJMUK4ago34w/9YFsjjOeQlJwta9WTQ+9SkPOdJFVdSX9xh65zof8Dg
-        x4L/3wj/8kYQwy6cyJ4RQ4ecOOJkfbCUdRNtwWgobvOdnex231ng3MTJk09o
-        a/to8BHMKuaxVpZAurtFE+hsm06en+i1s+ezPwFiiaOW+gwAAA==
+        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
     http_version: 
   recorded_at: Wed, 04 Feb 2015 00:00:00 GMT
 - request:
     method: get
     uri: https://spreadsheets.google.com/feeds/worksheets/19BkVrj1x8KwYlZL2f1mNmcs6NtGwDXuTXubgISoCQBA/private/full
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - ! "google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.4\n
-        (gzip)"
+      - |-
+        google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.5
+         (gzip)
       Gdata-Version:
       - '3.0'
       Content-Type:
       - ''
       Authorization:
-      - Bearer ya29.pQE0PBtAPcg0yBOJf6WxJMBZaBbB5z5pzVPKqsNrnYB12gQc3sEI74lvySlyDNPaQ1DEFuCcY_1eDw
+      - Bearer ya29.IwJJVA0BU23JCVQLaYT6ZBbWR5WxfxOn7kXimKno_y5kjIl-knuqFJ6Wi63Le1-SMfHx
       Cache-Control:
       - no-store
       Accept:
-      - ! '*/*'
+      - "*/*"
       Accept-Enc<METRICS_API_USERNAME>ng:
       - gzip
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vYXRvbSt4bWw7IGNoYXJzZXQ9VVRGLTg7IHR5cGU9ZmVl
-        ZA==
-      !binary "WC1Sb2JvdHMtVGFn":
-      - !binary |-
-        bm9pbmRleCwgbm9mb2xsb3csIG5vc25pcHBldA==
-      !binary "RXhwaXJlcw==":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OTo0NiBHTVQ=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OTo0NiBHTVQ=
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGUsIG5vLXRyYW5z
-        Zm9ybQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBYLUdEYXRhLUF1dGhvcml6YXRpb24sIEdEYXRhLVZlcnNpb24=
-      !binary "R2RhdGEtVmVyc2lvbg==":
-      - !binary |-
-        My4w
-      !binary "RXRhZw==":
-      - !binary |-
-        Vy8iQzBRQlFYdzhlU3Q3SW1BOVhSVldHVTQuIg==
-      !binary "UDNw":
-      - !binary |-
-        Q1A9IlRoaXMgaXMgbm90IGEgUDNQIHBvbGljeSEgU2VlIGh0dHA6Ly93d3cu
-        Z29vZ2xlLmNvbS9zdXBwb3J0L2FjY291bnRzL2Jpbi9hbnN3ZXIucHk/aGw9
-        ZW4mYW5zd2VyPTE1MTY1NyBmb3IgbW9yZSBpbmZvLiI=
-      - !binary |-
-        Q1A9IlRoaXMgaXMgbm90IGEgUDNQIHBvbGljeSEgU2VlIGh0dHA6Ly93d3cu
-        Z29vZ2xlLmNvbS9zdXBwb3J0L2FjY291bnRzL2Jpbi9hbnN3ZXIucHk/aGw9
-        ZW4mYW5zd2VyPTE1MTY1NyBmb3IgbW9yZSBpbmZvLiI=
-      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        U0FNRU9SSUdJTg==
-      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
-      - !binary |-
-        MTsgbW9kZT1ibG9jaw==
-      !binary "U2VydmVy":
-      - !binary |-
-        R1NF
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        TklEPTY5PVIzZDRxUVFhOHFpWFFTV3dmWUdiSnA4dWZaVTRqaWh1WHh4T1JP
-        d0pvaGp1bldya2h2Yk9DdkJlWXZJQW9sclpGZXktVDNhT0QyQ2VRdS1HRFFk
-        VlBYa1k4ZmwzMENHVnYteEpEVzZJMlgtVS1QU0ZhNzhLZGRlbkwxX3lpbDBE
-        O0RvbWFpbj0uZ29vZ2xlLmNvbTtQYXRoPS87RXhwaXJlcz1TYXQsIDAyLUph
-        bi0yMDE2IDEzOjQ5OjQ2IEdNVDtIdHRwT25seQ==
-      - !binary |-
-        TklEPTY5PWhHTGJIa1NGTS1MckpjUXN4Z2ROUHlSUzBCd3N5b3BXeXJLNlda
-        S3hzT1VYTUVsMXN5cXdlLU9TNV9FZTBVZDhHZGFQQUFPVmVfRWJfbmduNFZq
-        N0ZlMm0tNFlkWHdsTUJiN25ZeUUxTFVsN0FPNkJnUDBfZjUyaDRMbVdHRUcy
-        O0RvbWFpbj0uZ29vZ2xlLmNvbTtQYXRoPS87RXhwaXJlcz1TYXQsIDAyLUph
-        bi0yMDE2IDEzOjQ5OjQ2IEdNVDtIdHRwT25seQ==
-      !binary "QWx0ZXJuYXRlLVByb3RvY29s":
-      - !binary |-
-        NDQzOnF1aWMscD0x
-      !binary "TGFzdC1NPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPmZpZWQ=":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OToxMCBHTVQ=
-      !binary "Q29udGVudC1FbmM8TUVUUklDU19BUElfVVNFUk5BTUU+bmc=":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPm5n":
-      - !binary |-
-        Y2h1bmtlZA==
+      Content-Type:
+      - application/atom+xml; charset=UTF-8; type=feed
+      X-Robots-Tag:
+      - noindex, nofollow, nosnippet
+      Expires:
+      - Thu, 05 Nov 2015 11:33:39 GMT
+      Date:
+      - Thu, 05 Nov 2015 11:33:39 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Vary:
+      - Accept, X-GData-Authorization, GData-Version
+      Gdata-Version:
+      - '3.0'
+      Etag:
+      - W/"DEYMRHo9cSt7ImA9XRJTEUs."
+      P3p:
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=73=c8UkE-u0ndvSB6t4ecghcBSFWDxE5E35XIVcmj2O1FjTGp-01FCA_yyaj-mFIOQSRVmO1fsq_DR0CeaRPURexHvvOKagkQPEQRqQLFniPZhnm1WbDKUHOuFlMWtZ85mI;Domain=.google.com;Path=/;Expires=Fri,
+        06-May-2016 11:33:39 GMT;HttpOnly
+      - NID=73=kWCwHymnUtD6kAeuvEAFnX0xwD0YSxpCsNfSO1GH76itwIeLzZnt2Nkc5S4X-41WQL7Op7G3RSBTp1sXENo2xP0mwBqAs05DWZayRkkcPHbQqXH1qCWiktdQPrxT6FXv;Domain=.google.com;Path=/;Expires=Fri,
+        06-May-2016 11:33:39 GMT;HttpOnly
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
+      Last-M<METRICS_API_USERNAME>fied:
+      - Fri, 21 Aug 2015 14:09:45 GMT
+      Content-Enc<METRICS_API_USERNAME>ng:
+      - gzip
+      Transfer-Enc<METRICS_API_USERNAME>ng:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        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
+        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
     http_version: 
   recorded_at: Wed, 04 Feb 2015 00:00:00 GMT
 - request:
     method: get
     uri: https://spreadsheets.google.com/feeds/cells/19BkVrj1x8KwYlZL2f1mNmcs6NtGwDXuTXubgISoCQBA/o3f7txu/private/full
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - ! "google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.4\n
-        (gzip)"
+      - |-
+        google_drive Ruby library/0.4.0 google-api-ruby-client/0.8.6 Mac OS X/10.10.5
+         (gzip)
       Gdata-Version:
       - '3.0'
       Content-Type:
       - ''
       Authorization:
-      - Bearer ya29.pQE0PBtAPcg0yBOJf6WxJMBZaBbB5z5pzVPKqsNrnYB12gQc3sEI74lvySlyDNPaQ1DEFuCcY_1eDw
+      - Bearer ya29.IwJJVA0BU23JCVQLaYT6ZBbWR5WxfxOn7kXimKno_y5kjIl-knuqFJ6Wi63Le1-SMfHx
       Cache-Control:
       - no-store
       Accept:
-      - ! '*/*'
+      - "*/*"
       Accept-Enc<METRICS_API_USERNAME>ng:
       - gzip
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vYXRvbSt4bWw7IGNoYXJzZXQ9VVRGLTg7IHR5cGU9ZmVl
-        ZA==
-      !binary "WC1Sb2JvdHMtVGFn":
-      - !binary |-
-        bm9pbmRleCwgbm9mb2xsb3csIG5vc25pcHBldA==
-      !binary "RXhwaXJlcw==":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OTo0NyBHTVQ=
-      !binary "RGF0ZQ==":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OTo0NyBHTVQ=
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGUsIG5vLXRyYW5z
-        Zm9ybQ==
-      !binary "VmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBYLUdEYXRhLUF1dGhvcml6YXRpb24sIEdEYXRhLVZlcnNpb24=
-      !binary "R2RhdGEtVmVyc2lvbg==":
-      - !binary |-
-        My4w
-      !binary "RXRhZw==":
-      - !binary |-
-        Vy8iQzBRQlFYdzhlU3Q3SW1BOVhSVldHVTQuIg==
-      !binary "UDNw":
-      - !binary |-
-        Q1A9IlRoaXMgaXMgbm90IGEgUDNQIHBvbGljeSEgU2VlIGh0dHA6Ly93d3cu
-        Z29vZ2xlLmNvbS9zdXBwb3J0L2FjY291bnRzL2Jpbi9hbnN3ZXIucHk/aGw9
-        ZW4mYW5zd2VyPTE1MTY1NyBmb3IgbW9yZSBpbmZvLiI=
-      - !binary |-
-        Q1A9IlRoaXMgaXMgbm90IGEgUDNQIHBvbGljeSEgU2VlIGh0dHA6Ly93d3cu
-        Z29vZ2xlLmNvbS9zdXBwb3J0L2FjY291bnRzL2Jpbi9hbnN3ZXIucHk/aGw9
-        ZW4mYW5zd2VyPTE1MTY1NyBmb3IgbW9yZSBpbmZvLiI=
-      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "WC1GcmFtZS1PcHRpb25z":
-      - !binary |-
-        U0FNRU9SSUdJTg==
-      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
-      - !binary |-
-        MTsgbW9kZT1ibG9jaw==
-      !binary "U2VydmVy":
-      - !binary |-
-        R1NF
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        TklEPTY5PWVsMFhScGU3TGN5eDRoem1laVlNMGpOMGFWS1E3SVlmRldxLXFT
-        UmYwTFdCcElSXy1hdVItTlAwQUVZajJUYU5zQXhLbnNTbFVqQWZNVVI4TEw4
-        R1g3cmdUT3dVMWtFZ01tMWU0TXk1MERqY3h2Vkk4M01CRXFUWEtVMk9hUUdw
-        O0RvbWFpbj0uZ29vZ2xlLmNvbTtQYXRoPS87RXhwaXJlcz1TYXQsIDAyLUph
-        bi0yMDE2IDEzOjQ5OjQ3IEdNVDtIdHRwT25seQ==
-      - !binary |-
-        TklEPTY5PW1kUnNoWGx5Zl9ucEZ1by1hOW1VTmJvOGZCRHNWX1lzSUllbGRP
-        dTlvc0h4VklwZ3hxbzRvd1piSDVMSHMyd2pJM05QaFBJdk9sZktFc3hYTEls
-        MW81YTFnQVN6TDB4bnVMc3AxT0ZLSU1uNXVfSzBmSXU3aEZfWGtxTU1SR3R0
-        O0RvbWFpbj0uZ29vZ2xlLmNvbTtQYXRoPS87RXhwaXJlcz1TYXQsIDAyLUph
-        bi0yMDE2IDEzOjQ5OjQ3IEdNVDtIdHRwT25seQ==
-      !binary "QWx0ZXJuYXRlLVByb3RvY29s":
-      - !binary |-
-        NDQzOnF1aWMscD0x
-      !binary "TGFzdC1NPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPmZpZWQ=":
-      - !binary |-
-        RnJpLCAwMyBKdWwgMjAxNSAxMzo0OToxMCBHTVQ=
-      !binary "Q29udGVudC1FbmM8TUVUUklDU19BUElfVVNFUk5BTUU+bmc=":
-      - !binary |-
-        Z3ppcA==
-      !binary "VHJhbnNmZXItRW5jPE1FVFJJQ1NfQVBJX1VTRVJOQU1FPm5n":
-      - !binary |-
-        Y2h1bmtlZA==
+      Content-Type:
+      - application/atom+xml; charset=UTF-8; type=feed
+      X-Robots-Tag:
+      - noindex, nofollow, nosnippet
+      Expires:
+      - Thu, 05 Nov 2015 11:33:39 GMT
+      Date:
+      - Thu, 05 Nov 2015 11:33:39 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Vary:
+      - Accept, X-GData-Authorization, GData-Version
+      Gdata-Version:
+      - '3.0'
+      Etag:
+      - W/"DEYMRHo9cSt7ImA9XRJTEUs."
+      P3p:
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Set-Cookie:
+      - NID=73=YYgtGVoxyoedB7rxCo74L8BswBcbM3kXyJY16YKESpxojhmshZDYdOFTBoVIxPFqKkASfD2engwoGZ9AKevj2j4QdZ1NjnvUypR7lCtbV2zYnjtzrTo1rH7D8_vcYs6L;Domain=.google.com;Path=/;Expires=Fri,
+        06-May-2016 11:33:39 GMT;HttpOnly
+      - NID=73=fTALiVIYPOU86OdTh8qnud1dslT6oySoVZPpVVFTQLOYsVeFQscBefyLEkvuIhiyicVxjCITKin5AWMJkmW-awqNp8_Vz4pFT5FgYtQdFUUr5xjGUXdorASpS6_y968n;Domain=.google.com;Path=/;Expires=Fri,
+        06-May-2016 11:33:39 GMT;HttpOnly
+      Alternate-Protocol:
+      - 443:quic,p=1
+      Alt-Svc:
+      - quic=":443"; p="1"; ma=604800
+      Last-M<METRICS_API_USERNAME>fied:
+      - Fri, 21 Aug 2015 14:09:45 GMT
+      Content-Enc<METRICS_API_USERNAME>ng:
+      - gzip
+      Transfer-Enc<METRICS_API_USERNAME>ng:
+      - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        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
+        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
+        AA==
     http_version: 
   recorded_at: Wed, 04 Feb 2015 00:00:00 GMT
 recorded_with: VCR 2.9.3

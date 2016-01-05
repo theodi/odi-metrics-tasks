@@ -22,10 +22,10 @@ describe QuarterlyProgress do
   it "should show correct progress for each quarter in 2015", :vcr do
     progress = QuarterlyProgress.progress(2015)
 
-    progress[:q1].should == 68.9
-    progress[:q2].should == 15.3
-    progress[:q3].should == 0
-    progress[:q4].should == 0
+    progress[:q1].should == 82.6
+    progress[:q2].should == 82.1
+    progress[:q3].should == 72.4
+    progress[:q4].should == 26.5
   end
 
   it "should store right values in metrics API", :vcr do
@@ -45,11 +45,17 @@ describe QuarterlyProgress do
             :q4 => 92.5
         },
         '2015' => {
-            :q1 => 68.9,
-            :q2 => 15.3,
+            :q1 => 82.6,
+            :q2 => 82.1,
+            :q3 => 72.4,
+            :q4 => 26.5
+        },
+        '2016' => {
+            :q1 => 0,
+            :q2 => 0,
             :q3 => 0,
-            :q4 => 0
-        }
+            :q4 => 0,
+        },
     }
     metrics_api_should_receive("quarterly-progress", time, h.to_json)
 

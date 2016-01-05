@@ -18,7 +18,7 @@ module TrelloBoards
             :q1 => '72lviKLV',
             :q2 => 'pSkUuB9x',
             :q3 => 'dzx6W33u',
-            :q4 => 'PhPlKLAN',
+            :q4 => 'wisraSQi',
         },
     }
   end

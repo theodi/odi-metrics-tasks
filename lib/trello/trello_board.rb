@@ -1,4 +1,5 @@
 require 'trello'
+require 'helpers/trello_helper'
 
 Trello.configure do |config|
   config.developer_public_key = ENV['TRELLO_DEV_KEY']
@@ -7,16 +8,18 @@ end
 
 class TrelloBoard
 
+  include TrelloHelper
+
   def initialize(board_id)
-    @board = Trello::Board.find(board_id)
+    @board = trello_rescue{Trello::Board.find(board_id)}
     @discuss_list = discuss_list
     @done_list = done_list
   end
 
   def outstanding
     cards = []
-    @board.cards.each do |card|
-      if card.closed == false && card.list.id != @discuss_list && card.list.id != @done_list
+    trello_rescue{@board.cards}.each do |card|
+      if card.closed == false && trello_rescue{card.list}.id != @discuss_list && trello_rescue{card.list}.id != @done_list
         cards << get_progress(card)
       end
     end
@@ -25,7 +28,7 @@ class TrelloBoard
 
   def to_discuss
     cards = []
-    @board.cards.each do |card|
+    trello_rescue{@board.cards}.each do |card|
       if card.list.id == @discuss_list
         cards << get_progress(card)
       end
@@ -35,7 +38,7 @@ class TrelloBoard
 
   def done
     cards = []
-    @board.cards.each do |card|
+    trello_rescue{@board.cards}.each do |card|
       if card.list.id == @done_list
         cards << get_progress(card)
       end
@@ -52,15 +55,15 @@ class TrelloBoard
   end
 
   def get_list(name)
-    @board.lists.select { |l| l.name.downcase == name.downcase }.first.id rescue nil
+    trello_rescue{@board.lists}.select { |l| l.name.downcase == name.downcase }.first.id rescue nil
   end
 
   def get_progress(card)
     progress = []
     total = 0
     complete = 0
-    card.checklists.each do |checklist|
-      unless checklist.check_items.count == 0
+    trello_rescue{card.checklists}.each do |checklist|
+      unless trello_rescue{checklist.check_items}.count == 0
         total    += checklist.check_items.count
         complete += checklist.check_items.select { |item| item["state"]=="complete" }.count
       end

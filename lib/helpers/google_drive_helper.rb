@@ -82,6 +82,7 @@ module GoogleDriveHelper
 
   def metrics_cell identifier, year, block, ref = "cell_ref"
     location             = cell_location(year, identifier)
+    return nil if location.nil? # check we have a valid ref
     location['document'] ||= @@lookups['document_keys'][environment]['default']
     multiplier = location['multiplier'] || @@lookups['default_multiplier']
 

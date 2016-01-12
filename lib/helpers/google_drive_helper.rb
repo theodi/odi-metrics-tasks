@@ -17,6 +17,7 @@ module GoogleDriveHelper
 
   def extract_metric name, year, month, block
     location = cell_location year, name
+    return nil if location.nil? # check we have a valid year, etc
     if location.has_key? "cell_ref"
       metrics_cell name, year, block
     else

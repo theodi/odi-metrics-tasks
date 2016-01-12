@@ -194,6 +194,16 @@ describe NetworkMetrics do
     NetworkMetrics.network_size(nil, nil).should == 287
   end
 
+  it "should handle unknown years" do
+    NetworkMetrics.reach(3001, 2).should == {
+      :total   => 0,
+      :breakdown => {
+        :active  => 0,
+        :passive => 0,
+      }
+    }
+  end
+
   after :each do
     Timecop.return
     NetworkMetrics.clear_cache!

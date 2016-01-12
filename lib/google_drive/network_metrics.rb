@@ -47,13 +47,13 @@ class NetworkMetrics
           data
         end
       else
-        total = total_block.call(active) + total_block.call(passive)
+        total = (total_block.call(active) || 0) + (total_block.call(passive) || 0) # handle nil data
       end
       {
         total: total,
         breakdown: {
-          active:  active,
-          passive: passive,
+          active:  active || 0,
+          passive: passive || 0,
         }
       }
     end

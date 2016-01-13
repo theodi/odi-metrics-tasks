@@ -1,4 +1,5 @@
 require 'trello'
+require 'helpers/trello_helper'
 require 'trello/trello_boards'
 
 class QuarterlyProgress
@@ -6,6 +7,7 @@ class QuarterlyProgress
 
   extend MetricsHelper
   extend TrelloBoards
+  extend TrelloHelper
 
   def self.perform
     h = Hash[years.map{|year| [year, progress(year)]}]
@@ -39,11 +41,11 @@ class QuarterlyProgress
     return [] if id.nil?
 
     progress = []
-    board    = Trello::Board.find(id)
+    board    = trello_rescue{Trello::Board.find(id)}
 
-    board.cards.each do |card|
-      card.checklists.each do |checklist|
-        total = checklist.check_items.count
+    trello_rescue{board.cards}.each do |card|
+      trello_rescue{card.checklists}.each do |checklist|
+        total = trello_rescue{checklist.check_items}.count
         unless total == 0
           complete      = checklist.check_items.select { |item| item["state"]=="complete" }.count
           task_progress = complete.to_f/total.to_f

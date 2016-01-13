@@ -38,7 +38,7 @@ class FinancialMetrics
   end
 
   def self.kpis(year)
-    metrics_cell('KPI percentage', year, Proc.new {|x| floatize(x) }).round(1)
+    metrics_cell('KPI percentage', year, Proc.new {|x| floatize(x) }).try(:round, 1)
   end
 
   def self.cash_reserves(year)

@@ -310,4 +310,9 @@ describe FinancialMetrics do
     FinancialMetrics.clear_cache!
   end
 
+  it "should handle unknown years" do
+    FinancialMetrics.kpis(3001).should == nil
+  end
+
+
 end

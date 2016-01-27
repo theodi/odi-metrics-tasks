@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'capsulecrm'
   s.add_dependency 'fog'                , '~> 1.12', '>= 1.12.1'
   s.add_dependency 'httparty'
-  s.add_dependency 'google-api-client'  , '>= 0.7.0'
+  s.add_dependency 'google-api-client'  , '>= 0.7.0', '< 0.9.0'
   s.add_dependency 'curb'               , '~> 0.8' , '>= 0.8.6'
 
   s.add_development_dependency 'coveralls'

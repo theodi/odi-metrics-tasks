@@ -88,8 +88,8 @@ class NetworkMetrics
       }
 
       data = extract_metrics h, year, month, block
-      if not data.has_key?(:total)
-        data[:total] = data[:commercial][:actual] + data[:non_commercial][:actual]
+      unless data.has_key?(:total)
+        data[:total] = (data[:commercial].try(:[], :actual)||0) + (data[:non_commercial].try(:[], :actual)||0)
       end
       if data.has_key?(:nodes)
         data[:total][:actual] = data[:total][:actual] + data[:nodes][:actual]

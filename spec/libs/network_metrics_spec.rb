@@ -194,14 +194,10 @@ describe NetworkMetrics do
     NetworkMetrics.network_size(nil, nil).should == 287
   end
 
-  it "should handle unknown years" do
-    NetworkMetrics.reach(3001, 2).should == {
-      :total   => 0,
-      :breakdown => {
-        :active  => 0,
-        :passive => 0,
-      }
-    }
+  it "should handle unknown years for entire metrics grab" do
+    Timecop.freeze(3001,1,1)
+    NetworkMetrics.should_receive(:store_metric).exactly(8).times
+    NetworkMetrics.perform
   end
 
   after :each do

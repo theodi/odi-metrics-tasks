@@ -310,8 +310,10 @@ describe FinancialMetrics do
     FinancialMetrics.clear_cache!
   end
 
-  it "should handle unknown years" do
-    FinancialMetrics.kpis(3001).should == nil
+  it "should handle unknown years for entire metrics grab" do
+    Timecop.freeze(3001,1,1)
+    FinancialMetrics.should_receive(:store_metric).exactly(13).times
+    FinancialMetrics.perform
   end
 
 

@@ -39,7 +39,7 @@ class TrelloBoard
   def done
     cards = []
     trello_rescue{@board.cards}.each do |card|
-      if card.list.id == @done_list
+      if trello_rescue{card.list}.id == @done_list
         cards << get_progress(card)
       end
     end
@@ -64,8 +64,8 @@ class TrelloBoard
     complete = 0
     trello_rescue{card.checklists}.each do |checklist|
       unless trello_rescue{checklist.check_items}.count == 0
-        total    += checklist.check_items.count
-        complete += checklist.check_items.select { |item| item["state"]=="complete" }.count
+        total    += trello_rescue{checklist.check_items}.count
+        complete += trello_rescue{checklist.check_items}.select { |item| item["state"]=="complete" }.count
       end
     end
     progress = complete.to_f / total.to_f

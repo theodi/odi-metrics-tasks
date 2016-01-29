@@ -33,7 +33,7 @@ class FinancialMetrics
     if year.nil?
       years.inject(0) { |total, year| total += value(year) }
     else
-      metrics_cell('Value unlocked', year, Proc.new {|x| integize(x) })
+      metrics_cell('Value unlocked', year, Proc.new {|x| integize(x) }) || 0
     end
   end
 
@@ -50,7 +50,7 @@ class FinancialMetrics
     block = Proc.new { |x| x.is_a?(Array) ? x.slice(0, slice_by).inject(0) { |s,v| s += integize(v) } : integize(x) }
     if year.nil? && month.nil?
       years.inject(0) do |memo, year|
-        memo += metrics_total 'Total bookings', year, block
+        memo += metrics_total('Total bookings', year, block) || 0
       end
     else
       extract_metric 'Total bookings', year, month, block
@@ -62,7 +62,7 @@ class FinancialMetrics
     block = Proc.new { |x| x.is_a?(Array) ? x.slice(0, slice_by).inject(0.0) { |s,v| s += floatize(v) } : floatize(x) }
     if year.nil? && month.nil?
       years.inject(0) do |memo, year|
-        memo += metrics_cell 'Income', year, block, 'actual'
+        memo += metrics_cell('Income', year, block, 'actual') || 0
       end
     else
       metric_with_target 'Income', year, month, block

@@ -17,7 +17,7 @@ module GoogleDriveHelper
 
   def extract_metric name, year, month, block
     location = cell_location year, name
-    return nil if location.nil? # check we have a valid year, etc
+    return nil if location.nil? # check we have a valid ref
     if location.has_key? "cell_ref"
       metrics_cell name, year, block
     else
@@ -27,6 +27,7 @@ module GoogleDriveHelper
 
   def metric_with_target name, year, month, block
     location             = cell_location(year, name)
+    return nil if location.nil? # check we have a valid ref
     location['document'] ||= @@lookups['document_keys'][environment]['default']
     ytd_method = location['ytd_method'] || @@lookups['default_ytd_method']
     ytd_aggregator = case ytd_method
@@ -77,6 +78,7 @@ module GoogleDriveHelper
 
   def metrics_total name, year, block
     location = cell_location(year, name)
+    return nil if location.nil? # check we have a valid ref
     ref = location.has_key?("actual") ? "actual" : "cell_ref"
     metrics_cell name, year, block, ref
   end

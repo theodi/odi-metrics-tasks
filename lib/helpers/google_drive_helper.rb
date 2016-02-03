@@ -3,7 +3,15 @@ require 'google_drive/auth'
 require 'yaml'
 
 module GoogleDriveHelper
-  @@lookups = YAML.load(File.open(File.join(File.dirname(__FILE__), '..', '..', 'config/lookups.yaml')))
+  @@defaults = YAML.load(File.open(File.join(File.dirname(__FILE__), '..', '..', 'config/defaults.yaml')))
+  @@documents = YAML.load(File.open(File.join(File.dirname(__FILE__), '..', '..', 'config/documents.yaml')))
+  @@lookups = {
+    2013 => YAML.load(File.open(File.join(File.dirname(__FILE__), '..', '..', 'config/2013.yaml'))),
+    2014 => YAML.load(File.open(File.join(File.dirname(__FILE__), '..', '..', 'config/2014.yaml'))),
+    2015 => YAML.load(File.open(File.join(File.dirname(__FILE__), '..', '..', 'config/2015.yaml'))),
+    2016 => YAML.load(File.open(File.join(File.dirname(__FILE__), '..', '..', 'config/2016.yaml'))),
+    'lifetime' => YAML.load(File.open(File.join(File.dirname(__FILE__), '..', '..', 'config/lifetime.yaml')))
+  }
 
   def extract_metrics h, year, month, block
     Hash[
@@ -28,15 +36,15 @@ module GoogleDriveHelper
   def metric_with_target name, year, month, block
     location             = cell_location(year, name)
     return nil if location.nil? # check we have a valid ref
-    location['document'] ||= @@lookups['document_keys'][environment]['default']
-    ytd_method = location['ytd_method'] || @@lookups['default_ytd_method']
+    location['document'] ||= @@defaults['document']
+    ytd_method = location['ytd_method'] || @@defaults['ytd_method']
     ytd_aggregator = case ytd_method
     when "sum"
       Proc.new { |x| x.inject(0.0){|sum,val| sum + floatize(val) }}
     when "latest"
       Proc.new { |x| floatize([x].flatten.last) }
     end
-    multiplier = location['multiplier'] || @@lookups['default_multiplier']
+    multiplier = location['multiplier'] || @@defaults['multiplier']
     data = {}
     data[:actual] = (block.call(
             metrics_worksheet(location['document'], location['sheet'])[location['actual']]
@@ -60,20 +68,20 @@ module GoogleDriveHelper
   end
 
   def metrics_spreadsheet(doc_name)
-    key                         = @@lookups['document_keys'][environment][doc_name]
+    key                         = @@documents[environment][doc_name]
     @@metrics_spreadsheets      ||= {}
     @@metrics_spreadsheets[key] ||= google_drive.spreadsheet_by_key(key)
   end
 
   def metrics_worksheet doc_name, worksheet_name
     @@metrics_worksheets ||= {}
-    key = @@lookups['document_keys'][environment][doc_name]
+    key = @@documents[environment][doc_name]
     @@metrics_worksheets["#{key} #{worksheet_name}"] ||= metrics_spreadsheet(doc_name).worksheet_by_title worksheet_name.to_s
   end
 
   def cell_location year, identifier
     year = Date.today.year if year.nil?
-    @@lookups['cell_lookups'][year][identifier] rescue nil
+    @@lookups[year][identifier] rescue nil
   end
 
   def metrics_total name, year, block
@@ -86,8 +94,8 @@ module GoogleDriveHelper
   def metrics_cell identifier, year, block, ref = "cell_ref"
     location             = cell_location(year, identifier)
     return nil if location.nil? # check we have a valid ref
-    location['document'] ||= @@lookups['document_keys'][environment]['default']
-    multiplier = location['multiplier'] || @@lookups['default_multiplier']
+    location['document'] ||= @@defaults['document']
+    multiplier = location['multiplier'] || @@defaults['multiplier']
 
     attempt = 1
     begin

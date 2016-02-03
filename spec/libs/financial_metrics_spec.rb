@@ -14,7 +14,6 @@ describe FinancialMetrics do
     FinancialMetrics.should_receive(:income).with(2015, 2).once
     FinancialMetrics.should_receive(:income).with(nil, nil).once
     FinancialMetrics.should_receive(:bookings).with(nil, nil).once
-    # FinancialMetrics.should_receive(:kpis).with(2015).once
     FinancialMetrics.should_receive(:grant_funding).with(2015, 2).once
     FinancialMetrics.should_receive(:bookings).with(2015, 2).once
     FinancialMetrics.should_receive(:bookings_by_sector).with(2015, 2).once

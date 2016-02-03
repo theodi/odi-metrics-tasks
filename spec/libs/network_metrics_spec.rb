@@ -10,9 +10,7 @@ describe NetworkMetrics do
     # Which methods are called?
     NetworkMetrics.should_receive(:reach).with(2015, 2).once
     NetworkMetrics.should_receive(:reach).with(nil, nil).once
-    # NetworkMetrics.should_receive(:pr_pieces).with(2015).once
     NetworkMetrics.should_receive(:flagship_stories).with(2015, 2).once
-    # NetworkMetrics.should_receive(:events_hosted).with(2015).once
     NetworkMetrics.should_receive(:people_trained).with(2015, 2).once
     NetworkMetrics.should_receive(:people_trained).with(nil, nil).once
     NetworkMetrics.should_receive(:trainers_trained).with(2015, 2).once
@@ -76,20 +74,12 @@ describe NetworkMetrics do
     }
   end
 
-  it "should show the correct number of PR pieces", :vcr do
-    NetworkMetrics.pr_pieces(2014).should == 99
-  end
-
   it "should show the correct number of flagship stories for 2015", :vcr do
     NetworkMetrics.flagship_stories(2015, 2).should == {
         actual:        0,
         annual_target: 0,
         ytd_target:    0,
     }
-  end
-
-  it "should show the correct number of events hosted", :vcr do
-    NetworkMetrics.events_hosted(2014).should == 2
   end
 
   it "should show number of people trained for 2013", :vcr do

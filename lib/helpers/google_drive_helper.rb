@@ -26,7 +26,7 @@ module GoogleDriveHelper
   def extract_metric name, year, month, block
     location = cell_location year, name
     return nil if location.nil? # check we have a valid ref
-    if location.has_key?("annual_target") || location.has_key?("ytd_target")
+    if location.has_key?("target") || location.has_key?("interim_target")
       metric_with_target name, year, month, block
     else
       metrics_cell name, year, block
@@ -53,13 +53,13 @@ module GoogleDriveHelper
             metrics_worksheet(location['document'], location['sheet'])[location['latest']].slice(0,month).select{|x| x.to_f != 0.0}.last
           ) * multiplier) if location['latest']
     data[:annual_target] = (block.call(
-            metrics_worksheet(location['document'], location['sheet'])[location['annual_target']]
-          ) * multiplier) if location['annual_target']
+            metrics_worksheet(location['document'], location['sheet'])[location['target']]
+          ) * multiplier) if location['target']
     data[:ytd_target] = (block.call(
             ytd_aggregator.call(
-              metrics_worksheet(location['document'], location['sheet'])[location['ytd_target']].slice(0,month)
+              metrics_worksheet(location['document'], location['sheet'])[location['interim_target']].slice(0,month)
             )
-          ) * multiplier) if location['ytd_target']
+          ) * multiplier) if location['interim_target']
     data
   end
 

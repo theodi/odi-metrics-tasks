@@ -32,31 +32,31 @@ Startups:
 # Sales
 Total bookings:
   actual: E41:P41
-  annual_target: AE41
-  ytd_target: S41:AD41
+  target: AE41
+  interim_target: S41:AD41
   document: 2015_financial
   sheet: P&L - programme
 
 Active Reach:
   actual: O2
-  annual_target: AB2
-  ytd_target: P2:AA2
+  target: AB2
+  interim_target: P2:AA2
   document: 2015_non_financial
   sheet: Culture
   multiplier: 1
 
 Passive Reach:
   actual: O3
-  annual_target: AB3
-  ytd_target: P3:AA3
+  target: AB3
+  interim_target: P3:AA3
   document: 2015_non_financial
   sheet: Culture
   multiplier: 1
 
 People trained:
   actual: O3
-  annual_target: AB3
-  ytd_target: P3:AA3
+  target: AB3
+  interim_target: P3:AA3
   document: 2015_non_financial
   sheet: Learning
   multiplier: 1
@@ -69,59 +69,59 @@ People trained by nodes:
 
 Trainers trained:
   actual: O5
-  annual_target: AB5
-  ytd_target: P5:AA5
+  target: AB5
+  interim_target: P5:AA5
   document: 2015_non_financial
   sheet: Learning
   multiplier: 1
 
 Flagship stories:
   actual: O3
-  annual_target: AB3
-  ytd_target: P3:AA3
+  target: AB3
+  interim_target: P3:AA3
   sheet: Evidence
   document: 2015_non_financial
   multiplier: 1
 
 Network bookings:
   actual: E4:P4
-  annual_target: AO4
-  ytd_target: X4:AI4
+  target: AO4
+  interim_target: X4:AI4
   document: 2015_financial
   sheet: P&L
 
 Innovation bookings:
   actual: E5:P5
-  annual_target: AO5
-  ytd_target: X5:AI5
+  target: AO5
+  interim_target: X5:AI5
   document: 2015_financial
   sheet: P&L
 
 Core bookings:
   actual: E6:P6
-  annual_target: AO6
-  ytd_target: X6:AI6
+  target: AO6
+  interim_target: X6:AI6
   document: 2015_financial
   sheet: P&L
 
 Income:
   actual: E3:P3
-  annual_target: AJ3
-  ytd_target: S3:AD3
+  target: AJ3
+  interim_target: S3:AD3
   document: 2015_financial
   sheet: P&L - detail
 
 Grant Funding:
   actual: E21:P21
-  annual_target: AO21
-  ytd_target: X21:AI21
+  target: AO21
+  interim_target: X21:AI21
   document: 2015_financial
   sheet: P&L
 
 Headcount:
   actual: E12
-  annual_target: D12
-  ytd_target: D12
+  target: D12
+  interim_target: D12
   document: diversity
   sheet: Gender
   multiplier: 1
@@ -134,44 +134,44 @@ Burn:
 
 Network costs:
   actual: E9:P9
-  annual_target: AO9
-  ytd_target: X9:AI9
+  target: AO9
+  interim_target: X9:AI9
   document: 2015_financial
   sheet: P&L
 
 Innovation costs:
   actual: E10:P10
-  annual_target: AO10
-  ytd_target: X10:AI10
+  target: AO10
+  interim_target: X10:AI10
   document: 2015_financial
   sheet: P&L
 
 Core costs:
   actual: E11:P11
-  annual_target: AO11
-  ytd_target: X11:AI11
+  target: AO11
+  interim_target: X11:AI11
   document: 2015_financial
   sheet: P&L
 
 Staff costs:
   actual: E16:P16
-  annual_target: AO16
-  ytd_target: X16:AI16
+  target: AO16
+  interim_target: X16:AI16
   document: 2015_financial
   sheet: P&L
 
 Other costs:
   actual: E17:P17
-  annual_target: AO17
-  ytd_target: X17:AI17
+  target: AO17
+  interim_target: X17:AI17
   document: 2015_financial
   sheet: P&L
 
 EBITDA:
   actual: E20:P20
   latest: E20:P20
-  annual_target: AO20
-  ytd_target: X20:AI20
+  target: AO20
+  interim_target: X20:AI20
   document: 2015_financial
   sheet: P&L
 

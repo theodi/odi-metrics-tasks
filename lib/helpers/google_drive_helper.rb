@@ -57,7 +57,7 @@ module GoogleDriveHelper
           ) * multiplier) if location['target']
     data[:ytd_target] = (block.call(
             ytd_aggregator.call(
-              metrics_worksheet(location['document'], location['sheet'])[location['interim_target']].slice(0,month)
+              [metrics_worksheet(location['document'], location['sheet'])[location['interim_target']]].flatten.slice(0,month)
             )
           ) * multiplier) if location['interim_target']
     data

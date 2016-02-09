@@ -87,9 +87,13 @@ describe NetworkMetrics do
         total: 234,
         commercial:     {
             actual:        234,
+            annual_target: 0,
+            ytd_target:    0,
         },
         non_commercial: {
             actual:        0,
+            annual_target: 0,
+            ytd_target:    0,
         }
     }
   end

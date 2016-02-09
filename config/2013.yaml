@@ -42,12 +42,16 @@ Network size:
 
 Commercial people trained:
   actual: B11
+  target: ZZ99
+  interim_target: ZZ99
   sheet: 2013
   document: dashboard
   multiplier: 1
 
 Non-commercial people trained:
   actual: B11
+  target: ZZ99
+  interim_target: ZZ99
   sheet: 2013
   document: dashboard
   multiplier: 0

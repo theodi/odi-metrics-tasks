@@ -36,22 +36,24 @@ Income:
 
 Network size:
   actual: I33
+  target: ZZ99 # blank
+  interim_target: ZZ99 # blank
   sheet: 2013
   document: dashboard
   multiplier: 1
 
 Commercial people trained:
   actual: B11
-  target: ZZ99
-  interim_target: ZZ99
+  target: ZZ99 # blank
+  interim_target: ZZ99 # blank
   sheet: 2013
   document: dashboard
   multiplier: 1
 
 Non-commercial people trained:
   actual: B11
-  target: ZZ99
-  interim_target: ZZ99
+  target: ZZ99 # blank
+  interim_target: ZZ99 # blank
   sheet: 2013
   document: dashboard
   multiplier: 0

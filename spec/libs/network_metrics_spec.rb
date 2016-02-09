@@ -168,18 +168,26 @@ describe NetworkMetrics do
         },
         affiliates: {
             actual:        0,
+            annual_target: 0,
+            ytd_target:    0,
         }
     }
 
     NetworkMetrics.network_size(2015, 2).should == {
       members:  {
-        actual: 147,
+        actual:        147,
+        annual_target: 0,
+        ytd_target:    0,
       },
       nodes:    {
-        actual: 5,
+        actual:        5,
+        annual_target: 0,
+        ytd_target:    0,
       },
       startups: {
-        actual: 5
+        actual:        5,
+        annual_target: 0,
+        ytd_target:    0,
       }
     }
   end

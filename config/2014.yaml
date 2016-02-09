@@ -1,5 +1,7 @@
 Affiliates:
   actual: I28
+  target: ZZ99 # blank
+  interim_target: ZZ99 # blank
   sheet: 2014
   document: dashboard
 

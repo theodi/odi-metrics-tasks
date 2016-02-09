@@ -13,18 +13,24 @@ Network size:
 
 Members:
   actual: F20
+  target: ZZ99 # blank
+  interim_target: ZZ99 # blank
   document: 2015_non_financial
   sheet: aggregated
   multiplier: 1
 
 Nodes:
   actual: F21
+  target: ZZ99 # blank
+  interim_target: ZZ99 # blank
   document: 2015_non_financial
   sheet: aggregated
   multiplier: 1
 
 Startups:
   actual: F22
+  target: ZZ99 # blank
+  interim_target: ZZ99 # blank
   document: 2015_non_financial
   sheet: aggregated
   multiplier: 1
@@ -63,6 +69,8 @@ People trained:
 
 People trained by nodes:
   actual: F16
+  target: ZZ99 # blank
+  interim_target: ZZ99 # blank
   document: 2015_non_financial
   sheet: aggregated
   multiplier: 1

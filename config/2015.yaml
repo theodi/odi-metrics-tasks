@@ -1,12 +1,12 @@
 Value unlocked:
-  cell_ref: F4
+  actual: F4
   document: 2015_non_financial
   sheet: aggregated
   multiplier: 1
 
 # Global Network
 Network size:
-  cell_ref: F19
+  actual: F19
   document: 2015_non_financial
   sheet: aggregated
   multiplier: 1
@@ -128,7 +128,7 @@ Headcount:
   ytd_method: latest
 
 Burn:
-  cell_ref: E33:P33
+  actual: E33:P33
   document: 2015_financial
   sheet: P&L
 
@@ -176,58 +176,58 @@ EBITDA:
   sheet: P&L
 
 Cash reserves:
-  cell_ref: C9
+  actual: C9
   document: 2015_financial
   sheet: Balance sheet
   multiplier: 1
 
 Visitors:
-  cell_ref: G32
+  actual: G32
   document: 2015_non_financial
   sheet: Public dashboards
   multiplier: 1
 
 # this should possibly come from PreciseMedia...
 PR reach:
-  cell_ref: G30
+  actual: G30
   document: 2015_non_financial
   sheet: Public dashboards
   multiplier: 1
 
 Offline media reach:
-  cell_ref: G31
+  actual: G31
   document: 2015_non_financial
   sheet: Public dashboards
   multiplier: 1
 
 Social media reach:
-  cell_ref: G29
+  actual: G29
   document: 2015_non_financial
   sheet: Public dashboards
   multiplier: 1
 
 # this should come from GA...
 Website visitors:
-  cell_ref: G27
+  actual: G27
   document: 2015_non_financial
   sheet: Public dashboards
   multiplier: 1
 
 Publication reads:
-  cell_ref: G28
+  actual: G28
   document: 2015_non_financial
   sheet: Public dashboards
   multiplier: 1
 
 # this should come from eventbrite...
 Events:
-  cell_ref: G25
+  actual: G25
   document: 2015_non_financial
   sheet: Public dashboards
   multiplier: 1
 
 Event attendees:
-  cell_ref: G26
+  actual: G26
   document: 2015_non_financial
   sheet: Public dashboards
   multiplier: 1

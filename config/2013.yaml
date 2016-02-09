@@ -1,29 +1,29 @@
 Reach:
-  cell_ref: B1
+  actual: B1
   sheet: 2013
   document: dashboard
   multiplier: 1
 
 Value unlocked:
-  cell_ref: B6
+  actual: B6
   sheet: 2013
   document: dashboard
   multiplier: 1
 
 KPI percentage:
-  cell_ref: B5
+  actual: B5
   sheet: 2013
   document: dashboard
   multiplier: 1
 
 Active Reach:
-  cell_ref: I30
+  actual: I30
   sheet: 2013
   document: dashboard
   multiplier: 1
 
 Passive Reach:
-  cell_ref: I31
+  actual: I31
   sheet: 2013
   document: dashboard
   multiplier: 1
@@ -35,7 +35,7 @@ Income:
   multiplier: 1
 
 Network size:
-  cell_ref: I33
+  actual: I33
   sheet: 2013
   document: dashboard
   multiplier: 1
@@ -53,7 +53,7 @@ Non-commercial people trained:
   multiplier: 0
 
 Total bookings:
-  cell_ref: B7
+  actual: B7
   sheet: 2013
   document: dashboard
   multiplier: 1

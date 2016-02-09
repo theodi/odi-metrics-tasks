@@ -4,55 +4,55 @@ Affiliates:
   document: dashboard
 
 Active Reach:
-  cell_ref: E3
+  actual: E3
   sheet: Dashboard
   document: reach
   multiplier: 1
 
 Passive Reach:
-  cell_ref: E8
+  actual: E8
   sheet: Dashboard
   document: reach
   multiplier: 1
 
 Value unlocked:
-  cell_ref: B6
+  actual: B6
   sheet: 2014
   document: dashboard
   multiplier: 1
 
 KPI percentage:
-  cell_ref: B5
+  actual: B5
   sheet: 2014
   document: dashboard
   multiplier: 1
 
 PR Pieces:
-  cell_ref: I20
+  actual: I20
   sheet: 2014
   document: dashboard
   multiplier: 1
 
 Events hosted:
-  cell_ref: I27
+  actual: I27
   sheet: 2014
   document: dashboard
   multiplier: 1
 
 Network size:
-  cell_ref: I29
+  actual: I29
   sheet: 2014
   document: dashboard
   multiplier: 1
 
 Total bookings:
-  cell_ref: B7
+  actual: B7
   sheet: 2014
   document: dashboard
   multiplier: 1
 
 Cash reserves:
-  cell_ref: B8
+  actual: B8
   sheet: Balance sheet
   multiplier: 1
 
@@ -125,7 +125,7 @@ Headcount:
   ytd_method: latest
 
 Burn:
-  cell_ref: C27:N27
+  actual: C27:N27
   sheet: P&L + Cashflow
 
 Commercial people trained:
@@ -263,7 +263,7 @@ Software costs:
   sheet: P&L + Cashflow
 
 People trained:
-  cell_ref: E4
+  actual: E4
   sheet: Dashboard
   document: reach
   multiplier: 1

@@ -26,10 +26,10 @@ module GoogleDriveHelper
   def extract_metric name, year, month, block
     location = cell_location year, name
     return nil if location.nil? # check we have a valid ref
-    if location.has_key? "cell_ref"
-      metrics_cell name, year, block
-    else
+    if location.has_key?("annual_target") || location.has_key?("ytd_target")
       metric_with_target name, year, month, block
+    else
+      metrics_cell name, year, block
     end
   end
 
@@ -87,11 +87,10 @@ module GoogleDriveHelper
   def metrics_total name, year, block
     location = cell_location(year, name)
     return nil if location.nil? # check we have a valid ref
-    ref = location.has_key?("actual") ? "actual" : "cell_ref"
-    metrics_cell name, year, block, ref
+    metrics_cell name, year, block
   end
 
-  def metrics_cell identifier, year, block, ref = "cell_ref"
+  def metrics_cell identifier, year, block, ref = "actual"
     location             = cell_location(year, identifier)
     return nil if location.nil? # check we have a valid ref
     location['document'] ||= @@defaults['document']

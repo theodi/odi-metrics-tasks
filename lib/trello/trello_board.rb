@@ -68,9 +68,10 @@ class TrelloBoard
     total = 0
     complete = 0
     trello_rescue{card.checklists}.each do |checklist|
-      unless trello_rescue{checklist.check_items}.count == 0
-        total    += trello_rescue{checklist.check_items}.count
-        complete += trello_rescue{checklist.check_items}.select { |item| item["state"]=="complete" }.count
+      check_items = trello_rescue{checklist.check_items}
+      unless check_items.count == 0
+        total    += check_items.count
+        complete += check_items.select { |item| item["state"]=="complete" }.count
       end
     end
     progress = complete.to_f / total.to_f

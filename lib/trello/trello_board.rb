@@ -55,8 +55,12 @@ class TrelloBoard
     get_list("done")
   end
 
+  def lists
+    @lists ||= trello_rescue{@board.lists}
+  end
+
   def get_list(name)
-    trello_rescue{@board.lists}.select { |l| l.name.downcase == name.downcase }.first.id rescue nil
+    lists.select { |l| l.name.downcase == name.downcase }.first.id rescue nil
   end
 
   def get_progress(card)

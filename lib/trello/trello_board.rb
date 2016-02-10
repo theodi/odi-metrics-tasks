@@ -18,33 +18,20 @@ class TrelloBoard
   end
 
   def outstanding
-    cards = []
-    @cards.each do |card|
-      if card.closed == false && card.list_id != @discuss_list && card.list_id != @done_list
-        cards << get_progress(card)
-      end
-    end
-    cards
+    get_cards(Proc.new { |card| card.closed == false && card.list_id != @discuss_list && card.list_id != @done_list })
   end
 
   def to_discuss
-    cards = []
-    @cards.each do |card|
-      if card.list_id == @discuss_list
-        cards << get_progress(card)
-      end
-    end
-    cards
+    get_cards(Proc.new { |card| card.list_id == @discuss_list })
   end
 
   def done
-    cards = []
-    @cards.each do |card|
-      if card.list_id == @done_list
-        cards << get_progress(card)
-      end
-    end
-    cards
+    get_cards(Proc.new { |card| card.list_id == @done_list })
+  end
+
+  def get_cards(proc)
+    @cards.select { |card| proc.call(card) }
+          .map { |card| get_progress(card) }
   end
 
   def discuss_list

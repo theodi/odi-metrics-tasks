@@ -19,7 +19,8 @@ class TrelloBoard
 
   def outstanding
     cards = []
-      if card.closed == false && trello_rescue{card.list}.id != @discuss_list && trello_rescue{card.list}.id != @done_list
+    @cards.each do |card|
+      if card.closed == false && card.list_id != @discuss_list && card.list_id != @done_list
         cards << get_progress(card)
       end
     end
@@ -28,8 +29,8 @@ class TrelloBoard
 
   def to_discuss
     cards = []
-      if card.list.id == @discuss_list
     @cards.each do |card|
+      if card.list_id == @discuss_list
         cards << get_progress(card)
       end
     end
@@ -38,8 +39,8 @@ class TrelloBoard
 
   def done
     cards = []
-      if trello_rescue{card.list}.id == @done_list
     @cards.each do |card|
+      if card.list_id == @done_list
         cards << get_progress(card)
       end
     end

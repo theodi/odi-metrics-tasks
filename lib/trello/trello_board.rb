@@ -12,13 +12,13 @@ class TrelloBoard
 
   def initialize(board_id)
     @board = trello_rescue{Trello::Board.find(board_id)}
+    @cards = trello_rescue{@board.cards}
     @discuss_list = discuss_list
     @done_list = done_list
   end
 
   def outstanding
     cards = []
-    trello_rescue{@board.cards}.each do |card|
       if card.closed == false && trello_rescue{card.list}.id != @discuss_list && trello_rescue{card.list}.id != @done_list
         cards << get_progress(card)
       end
@@ -28,8 +28,8 @@ class TrelloBoard
 
   def to_discuss
     cards = []
-    trello_rescue{@board.cards}.each do |card|
       if card.list.id == @discuss_list
+    @cards.each do |card|
         cards << get_progress(card)
       end
     end
@@ -38,8 +38,8 @@ class TrelloBoard
 
   def done
     cards = []
-    trello_rescue{@board.cards}.each do |card|
       if trello_rescue{card.list}.id == @done_list
+    @cards.each do |card|
         cards << get_progress(card)
       end
     end

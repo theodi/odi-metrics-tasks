@@ -12,38 +12,26 @@ class TrelloBoard
 
   def initialize(board_id)
     @board = trello_rescue{Trello::Board.find(board_id)}
+    @cards = trello_rescue{@board.cards}
     @discuss_list = discuss_list
     @done_list = done_list
   end
 
   def outstanding
-    cards = []
-    trello_rescue{@board.cards}.each do |card|
-      if card.closed == false && trello_rescue{card.list}.id != @discuss_list && trello_rescue{card.list}.id != @done_list
-        cards << get_progress(card)
-      end
-    end
-    cards
+    get_cards(Proc.new { |card| card.closed == false && card.list_id != @discuss_list && card.list_id != @done_list })
   end
 
   def to_discuss
-    cards = []
-    trello_rescue{@board.cards}.each do |card|
-      if card.list.id == @discuss_list
-        cards << get_progress(card)
-      end
-    end
-    cards
+    get_cards(Proc.new { |card| card.list_id == @discuss_list })
   end
 
   def done
-    cards = []
-    trello_rescue{@board.cards}.each do |card|
-      if trello_rescue{card.list}.id == @done_list
-        cards << get_progress(card)
-      end
-    end
-    cards
+    get_cards(Proc.new { |card| card.list_id == @done_list })
+  end
+
+  def get_cards(proc)
+    @cards.select { |card| proc.call(card) }
+          .map { |card| get_progress(card) }
   end
 
   def discuss_list
@@ -54,8 +42,12 @@ class TrelloBoard
     get_list("done")
   end
 
+  def lists
+    @lists ||= trello_rescue{@board.lists}
+  end
+
   def get_list(name)
-    trello_rescue{@board.lists}.select { |l| l.name.downcase == name.downcase }.first.id rescue nil
+    lists.select { |l| l.name.downcase == name.downcase }.first.id rescue nil
   end
 
   def get_progress(card)
@@ -63,9 +55,10 @@ class TrelloBoard
     total = 0
     complete = 0
     trello_rescue{card.checklists}.each do |checklist|
-      unless trello_rescue{checklist.check_items}.count == 0
-        total    += trello_rescue{checklist.check_items}.count
-        complete += trello_rescue{checklist.check_items}.select { |item| item["state"]=="complete" }.count
+      check_items = trello_rescue{checklist.check_items}
+      unless check_items.count == 0
+        total    += check_items.count
+        complete += check_items.select { |item| item["state"]=="complete" }.count
       end
     end
     progress = complete.to_f / total.to_f

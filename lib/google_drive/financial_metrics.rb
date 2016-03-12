@@ -30,11 +30,11 @@ class FinancialMetrics
   end
 
   def self.value(year = "lifetime")
-    metrics_cell('Value unlocked', year, Proc.new {|x| integize(x) }) || 0
+    metrics_cell('Value unlocked', year, method(:integize)) || 0
   end
 
   def self.kpis(year)
-    metrics_cell('KPI percentage', year, Proc.new {|x| floatize(x) }).try(:round, 1)
+    metrics_cell('KPI percentage', year, method(:integize)).try(:round, 1)
   end
 
   def self.cash_reserves(year)

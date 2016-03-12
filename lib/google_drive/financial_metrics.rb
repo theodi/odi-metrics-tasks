@@ -11,7 +11,7 @@ class FinancialMetrics
     {
       "cash-reserves"                        => cash_reserves(current_year),
       "current-year-value-unlocked"          => value(current_year),
-      "cumulative-value-unlocked"            => value(nil),
+      "cumulative-value-unlocked"            => value,
       "current-year-income"                  => income(current_year, current_month),
       "cumulative-income"                    => income(nil, nil),
       "cumulative-bookings"                  => bookings(nil, nil),

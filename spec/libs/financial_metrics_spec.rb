@@ -10,7 +10,7 @@ describe FinancialMetrics do
     # Which methods are called?
     FinancialMetrics.should_receive(:cash_reserves).with(2015).once
     FinancialMetrics.should_receive(:value).with(2015).once
-    FinancialMetrics.should_receive(:value).with(nil).once
+    FinancialMetrics.should_receive(:value).with().once
     FinancialMetrics.should_receive(:income).with(2015, 2).once
     FinancialMetrics.should_receive(:income).with(nil, nil).once
     FinancialMetrics.should_receive(:bookings).with(nil, nil).once

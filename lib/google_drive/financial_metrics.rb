@@ -29,12 +29,8 @@ class FinancialMetrics
     clear_cache!
   end
 
-  def self.value(year = nil)
-    if year.nil?
-      years.inject(0) { |total, year| total += value(year) }
-    else
-      metrics_cell('Value unlocked', year, Proc.new {|x| integize(x) }) || 0
-    end
+  def self.value(year = "lifetime")
+    metrics_cell('Value unlocked', year, Proc.new {|x| integize(x) }) || 0
   end
 
   def self.kpis(year)

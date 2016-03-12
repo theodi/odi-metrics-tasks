@@ -29,10 +29,11 @@ describe FinancialMetrics do
   end
 
   it "should show the correct unlocked value", :vcr do
-    FinancialMetrics.value(2013).should == 15210243
-    FinancialMetrics.value(2014).should == 544441
-    FinancialMetrics.value(2015).should == 499511
-    FinancialMetrics.value.should == 16254195
+    FinancialMetrics.value(2013).should == 16924307
+    FinancialMetrics.value(2014).should == 15439302
+    FinancialMetrics.value(2015).should == 10622803
+    FinancialMetrics.value(2016).should == 1009441
+    FinancialMetrics.value.should == 43995853
   end
 
   it "should show the correct kpi percentage", :vcr do

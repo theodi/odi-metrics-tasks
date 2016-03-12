@@ -101,7 +101,7 @@ class NetworkMetrics
     extract_metric 'Trainers trained', year, month, Proc.new { |x| integize(x) }
   end
 
-  def self.network_size(year, month)
+  def self.network_size(year = nil, month = nil)
     block = Proc.new { |x| integize(x) }
     if year.nil? && month.nil?
       metrics_cell('Network size', "lifetime", block)

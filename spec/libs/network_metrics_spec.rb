@@ -191,7 +191,7 @@ describe NetworkMetrics do
   end
 
   it "should show the cumulative network size", :vcr do
-    NetworkMetrics.network_size(nil, nil).should == 287
+    NetworkMetrics.network_size.should == 1395
   end
 
   it "should handle unknown years for entire metrics grab" do

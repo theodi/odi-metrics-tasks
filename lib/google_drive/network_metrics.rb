@@ -73,11 +73,9 @@ class NetworkMetrics
     metrics_cell('Events hosted', year, block)
   end
 
-  def self.people_trained(year, month)
+  def self.people_trained(year = nil, month = nil)
     if year.nil? && month.nil?
-      years.map{|year| people_trained(year, 12)}.inject(0) do |memo, trained|
-        memo += trained[:total].is_a?(Hash) ? trained[:total][:actual] : trained[:total]
-      end
+      metrics_cell('People trained', "lifetime", Proc.new { |x| integize(x) })
     else
       block = Proc.new { |x| integize(x) }
       h     = {

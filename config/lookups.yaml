@@ -47,6 +47,11 @@ cell_lookups:
       sheet: Public dashboards
       document: 2016_dashboard
       multiplier: 1
+    People trained:
+      cell_ref: G3
+      sheet: Public dashboards
+      document: 2016_dashboard
+      multiplier: 1
 
   2013:
     Reach:

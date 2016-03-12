@@ -134,7 +134,7 @@ describe NetworkMetrics do
   end
 
   it "should show the cumulative number of people trained", :vcr do
-    NetworkMetrics.people_trained(nil, nil).should == 2717
+    NetworkMetrics.people_trained.should == 3659
   end
 
   it "should show number of trainers trained for 2015", :vcr do

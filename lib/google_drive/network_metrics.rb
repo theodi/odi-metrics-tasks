@@ -28,19 +28,19 @@ class NetworkMetrics
   def self.reach(year = nil, month = nil)
     total_block = Proc.new { |x| x.class == Hash ? x[:actual] : x }
     if year.nil? && month.nil?
-      years.map{|year| reach(year, 12)}.inject do |memo, reach|
-        memo = {
-          total: total_block.call(memo[:total]) + total_block.call(reach[:total]),
-          breakdown: {
-            active:  total_block.call(memo[:breakdown][:active]) + total_block.call(reach[:breakdown][:active]),
-            passive: total_block.call(memo[:breakdown][:passive]) + total_block.call(reach[:breakdown][:passive]),
-          }
-        }
+      # Total comes from a single cell
+      total = metrics_cell 'People reached', "lifetime", method(:integize)
+      # Breakdown is added up
+      active = 0
+      passive = 0
+      years.each do |year|
+        reach = reach(year, 12)
+        active += reach[:breakdown][:active].is_a?(Hash) ? reach[:breakdown][:active][:actual] : reach[:breakdown][:active]
+        passive += reach[:breakdown][:passive].is_a?(Hash) ? reach[:breakdown][:passive][:actual] : reach[:breakdown][:passive]
       end
     else
-      integize_block = Proc.new { |x| integize(x) }
-      active  = extract_metric "Active Reach", year, month, integize_block
-      passive = extract_metric "Passive Reach", year, month, integize_block
+      active  = extract_metric "Active Reach", year, month, method(:integize)
+      passive = extract_metric "Passive Reach", year, month, method(:integize)
       if active.class == Hash && passive.class == Hash
         total = active.inject({}) do |data, (k, v)|
           data[k] = v + passive[k]
@@ -49,37 +49,32 @@ class NetworkMetrics
       else
         total = (total_block.call(active) || 0) + (total_block.call(passive) || 0) # handle nil data
       end
-      {
-        total: total,
-        breakdown: {
-          active:  active || 0,
-          passive: passive || 0,
-        }
-      }
     end
+    {
+      total: total,
+      breakdown: {
+        active:  active || 0,
+        passive: passive || 0,
+      }
+    }
   end
 
   def self.pr_pieces(year)
-    block = Proc.new { |x| integize(x) }
-    metrics_cell('PR Pieces', year, block)
+    metrics_cell('PR Pieces', year, method(:integize))
   end
 
   def self.flagship_stories(year, month)
-    extract_metric 'Flagship stories', year, month, Proc.new { |x| integize(x) }
+    extract_metric 'Flagship stories', year, month, method(:integize)
   end
 
   def self.events_hosted(year)
-    block = Proc.new { |x| integize(x) }
-    metrics_cell('Events hosted', year, block)
+    metrics_cell('Events hosted', year, method(:integize))
   end
 
-  def self.people_trained(year, month)
+  def self.people_trained(year = nil, month = nil)
     if year.nil? && month.nil?
-      years.map{|year| people_trained(year, 12)}.inject(0) do |memo, trained|
-        memo += trained[:total].is_a?(Hash) ? trained[:total][:actual] : trained[:total]
-      end
+      metrics_cell('People trained', "lifetime", method(:integize))
     else
-      block = Proc.new { |x| integize(x) }
       h     = {
         commercial:     'Commercial people trained',
         non_commercial: 'Non-commercial people trained',
@@ -87,7 +82,7 @@ class NetworkMetrics
         total:          'People trained',
       }
 
-      data = extract_metrics h, year, month, block
+      data = extract_metrics h, year, month, method(:integize)
       unless data.has_key?(:total)
         data[:total] = (data[:commercial].try(:[], :actual)||0) + (data[:non_commercial].try(:[], :actual)||0)
       end
@@ -100,13 +95,12 @@ class NetworkMetrics
   end
 
   def self.trainers_trained(year, month)
-    extract_metric 'Trainers trained', year, month, Proc.new { |x| integize(x) }
+    extract_metric 'Trainers trained', year, month, method(:integize)
   end
 
-  def self.network_size(year, month)
-    block = Proc.new { |x| integize(x) }
+  def self.network_size(year = nil, month = nil)
     if year.nil? && month.nil?
-      metrics_cell('Network size', "lifetime", block)
+      metrics_cell('Network size', "lifetime", method(:integize))
     else
       h     = {
           partners:   'Partners',
@@ -117,7 +111,7 @@ class NetworkMetrics
           affiliates: 'Affiliates',
           members:    'Members',
       }
-      extract_metrics h, year, month, block
+      extract_metrics h, year, month, method(:integize)
     end
   end
 

@@ -29,10 +29,11 @@ describe FinancialMetrics do
   end
 
   it "should show the correct unlocked value", :vcr do
-    FinancialMetrics.value(2013).should == 15210243
-    FinancialMetrics.value(2014).should == 544441
-    FinancialMetrics.value(2015).should == 499511
-    FinancialMetrics.value.should == 16254195
+    FinancialMetrics.value(2013).should == 16924307
+    FinancialMetrics.value(2014).should == 15439302
+    FinancialMetrics.value(2015).should == 10622803
+    FinancialMetrics.value(2016).should == 1009441
+    FinancialMetrics.value.should == 43995853
   end
 
   it "should show the correct kpi percentage", :vcr do
@@ -78,11 +79,7 @@ describe FinancialMetrics do
   end
 
   it "should show correct cumulative bookings", :vcr do
-    FinancialMetrics.bookings(nil, nil).should == 1925000
-  end
-
-  it "should show correct bookings for 2014", :vcr do
-    FinancialMetrics.bookings(2014, 2).should == 209000
+    FinancialMetrics.bookings(nil, nil).should == 6944812
   end
 
   it "should show correct bookings for 2015", :vcr do
@@ -92,6 +89,8 @@ describe FinancialMetrics do
       :ytd_target => 83000,
     }
   end
+  
+  
 
   it "should show the correct bookings by sector for 2014", :vcr do
     FinancialMetrics.bookings_by_sector(2014, 2).should == {

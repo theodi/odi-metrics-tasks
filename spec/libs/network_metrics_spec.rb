@@ -26,7 +26,8 @@ describe NetworkMetrics do
 
   it "should show the correct cumulative reach", :vcr do
     NetworkMetrics.reach.should == {
-      :total   => 848832,
+      :total   => 1881191,
+      # This breakdown is currently inaccurate as 2016's detailed figures haven't been extracted yet
       :breakdown => {
         :active  => 24306,
         :passive => 824526,
@@ -134,7 +135,7 @@ describe NetworkMetrics do
   end
 
   it "should show the cumulative number of people trained", :vcr do
-    NetworkMetrics.people_trained(nil, nil).should == 2717
+    NetworkMetrics.people_trained.should == 3659
   end
 
   it "should show number of trainers trained for 2015", :vcr do
@@ -191,7 +192,7 @@ describe NetworkMetrics do
   end
 
   it "should show the cumulative network size", :vcr do
-    NetworkMetrics.network_size(nil, nil).should == 287
+    NetworkMetrics.network_size.should == 1395
   end
 
   it "should handle unknown years for entire metrics grab" do

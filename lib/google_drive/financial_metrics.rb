@@ -29,16 +29,12 @@ class FinancialMetrics
     clear_cache!
   end
 
-  def self.value(year = nil)
-    if year.nil?
-      years.inject(0) { |total, year| total += value(year) }
-    else
-      metrics_cell('Value unlocked', year, Proc.new {|x| integize(x) }) || 0
-    end
+  def self.value(year = "lifetime")
+    metrics_cell('Value unlocked', year, method(:integize)) || 0
   end
 
   def self.kpis(year)
-    metrics_cell('KPI percentage', year, Proc.new {|x| floatize(x) }).try(:round, 1)
+    metrics_cell('KPI percentage', year, method(:integize)).try(:round, 1)
   end
 
   def self.cash_reserves(year)
@@ -49,9 +45,7 @@ class FinancialMetrics
     slice_by = month ? month : 12
     block = Proc.new { |x| x.is_a?(Array) ? x.slice(0, slice_by).inject(0) { |s,v| s += integize(v) } : integize(x) }
     if year.nil? && month.nil?
-      years.inject(0) do |memo, year|
-        memo += metrics_total('Total bookings', year, block) || 0
-      end
+      metrics_cell 'Total bookings', "lifetime", block
     else
       extract_metric 'Total bookings', year, month, block
     end

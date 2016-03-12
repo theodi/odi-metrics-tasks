@@ -27,18 +27,19 @@ class NetworkMetrics
 
   def self.reach(year = nil, month = nil)
     total_block = Proc.new { |x| x.class == Hash ? x[:actual] : x }
+    integize_block = Proc.new { |x| integize(x) }
     if year.nil? && month.nil?
-      years.map{|year| reach(year, 12)}.inject do |memo, reach|
-        memo = {
-          total: total_block.call(memo[:total]) + total_block.call(reach[:total]),
-          breakdown: {
-            active:  total_block.call(memo[:breakdown][:active]) + total_block.call(reach[:breakdown][:active]),
-            passive: total_block.call(memo[:breakdown][:passive]) + total_block.call(reach[:breakdown][:passive]),
-          }
-        }
+      # Total comes from a single cell
+      total = metrics_cell 'People reached', "lifetime", integize_block
+      # Breakdown is added up
+      active = 0
+      passive = 0
+      years.each do |year|
+        reach = reach(year, 12)
+        active += reach[:breakdown][:active].is_a?(Hash) ? reach[:breakdown][:active][:actual] : reach[:breakdown][:active]
+        passive += reach[:breakdown][:passive].is_a?(Hash) ? reach[:breakdown][:passive][:actual] : reach[:breakdown][:passive]
       end
     else
-      integize_block = Proc.new { |x| integize(x) }
       active  = extract_metric "Active Reach", year, month, integize_block
       passive = extract_metric "Passive Reach", year, month, integize_block
       if active.class == Hash && passive.class == Hash
@@ -49,14 +50,14 @@ class NetworkMetrics
       else
         total = (total_block.call(active) || 0) + (total_block.call(passive) || 0) # handle nil data
       end
-      {
-        total: total,
-        breakdown: {
-          active:  active || 0,
-          passive: passive || 0,
-        }
-      }
     end
+    {
+      total: total,
+      breakdown: {
+        active:  active || 0,
+        passive: passive || 0,
+      }
+    }
   end
 
   def self.pr_pieces(year)

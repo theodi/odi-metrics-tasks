@@ -52,6 +52,11 @@ cell_lookups:
       sheet: Public dashboards
       document: 2016_dashboard
       multiplier: 1
+    People reached:
+      cell_ref: G6
+      sheet: Public dashboards
+      document: 2016_dashboard
+      multiplier: 1
 
   2013:
     Reach:

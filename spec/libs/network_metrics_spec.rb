@@ -26,7 +26,8 @@ describe NetworkMetrics do
 
   it "should show the correct cumulative reach", :vcr do
     NetworkMetrics.reach.should == {
-      :total   => 848832,
+      :total   => 1881191,
+      # This breakdown is currently inaccurate as 2016's detailed figures haven't been extracted yet
       :breakdown => {
         :active  => 24306,
         :passive => 824526,

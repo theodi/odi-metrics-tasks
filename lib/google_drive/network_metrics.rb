@@ -111,7 +111,7 @@ class NetworkMetrics
           affiliates: 'Affiliates',
           members:    'Members',
       }
-      extract_metrics h, year, month, block
+      extract_metrics h, year, month, method(:integize)
     end
   end
 

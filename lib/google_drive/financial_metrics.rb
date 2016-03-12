@@ -45,9 +45,7 @@ class FinancialMetrics
     slice_by = month ? month : 12
     block = Proc.new { |x| x.is_a?(Array) ? x.slice(0, slice_by).inject(0) { |s,v| s += integize(v) } : integize(x) }
     if year.nil? && month.nil?
-      years.inject(0) do |memo, year|
-        memo += metrics_total('Total bookings', year, block) || 0
-      end
+      metrics_cell 'Total bookings', "lifetime", block
     else
       extract_metric 'Total bookings', year, month, block
     end

@@ -79,11 +79,7 @@ describe FinancialMetrics do
   end
 
   it "should show correct cumulative bookings", :vcr do
-    FinancialMetrics.bookings(nil, nil).should == 1925000
-  end
-
-  it "should show correct bookings for 2014", :vcr do
-    FinancialMetrics.bookings(2014, 2).should == 209000
+    FinancialMetrics.bookings(nil, nil).should == 6944812
   end
 
   it "should show correct bookings for 2015", :vcr do
@@ -93,6 +89,8 @@ describe FinancialMetrics do
       :ytd_target => 83000,
     }
   end
+  
+  
 
   it "should show the correct bookings by sector for 2014", :vcr do
     FinancialMetrics.bookings_by_sector(2014, 2).should == {

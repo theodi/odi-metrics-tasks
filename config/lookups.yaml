@@ -42,6 +42,11 @@ cell_lookups:
       sheet: Public dashboards
       document: 2016_dashboard
       multiplier: 1
+    Total bookings:
+      cell_ref: G5
+      sheet: Public dashboards
+      document: 2016_dashboard
+      multiplier: 1
 
   2013:
     Reach:

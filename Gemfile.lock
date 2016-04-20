@@ -154,8 +154,8 @@ GEM
       multi_json (~> 1.10)
     fog-local (0.3.0)
       fog-core (~> 1.27)
-    fog-openstack (0.1.2)
-      fog-core (>= 1.35)
+    fog-openstack (0.1.3)
+      fog-core (>= 1.37)
       fog-json (>= 1.0)
       fog-xml (>= 0.1)
       ipaddress (>= 0.8)
@@ -314,7 +314,7 @@ GEM
       builder
       nokogiri (>= 1.4.1)
       trollop
-    redis (3.2.2)
+    redis (3.3.0)
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
     resque (1.26.0)
